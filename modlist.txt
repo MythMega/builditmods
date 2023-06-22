@@ -1,1 +1,21 @@
-init
+3DskinLayer : Affiche la layer supérieur en 3D, et possede des librairies nécessaire pour quelques autres mods
+Blur : fondu configurable sur l'arriere plan quand un GUI est affiché
+Capes : affiches les capes optifine, labymod etc
+Chat_head : affiche la tete de celui qui parle a coté de son pseudo dans le chat et dans les commandes
+chunksFadeIn : lorsqu'un chunk load, il y a une animation (par défaut c'est un fade, mais ça peut etre PLEINS d'autre trucs)
+Cloth-config : librairies pour plein de mods
+continuity : Connected Texture et custom texture
+Fabric Api : API nécessaire pour fabric
+falling leaves : cosmétique, particule de feuilles qui s'envolent au vents
+indium : optimisations (et nécessaire pour continuity)
+iris : shader
+lambdynamiclight : light dynamic
+litematica :  litematic
+malilib : librairies nécessaire pour Litematica & litematica enderchest
+modmenu : menu "mod" qui permet de changer les settings de chaque mods
+replaymods : hyperlapse
+Sodium : optimisations énormes du jeu
+Sodium Extra : ajoutes pas mal de settings (particles settings, fog settings etc) manquant à Sodium
+WorldEdit : Edition map
+JourneyMap : mini-map
+litematica-enderchest : permet a Litematica de prendre en compte les élements de l'enderchest [à tester]
