@@ -19,3 +19,7 @@ Sodium Extra : ajoutes pas mal de settings (particles settings, fog settings etc
 WorldEdit : Edition map
 JourneyMap : mini-map
 litematica-enderchest : permet a Litematica de prendre en compte les élements de l'enderchest [à tester]
+fabric-language-kotlin : nécessaire pour le mod capes
+camerautils : mods pour améliorer le F5 (et ajouter un F6 & F7 configurable, et un zoom configurable aussi)
+cmdKeyBind : associe des commandes a des raccourcis claviers
+reeses sodium : meilleur affichage des options sodium
