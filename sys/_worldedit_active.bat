@@ -1,0 +1,1 @@
+ren worldedit-mod-7.2.15.jard worldedit-mod-7.2.15.jar
