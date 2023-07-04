@@ -1,1 +1,0 @@
-ren replaymod-1.20.1-2.6.13.jar replaymod-1.20.1-2.6.13.jard
