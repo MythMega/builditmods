@@ -19,13 +19,32 @@ namespace BuildItModsSelector
     {
         private WebClient webClient;
         private Dictionary<string, string> filesToDownload = new Dictionary<string, string>();
-        private string version = "0.1e";
+        private string version = "0.1g";
 
         public Main()
         {
             InitializeComponent();
             //crée un dossier sys si il n'existe pas
             if (!Directory.Exists(Path.Combine(Application.StartupPath, "sys"))) { Directory.CreateDirectory(Path.Combine(Application.StartupPath, "sys")); }
+            // Chemin du fichier profile.txt
+            string filePath = Path.Combine("sys", "profile.txt");
+
+            // Vérifier si le fichier existe
+            if (!File.Exists(filePath))
+            {
+                // Contenu à écrire dans le fichier
+                string fileContent = @"p1=profile 1=
+p2=profile 2=
+p3=profile 3=
+p4=profile 4=
+p5=profile 5=
+p6=profile 6=
+p7=profile 7=
+p8=profile 8=";
+
+                // Créer le fichier avec le contenu spécifié
+                File.WriteAllText(filePath, fileContent);
+            }
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
@@ -113,6 +132,10 @@ namespace BuildItModsSelector
                 else { filePath = Path.Combine(Application.StartupPath, "sys/bats/cosmetique_skin_disable.bat"); }
                 process.StartInfo.FileName = filePath; process.Start();
 
+                if (cbCosmetiquesGUI.Checked) { filePath = Path.Combine(Application.StartupPath, "sys/bats/cosmetique_gui_enable.bat"); }
+                else { filePath = Path.Combine(Application.StartupPath, "sys/bats/cosmetique_gui_disable.bat"); }
+                process.StartInfo.FileName = filePath; process.Start();
+
                 if (chbIsometricRenderer.Checked) { filePath = Path.Combine(Application.StartupPath, "sys/bats/isorender_enable.bat"); }
                 else { filePath = Path.Combine(Application.StartupPath, "sys/bats/isorender_disable.bat"); }
                 process.StartInfo.FileName = filePath; process.Start();
@@ -133,6 +156,7 @@ namespace BuildItModsSelector
         private void btnUpdateMods_Click(object sender, EventArgs e)
         {
             DownloadFileSyncInSys("modlist.config", "https://jmdbymyth.000webhostapp.com/modlist.config");
+            Thread.Sleep(3000);
             string modlistFilePath = Path.Combine("sys", "modlist.config");
             enableAllMod();
             if (File.Exists(modlistFilePath))
@@ -198,9 +222,9 @@ namespace BuildItModsSelector
             Console.WriteLine("Téléchargements terminés.");
 
             Thread.Sleep(3000);
-            
+
             bool moving = false;
-            while(!moving){
+            while (!moving) {
                 try
                 {
                     moveBatFiles();
@@ -211,19 +235,19 @@ namespace BuildItModsSelector
                     Thread.Sleep(50);
                 }
             }
-            
+
 
         }
 
         private void DownloadFileSyncInSys(string file, string url)
         {
-            DownloadFiles("sys/"+file, url);
+            DownloadFiles("sys/" + file, url);
             bool fileIsDownloaded = false;
             int debug_timetodownloadFile = 0;
 
 
-            
-            
+
+
             string sysFilePath = Path.Combine("sys", file);
 
             while (!fileIsDownloaded)
@@ -258,8 +282,7 @@ namespace BuildItModsSelector
         private void lblCosmetiquesJeu_Click(object sender, EventArgs e)
         {
             Dictionary<string, int> modlist = new Dictionary<string, int> {
-                { "Blur", 1 },
-                { "Continuity", 0 },
+                { "Continuity", 1 },
                 { "Falling Leaves", 3 },
             };
 
@@ -271,6 +294,16 @@ namespace BuildItModsSelector
             Dictionary<string, int> modlist = new Dictionary<string, int> {
                 { "3D Skin Layer", 2 },
                 { "Capes", 2 },
+            };
+
+            showModstats(modlist);
+        }
+
+        private void lblCosmetiqueGUI_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, int> modlist = new Dictionary<string, int> {
+                { "Blur", 1 },
+                { "Chat Head", 0 },
             };
 
             showModstats(modlist);
@@ -522,5 +555,194 @@ namespace BuildItModsSelector
         {
             enableAllMod();
         }
+
+        private List<Button> GetProfilesButtons()
+        {
+            return new List<Button>()
+                    {
+                        btnProfile1, btnProfile2, btnProfile3, btnProfile4, btnProfile5, btnProfile6, btnProfile7, btnProfile8
+                    };
+        }
+
+        private List<CheckBox> GetModsCheckboxs()
+        {
+            return new List<CheckBox>()
+                    {
+                        cbCosmetiquesGUI, cbCosmetiquesJeu, cbCosmetiquesSkins, cbJourneymap, cbLitematica, cbReplaymod, cbWorldEdit, chbIsometricRenderer
+                    };
+        }
+
+        public Dictionary<string, Button> GetButtonDictionary()
+        {
+            Dictionary<string, Button> buttonDictionary = new Dictionary<string, Button>
+            {
+                { btnProfile1.Tag.ToString(), btnProfile1 },
+                { btnProfile2.Tag.ToString(), btnProfile2 },
+                { btnProfile3.Tag.ToString(), btnProfile3 },
+                { btnProfile4.Tag.ToString(), btnProfile4 },
+                { btnProfile5.Tag.ToString(), btnProfile5 },
+                { btnProfile6.Tag.ToString(), btnProfile6 },
+                { btnProfile7.Tag.ToString(), btnProfile7 },
+                { btnProfile8.Tag.ToString(), btnProfile8 }
+            };
+
+            return buttonDictionary;
+        }
+
+        public Dictionary<string, CheckBox> GetCheckboxsDictionary()
+        {
+            Dictionary<string, CheckBox> checkboxDictionary = new Dictionary<string, CheckBox>
+            {
+                { cbCosmetiquesGUI.Tag.ToString(), cbCosmetiquesGUI },
+                { cbCosmetiquesJeu.Tag.ToString(), cbCosmetiquesJeu },
+                { cbCosmetiquesSkins.Tag.ToString(), cbCosmetiquesSkins },
+                { cbJourneymap.Tag.ToString(), cbJourneymap },
+                { cbLitematica.Tag.ToString(), cbLitematica },
+                { cbReplaymod.Tag.ToString(), cbReplaymod },
+                { cbWorldEdit.Tag.ToString(), cbWorldEdit },
+                { chbIsometricRenderer.Tag.ToString(), chbIsometricRenderer }
+            };
+
+            return checkboxDictionary;
+        }
+
+        public Dictionary<string, ToolStripMenuItem> GetProfilToolStripMenuItems()
+        {
+            Dictionary<string, ToolStripMenuItem> toolStripMenuItems = new Dictionary<string, ToolStripMenuItem>
+            {
+                { profil1ToolStripMenuItem.Tag.ToString(), profil1ToolStripMenuItem },
+                { profil2ToolStripMenuItem.Tag.ToString(), profil2ToolStripMenuItem },
+                { profil3ToolStripMenuItem.Tag.ToString(), profil3ToolStripMenuItem },
+                { profil4ToolStripMenuItem.Tag.ToString(), profil4ToolStripMenuItem },
+                { profil5ToolStripMenuItem.Tag.ToString(), profil5ToolStripMenuItem },
+                { profil6ToolStripMenuItem.Tag.ToString(), profil6ToolStripMenuItem },
+                { profil7ToolStripMenuItem.Tag.ToString(), profil7ToolStripMenuItem },
+                { profil8ToolStripMenuItem.Tag.ToString(), profil8ToolStripMenuItem }
+            };
+
+            return toolStripMenuItems;
+        }
+
+
+        
+
+        private void profilSaveBtn(object sender, EventArgs e)
+        {
+            ToolStripMenuItem clickedButton = (ToolStripMenuItem)sender;
+            clickedButton.Text = txbProfileName.Text;
+            Dictionary<string, Button> myBtns = GetButtonDictionary();
+            myBtns[clickedButton.Tag.ToString()].Text = txbProfileName.Text;
+            string lineSave = txbProfileName.Text + "=";
+            foreach (CheckBox checkedElement in GetModsCheckboxs())
+            {
+                if (checkedElement.Checked)
+                {
+                    lineSave += checkedElement.Tag.ToString() + ",";
+                }
+            }
+            WriteProfile(clickedButton.Tag.ToString(), lineSave.Substring(0, lineSave.Length - 1));
+
+        }
+
+        private void profilLoadBtn(object sender, EventArgs e)
+        {
+            Button btnLoad = (Button)sender;
+            loadUniqueProfile(btnLoad.Tag.ToString());
+            btnExec_Click(sender, e);
+        }
+
+        private void WriteProfile(string profileNumber, string lineSave)
+        {
+            string filePath = Path.Combine("sys", "profile.txt");
+            string keyPrefix = profileNumber; // Clé souhaitée
+
+            // Lire le contenu du fichier dans une liste de chaînes de caractères
+            List<string> lines = File.ReadAllLines(filePath).ToList();
+
+            // Rechercher la ligne qui commence par la clé souhaitée
+            int lineIndex = lines.FindIndex(line => line.StartsWith(keyPrefix));
+
+            if (lineIndex != -1)
+            {
+                // Modifier cette ligne avec les nouvelles valeurs
+                string newValue = lineSave; // Nouvelles valeurs
+                lines[lineIndex] = $"{keyPrefix}={newValue}";
+            }
+
+            // Écrire le contenu mis à jour dans le fichier
+            File.WriteAllLines(filePath, lines);
+
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        public void loadUniqueProfile(string profileCode)
+        {
+            foreach(CheckBox checkBox in GetModsCheckboxs()) {
+                checkBox.Checked = false;
+            }
+            string filePath = Path.Combine("sys", "profile.txt");
+
+
+            // Vérifier si le fichier existe
+            if (File.Exists(filePath))
+            {
+                // Lire toutes les lignes du fichier
+                string[] lines = File.ReadAllLines(filePath);
+
+                // Chercher la ligne correspondant au profil
+                string profileLine = lines.FirstOrDefault(line => line.StartsWith(profileCode + "="));
+
+                // Vérifier si la ligne a été trouvée
+                if (profileLine != null)
+                {
+                    // Extraire le nom du profil
+                    string profileName = profileLine.Substring(profileCode.Length + 1).Split('=')[0];
+                    Dictionary<string, Button> myBtns = GetButtonDictionary();
+                    Button btn = myBtns[profileCode];
+                    btn.Text = profileName;
+                    Dictionary<string, ToolStripMenuItem> myTSMIs = GetProfilToolStripMenuItems();
+                    ToolStripMenuItem TSMI = myTSMIs[profileCode];
+                    TSMI.Text = profileName;
+
+                    // Extraire les éléments de la troisième partie de la ligne
+                    string[] elements;
+                    try
+                    {
+                        elements = profileLine.Split('=')[2].Split(',');
+                    }
+                    catch {
+                        elements = new string[0];
+                    }
+                    
+
+                    // Afficher chaque élément
+                    foreach (string element in elements)
+                    {
+                        Dictionary<string, CheckBox> myCbs = GetCheckboxsDictionary();
+                        if(element != "")
+                        {
+                            CheckBox myCb = myCbs[element];
+                            myCb.Checked = true;
+                        }
+                        
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Profil non trouvé : " + profileCode);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Fichier profile.txt introuvable.");
+            }
+        }
     }
+
 }
+
