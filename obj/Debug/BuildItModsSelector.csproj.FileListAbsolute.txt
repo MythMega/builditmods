@@ -25,6 +25,7 @@ C:\Users\mythm\source\repos\MySurvivalMods\obj\Debug\BuildItModsSelector.pdb
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\bin\Debug\BuildItModsSelector.exe.config
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\bin\Debug\BuildItModsSelector.exe
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\bin\Debug\BuildItModsSelector.pdb
+C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\bin\Debug\MaterialSkin.dll
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildItModsSelector.csproj.AssemblyReference.cache
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildItModsSelector.csproj.SuggestedBindingRedirects.cache
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildItModsSelector.Main.resources
@@ -32,5 +33,6 @@ C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildIt
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildItModsSelector.Properties.Resources.resources
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildItModsSelector.csproj.GenerateResource.cache
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildItModsSelector.csproj.CoreCompileInputs.cache
+C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildItModsSelector.csproj.CopyComplete
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildItModsSelector.exe
 C:\Users\mythm\source\repos\MySurvivalModsRepos\mysurvivalmods\obj\Debug\BuildItModsSelector.pdb
