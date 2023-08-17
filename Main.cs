@@ -200,6 +200,8 @@ theme=DEFAULT";
                 Process process = new Process();
                 string filePath = "";
                 process.StartInfo.WorkingDirectory = Application.StartupPath;
+                process.StartInfo.CreateNoWindow = true; // Évite la création de fenêtre de console
+                process.StartInfo.UseShellExecute = false; // N'utilise pas le shell pour exécuter le fichier
 
                 if (cbWorldEdit.Checked) { filePath = Path.Combine(Application.StartupPath, "sys/bats/worldedit_enable.bat"); }
                 else { filePath = Path.Combine(Application.StartupPath, "sys/bats/worldedit_disable.bat"); }
