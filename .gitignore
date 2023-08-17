@@ -64,3 +64,5 @@ bld/
 
 # Visual Studio Code specific files
 .vscode/
+
+BuildItModsSelector.csproj
