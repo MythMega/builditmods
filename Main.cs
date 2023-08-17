@@ -29,6 +29,7 @@ namespace BuildItModsSelector
 
         public Main()
         {
+            checkStartingFolder();
             InitializeComponent();
             //crée un dossier sys si il n'existe pas
             if (!Directory.Exists(Path.Combine(Application.StartupPath, "sys"))) { Directory.CreateDirectory(Path.Combine(Application.StartupPath, "sys")); }
@@ -67,6 +68,26 @@ theme=DEFAULT";
             reloadProfiles();
             makeTranslation();
             updateTheme();
+        }
+
+        private void checkStartingFolder()
+        {
+            string appFolderPath = Path.GetDirectoryName(Application.ExecutablePath);
+
+            if (Path.GetFileName(appFolderPath) != "mods")
+            {
+                DialogResult result = MessageBox.Show(
+                    translatedText("WARN_MUSTSTARTINMODSFOLDER"),
+                    translatedText("WARN_WRONGFOLDER"),
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Warning
+                );
+
+                if (result == DialogResult.Cancel)
+                {
+                    this.Close();
+                }
+            }
         }
 
         private void reloadProfiles()
@@ -1182,6 +1203,9 @@ theme=DEFAULT";
                         case "ERR_TIMEOUT": resultat = "Timeout - Verifiez votre connexion."; break;
                         case "ERR_NOTYETIMPLEMENTED": resultat = "Cette feature n'est pas encore implémentée"; break;
                         case "ERR_EXEC-BATCH": resultat = "Une erreur s'est produite lors de l'exécution du fichier batch : "; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "Mauvais dossier : "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "Le logiciel doit être exécuté depuis le dossier 'mods' de votre .minecraft."; break;
 
                         case "MOUSEHOVER_BTNQUITTER": resultat = "Regarde ce que ça fait..."; break;
                         case "MOUSEHOVER_BTNREPORT": resultat = "Ouvrir le rapport de problème."; break;
