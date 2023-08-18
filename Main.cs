@@ -1237,6 +1237,7 @@ theme=DEFAULT";
                     btnUpdateMods.Text = "Update/Download Mods";
                     btnReport.Text = "Report a Problem";
                     btnQuitter.Text = "Quit";
+                    btnStartMinecraft.Text = "Lancer Minecraft";
 
                     // section
                     gbFastProfiles.Text = "Fast Profiles";
@@ -1276,6 +1277,7 @@ theme=DEFAULT";
                     btnUpdateMods.Text = "Mettre à jours/télécharger mods";
                     btnReport.Text = "Signaler un problème";
                     btnQuitter.Text = "Quitter";
+                    btnStartMinecraft.Text = "Lancer Minecraft";
 
                     //section
                     gbFastProfiles.Text = "Profils rapides";
@@ -1291,6 +1293,7 @@ theme=DEFAULT";
                     configToolStripMenuItem.Text = "Paramètres";
                     aProposToolStripMenuItem.Text = "À propos";
                     themeToolStripMenuItem.Text = "thème";
+                    contributeursToolStripMenuItem.Text = "Contributeurs";
 
                     break;
 
