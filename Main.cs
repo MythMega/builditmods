@@ -852,11 +852,359 @@ theme=DEFAULT";
             File.WriteAllLines(profileFilePath, modifiedLines);
         }
 
+        public string getLanguageCode()
+        {
+            string ProfileFilePath = Path.Combine("sys", "profile.txt");
+            string[] lines = File.ReadAllLines(ProfileFilePath);
+            string code = "EN";
+
+            foreach (string line in lines)
+            {
+                if (line.StartsWith("language="))
+                {
+                    string language = line.Substring(line.IndexOf('=') + 1);
+                    Console.WriteLine($"Current language: {language}");
+                    return language;
+                }
+            }
+            return code;
+        }
+
+        public void UpdateProfileFile()
+        {
+            string[] lines = File.ReadAllLines(profileFilePath);
+
+            // Vérifier si la ligne "language=" existe
+            bool languageExists = false;
+            // Vérifier si la ligne "theme=" existe
+            bool themeExists = false;
+
+            foreach (string line in lines)
+            {
+                if (line.StartsWith("language="))
+                    languageExists = true;
+                if (line.StartsWith("theme="))
+                    themeExists = true;
+            }
+
+            // Si la ligne "language=" n'existe pas, l'ajouter à la fin du fichier
+            if (!languageExists)
+                File.AppendAllText(profileFilePath, "language=EN" + Environment.NewLine);
+
+            // Si la ligne "theme=" n'existe pas, l'ajouter à la fin du fichier
+            if (!themeExists)
+                File.AppendAllText(profileFilePath, "theme=DEFAULT" + Environment.NewLine);
+        }
+
+        private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            changeLanguage(comboBoxLanguage.SelectedItem.ToString().Substring(0, 2));
+            makeTranslation();
+        }
+
+        private void changeThemeClick(object sender, EventArgs e)
+        {
+            string theme = ((ToolStripMenuItem)sender).Text;
+            SetProfileValue("theme", theme);
+            updateTheme();
+        }
+
+        
+
+        private void MenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem menuItem)
+            {
+                menuItem.BackColor = Color.Gray; // Modifier la couleur de fond lors du survol
+            }
+        }
+
+        private void MenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem menuItem)
+            {
+                menuItem.BackColor = SystemColors.Control; // Rétablir la couleur de fond par défaut
+            }
+        }
+
+        private void MenuItem_Paint(object sender, PaintEventArgs e)
+        {
+            if (sender is ToolStripMenuItem menuItem)
+            {
+                if (menuItem.Selected)
+                {
+                    e.Graphics.FillRectangle(Brushes.LightBlue, e.ClipRectangle); // Modifier la couleur de fond lors de la sélection
+                }
+            }
+        }
+
+        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(translatedText("INFO_ABOUT"));
+        }
+
+        public void notYetImpletmentedFeature()
+        {
+            MessageBox.Show(translatedText("ERR_NOTYETIMPLEMENTED"));
+        }
+
+        private void mythMegaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(translatedText("INFO_MYTHMEGA"));
+        }
+
+        private void wikiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/MythMega/mysurvivalmods/wiki");
+        }
+
+        private void rafraichirProfilsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reloadProfiles();
+        }
+
+        private void réinitialiserProfilsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(translatedText("LBL_CONFIRMATION"), translatedText("LBL_WARNING"), MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            string[] lines = File.ReadAllLines(profileFilePath);
+
+            List<string> updatedLines = new List<string>();
+            int c = 1;
+
+            foreach (string line in lines)
+            {
+                if (line.StartsWith("p") && char.IsDigit(line[1]))
+                {
+                    // Garder les 3 premiers caractères de la ligne
+                    string updatedLine = line.Substring(0, 3) + $"Profile {c}";
+                    c++;
+                    updatedLines.Add(updatedLine);
+                }
+                else
+                {
+                    updatedLines.Add(line);
+                }
+            }
+
+            File.WriteAllLines(profileFilePath, updatedLines);
+            reloadProfiles();
+        }
+
+        private void btnLocateMinecraft_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(btnUpdateMods, translatedText("MOUSEHOVER_BTNUPDATE"));
+        }
+
+        private Dictionary<string, string> getContributor()
+        {
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            return keyValuePairs;
+        }
+
+        private string getContributorsNamesAndLbl(){
+            string res = string.Empty;
+            return res;
+        }
+
+        private void contributeursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
+
+
+        private void updateTheme()
+        {
+            string theme = GetProfileValue("theme");
+            List<Control> allControls = new List<Control>();
+
+            foreach (Control control in Controls)
+            {
+                allControls.Add(control);
+                if (control is GroupBox)
+                {
+                    foreach (Control element in control.Controls)
+                    {
+                        allControls.Add(element);
+                    }
+                }
+            }
+
+            Color backColor = Color.FromArgb(255, 225, 225, 225);
+            Color lightBackColor = Color.FromArgb(255, 225, 225, 245);
+            Color lightMainColor = Color.FromArgb(255, 12, 20, 55);
+            Color secondaryColor = Color.LightGray;
+            Color textColor = Color.Black;
+
+            switch (theme)
+            {
+                case "DEFAULT":
+                    backColor = Color.FromArgb(255, 225, 225, 225);
+                    lightBackColor = Color.FromArgb(255, 225, 225, 245);
+                    lightMainColor = Color.FromArgb(255, 12, 20, 55);
+                    secondaryColor = Color.LightGray;
+                    textColor = Color.Black;
+                    break;
+
+                case "DARK":
+                    backColor = Color.FromArgb(255, 10, 10, 14);
+                    lightBackColor = Color.FromArgb(255, 15, 15, 20);
+                    lightMainColor = Color.FromArgb(255, 17, 17, 23);
+                    secondaryColor = Color.FromArgb(255, 50, 50, 70);
+                    textColor = Color.White;
+                    break;
+
+                case "BUILDITGREEN":
+                    backColor = Color.FromArgb(255, 30, 30, 30);
+                    lightBackColor = Color.FromArgb(255, 40, 40, 40);
+                    lightMainColor = Color.FromArgb(255, 12, 55, 20);
+                    secondaryColor = Color.FromArgb(255, 50, 70, 50);
+                    textColor = Color.FromArgb(255, 28, 239, 91);
+                    break;
+
+                case "BUILDITBLUE":
+                    backColor = Color.FromArgb(255, 30, 30, 30);
+                    lightBackColor = Color.FromArgb(255, 40, 40, 40);
+                    lightMainColor = Color.FromArgb(255, 12, 20, 55);
+                    secondaryColor = Color.FromArgb(255, 50, 50, 70);
+                    textColor = Color.FromArgb(255, 50, 200, 244);
+                    break;
+
+                case "BUILDITYELLOW":
+                    backColor = Color.FromArgb(30, 30, 30);
+                    lightBackColor = Color.FromArgb(40, 40, 40);
+                    lightMainColor = Color.FromArgb(12, 55, 20);
+                    secondaryColor = Color.FromArgb(50, 70, 50);
+                    textColor = Color.Yellow;
+                    break;
+
+                case "BUILDITPINK":
+                    backColor = Color.FromArgb(30, 30, 30);
+                    lightBackColor = Color.FromArgb(40, 40, 40);
+                    lightMainColor = Color.FromArgb(12, 55, 20);
+                    secondaryColor = Color.FromArgb(50, 70, 50);
+                    textColor = Color.Pink;
+                    break;
+
+                case "BUILDITORANGE":
+                    backColor = Color.FromArgb(30, 30, 30);
+                    lightBackColor = Color.FromArgb(40, 40, 40);
+                    lightMainColor = Color.FromArgb(12, 55, 20);
+                    secondaryColor = Color.FromArgb(50, 70, 50);
+                    textColor = Color.Orange;
+                    break;
+
+                case "CANDY":
+                    backColor = Color.Pink;
+                    lightBackColor = Color.Purple;
+                    lightMainColor = Color.Blue;
+                    secondaryColor = Color.Green;
+                    textColor = Color.White;
+                    break;
+
+                case "MINT":
+                    backColor = Color.LightGreen;
+                    lightBackColor = Color.Green;
+                    lightMainColor = Color.DarkGreen;
+                    secondaryColor = Color.PaleGreen;
+                    textColor = Color.Black;
+                    break;
+
+                case "PASTEL":
+                    backColor = Color.FromArgb(240, 240, 240);
+                    lightBackColor = Color.FromArgb(230, 230, 230);
+                    lightMainColor = Color.FromArgb(200, 200, 200);
+                    secondaryColor = Color.LightGray;
+                    textColor = Color.White;
+                    break;
+
+                case "AQUA":
+                    backColor = Color.FromArgb(100, 149, 237);
+                    lightBackColor = Color.FromArgb(135, 206, 250);
+                    lightMainColor = Color.FromArgb(0, 0, 128);
+                    secondaryColor = Color.Cyan;
+                    textColor = Color.White;
+                    break;
+
+            }
+            menuStrip1.BackColor = backColor;
+            this.BackColor = backColor;
+
+            foreach (ToolStripMenuItem item in menuStrip1.Items.OfType<ToolStripMenuItem>())
+            {
+                item.BackColor = backColor;
+                item.ForeColor = textColor;
+
+                foreach (ToolStripItem subItem in item.DropDownItems)
+                {
+                    subItem.BackColor = lightBackColor;
+                    subItem.ForeColor = textColor;
+                    if (subItem is ToolStripMenuItem)
+                    {
+                        ToolStripMenuItem menuItem = (ToolStripMenuItem)subItem;
+                        foreach (ToolStripItem againmoresubItem in menuItem.DropDownItems)
+                        {
+                            againmoresubItem.BackColor = lightBackColor;
+                            againmoresubItem.ForeColor = textColor;
+                        }
+                    }
+                }
+            }
+            foreach (Control control in allControls)
+            {
+                switch (control)
+                {
+                    case Label label:
+                        // Action spécifique pour les labels
+                        // ...
+                        break;
+
+                    case Button button:
+                        button.BackColor = backColor;
+                        button.ForeColor = textColor;
+                        button.FlatAppearance.MouseOverBackColor = lightBackColor;
+                        button.FlatAppearance.MouseDownBackColor = lightMainColor;
+                        break;
+
+                    case GroupBox groupBox:
+                        groupBox.BackColor = backColor;
+                        groupBox.ForeColor = textColor;
+                        break;
+
+                    case TextBox textBox:
+                        textBox.BackColor = secondaryColor;
+                        textBox.ForeColor = textColor;
+                        break;
+
+                    case ComboBox comboBox:
+                        comboBox.BackColor = secondaryColor;
+                        comboBox.ForeColor = textColor;
+                        break;
+
+                    default:
+                        // Action par défaut pour les autres types de contrôles
+                        // ...
+                        break;
+                }
+
+            }
+
+        }
+
+
+        #region TRADUCTIONS
+
         public void makeTranslation()
         {
             string LanguageCode = getLanguageCode();
             string isEnabled = "!! Missing Translation !!";
-            
+
 
             lblJourneyMap.Text = "JourneyMap";
             lblLitematica.Text = "Litematica";
@@ -1184,7 +1532,7 @@ theme=DEFAULT";
                     break;
             }
 
-            foreach(CheckBox cb in GetCheckboxsDictionary().Values)
+            foreach (CheckBox cb in GetCheckboxsDictionary().Values)
             {
                 cb.Text = isEnabled;
             }
@@ -1197,12 +1545,13 @@ theme=DEFAULT";
             {
                 // french
                 case "FR":
-                    switch(textCode)
+                    switch (textCode)
                     {
                         case "ERR_NOMODS": resultat = "Une erreur s'est produite :( attention ce logiciel doit être placé dans le dossier mods de votre .minecraft !\nVerifiez aussi que vous avez bien téléchargé les mods !"; break;
                         case "ERR_TIMEOUT": resultat = "Timeout - Verifiez votre connexion."; break;
                         case "ERR_NOTYETIMPLEMENTED": resultat = "Cette feature n'est pas encore implémentée"; break;
                         case "ERR_EXEC-BATCH": resultat = "Une erreur s'est produite lors de l'exécution du fichier batch : "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Il semblerait qu'il soit pas possible de lancer minecraft"; break;
 
                         case "WARN_WRONGFOLDER": resultat = "Mauvais dossier : "; break;
                         case "WARN_MUSTSTARTINMODSFOLDER": resultat = "Le logiciel doit être exécuté depuis le dossier 'mods' de votre .minecraft."; break;
@@ -1217,9 +1566,25 @@ theme=DEFAULT";
                         case "INFO_SUCCESS": resultat = "Tout s'est déroulé avec succés !"; break;
                         case "INFO_ABOUT": resultat = $"My Survival Mods\nby MythMega\n2023\nVersion :{version}\nBuild : {app_build}"; break;
                         case "INFO_MYTHMEGA": resultat = "Je suis MythMega (j'ai pas encore crée cette section, c'est moins urgent)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"Les contributeurs sont les suivants :\n{getContributorsNamesAndLbl()}\nMerci à eux !"; break;
+
+                        case "CONTRIBUTORS": resultat = "Contributeurs"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = ""; break;
+                        case "CONTRIB_DEV": resultat = ""; break;
+                        case "CONTRIB_ARTIST": resultat = ""; break;
+                        case "CONTRIB_TESTER": resultat = ""; break;
+                        case "CONTRIB_OTHER": resultat = ""; break;
 
                         case "LBL_WARNING": resultat = "Attention !"; break;
                         case "LBL_CONFIRMATION": resultat = "ëtes vous sur de vouloir faire cette action ?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Tout déselctionner"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Tout selctionner"; break;
+                        case "LBL_STOP": resultat = "Arrêter"; break;
+                        case "LBL_OUI": resultat = "Oui"; break;
+                        case "LBL_NON": resultat = "Non"; break;
+                        case "LBL_ANNULER": resultat = "Annuler"; break;
+                        case "LBL_LOCALISER": resultat = "Localiser"; break;
+
                         case "": resultat = ""; break;
                     }
                     break;
@@ -1243,6 +1608,7 @@ theme=DEFAULT";
                         case "INFO_SUCCESS": resultat = "Everything went smoothly!"; break;
                         case "INFO_ABOUT": resultat = $"My Survival Mods\nby MythMega\n2023\nVersion :{version}\nBuild : {app_build}"; break;
                         case "INFO_MYTHMEGA": resultat = "I am MythMega (I haven't created this section yet, it's less urgent)."; break;
+
 
                         case "LBL_WARNING": resultat = "Warning!"; break;
                         case "LBL_CONFIRMATION": resultat = "Are you sure you want to perform this action?"; break;
@@ -1416,449 +1782,9 @@ theme=DEFAULT";
             return resultat;
         }
 
+        #endregion
 
-        public string getLanguageCode()
-        {
-            string ProfileFilePath = Path.Combine("sys", "profile.txt");
-            string[] lines = File.ReadAllLines(ProfileFilePath);
-            string code = "EN";
-
-            foreach (string line in lines)
-            {
-                if (line.StartsWith("language="))
-                {
-                    string language = line.Substring(line.IndexOf('=') + 1);
-                    Console.WriteLine($"Current language: {language}");
-                    return language;
-                }
-            }
-            return code;
-        }
-
-        public void UpdateProfileFile()
-        {
-            string[] lines = File.ReadAllLines(profileFilePath);
-
-            // Vérifier si la ligne "language=" existe
-            bool languageExists = false;
-            // Vérifier si la ligne "theme=" existe
-            bool themeExists = false;
-
-            foreach (string line in lines)
-            {
-                if (line.StartsWith("language="))
-                    languageExists = true;
-                if (line.StartsWith("theme="))
-                    themeExists = true;
-            }
-
-            // Si la ligne "language=" n'existe pas, l'ajouter à la fin du fichier
-            if (!languageExists)
-                File.AppendAllText(profileFilePath, "language=EN" + Environment.NewLine);
-
-            // Si la ligne "theme=" n'existe pas, l'ajouter à la fin du fichier
-            if (!themeExists)
-                File.AppendAllText(profileFilePath, "theme=DEFAULT" + Environment.NewLine);
-        }
-
-        private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            changeLanguage(comboBoxLanguage.SelectedItem.ToString().Substring(0, 2));
-            makeTranslation();
-        }
-
-        private void changeThemeClick(object sender, EventArgs e)
-        {
-            string theme = ((ToolStripMenuItem)sender).Text;
-            SetProfileValue("theme", theme);
-            updateTheme();
-        }
-
-        private void updateTheme()
-        {
-            string theme = GetProfileValue("theme");
-            List<Control> allControls = new List<Control>();
-
-            foreach (Control control in Controls)
-            {
-                allControls.Add(control);
-                if (control is GroupBox)
-                {
-                    foreach (Control element in control.Controls)
-                    {
-                        allControls.Add(element);
-                    }
-                }
-            }
-
-            switch (theme)
-            {
-                case "DEFAULT":
-                    Color backColor = Color.FromArgb(255, 225, 225, 225);
-                    Color lightBackCOlor = Color.FromArgb(255, 225, 225, 245);
-                    Color lightMainColor = Color.FromArgb(255, 12, 20, 55);
-                    Color SecondaryColor = Color.LightGray;
-                    Color textColor = Color.Black;
-
-                    menuStrip1.BackColor = backColor;
-                    this.BackColor = backColor;
-                    foreach (ToolStripMenuItem item in menuStrip1.Items.OfType<ToolStripMenuItem>())
-                    {
-                        item.BackColor = backColor;
-                        item.ForeColor = textColor;
-                        foreach (ToolStripItem subItem in item.DropDownItems)
-                        {
-                            subItem.BackColor = lightBackCOlor;
-                            subItem.ForeColor = textColor;
-                            if (subItem is ToolStripMenuItem)
-                            {
-                                ToolStripMenuItem menuItem = (ToolStripMenuItem)subItem;
-                                foreach (ToolStripItem againmoresubItem in menuItem.DropDownItems)
-                                {
-                                    againmoresubItem.BackColor = lightBackCOlor;
-                                    againmoresubItem.ForeColor = textColor;
-                                }
-                            }
-                        }
-                    }
-                    foreach (Control control in allControls)
-                    {
-                        switch (control)
-                        {
-                            case Label label:
-                                // Action spécifique pour les labels
-                                // ...
-                                break;
-
-                            case Button button:
-                                button.BackColor = backColor;
-                                button.ForeColor = textColor;
-                                button.FlatAppearance.MouseOverBackColor = lightBackCOlor;
-                                button.FlatAppearance.MouseDownBackColor = SecondaryColor;
-                                break;
-
-                            case GroupBox groupBox:
-                                groupBox.BackColor = backColor;
-                                groupBox.ForeColor = textColor;
-                                break;
-
-                            case TextBox textBox:
-                                textBox.BackColor = lightBackCOlor;
-                                textBox.ForeColor = textColor;
-                                break;
-
-                            case ComboBox comboBox:
-                                comboBox.BackColor = lightBackCOlor;
-                                comboBox.ForeColor = textColor;
-                                
-                                break;
-
-
-                            default:
-                                // Action par défaut pour les autres types de contrôles
-                                // ...
-                                break;
-                        }
-
-                    }
-                    break;
-
-                case "DARK":
-                    backColor = Color.FromArgb(255, 10, 10, 14);
-                    lightBackCOlor = Color.FromArgb(255, 15, 15, 20);
-                    lightMainColor = Color.FromArgb(255, 17, 17, 23);
-                    SecondaryColor = Color.FromArgb(255, 50, 50, 70);
-                    textColor = Color.White;
-
-                    menuStrip1.BackColor = backColor;
-                    this.BackColor = backColor;
-
-                    foreach (ToolStripMenuItem item in menuStrip1.Items.OfType<ToolStripMenuItem>())
-                    {
-                        item.BackColor = backColor;
-                        item.ForeColor = textColor;
-
-                        foreach (ToolStripItem subItem in item.DropDownItems)
-                        {
-                            subItem.BackColor = lightBackCOlor;
-                            subItem.ForeColor = textColor;
-                            if (subItem is ToolStripMenuItem)
-                            {
-                                ToolStripMenuItem menuItem = (ToolStripMenuItem)subItem;
-                                foreach (ToolStripItem againmoresubItem in menuItem.DropDownItems)
-                                {
-                                    againmoresubItem.BackColor = lightBackCOlor;
-                                    againmoresubItem.ForeColor = textColor;
-                                }
-                            }
-                        }
-                    }
-                    foreach (Control control in allControls)
-                    {
-                        switch (control)
-                        {
-                            case Label label:
-                                // Action spécifique pour les labels
-                                // ...
-                                break;
-
-                            case Button button:
-                                button.BackColor = backColor;
-                                button.ForeColor = textColor;
-                                button.FlatAppearance.MouseOverBackColor = lightBackCOlor;
-                                button.FlatAppearance.MouseDownBackColor = lightMainColor;
-                                break;
-
-                            case GroupBox groupBox:
-                                groupBox.BackColor = backColor;
-                                groupBox.ForeColor = textColor;
-                                break;
-
-                            case TextBox textBox:
-                                textBox.BackColor = SecondaryColor;
-                                textBox.ForeColor = textColor;
-                                break;
-
-                            case ComboBox comboBox:
-                                comboBox.BackColor = SecondaryColor;
-                                comboBox.ForeColor = textColor;
-                                break;
-
-                            default:
-                                // Action par défaut pour les autres types de contrôles
-                                // ...
-                                break;
-                        }
-
-                    }
-                    break;
-
-                case "BUILDITGREEN":
-                    backColor = Color.FromArgb(255, 30, 30, 30);
-                    lightBackCOlor = Color.FromArgb(255, 40, 40, 40);
-                    lightMainColor = Color.FromArgb(255, 12, 55, 20);
-                    SecondaryColor = Color.FromArgb(255, 50, 70, 50);
-                    textColor = Color.FromArgb(255, 28, 239, 91);
-
-                    menuStrip1.BackColor = backColor;
-                    this.BackColor = backColor;
-
-                    foreach (ToolStripMenuItem item in menuStrip1.Items.OfType<ToolStripMenuItem>())
-                    {
-                        item.BackColor = backColor;
-                        item.ForeColor = textColor;
-
-                        foreach (ToolStripItem subItem in item.DropDownItems)
-                        {
-                            subItem.BackColor = lightBackCOlor;
-                            subItem.ForeColor = textColor;
-                            if (subItem is ToolStripMenuItem)
-                            {
-                                ToolStripMenuItem menuItem = (ToolStripMenuItem)subItem;
-                                foreach (ToolStripItem againmoresubItem in menuItem.DropDownItems)
-                                {
-                                    againmoresubItem.BackColor = lightBackCOlor;
-                                    againmoresubItem.ForeColor = textColor;
-                                }
-                            }
-                        }
-                    }
-                    foreach (Control control in allControls)
-                    {
-                        switch (control)
-                        {
-                            case Label label:
-                                // Action spécifique pour les labels
-                                // ...
-                                break;
-
-                            case Button button:
-                                button.BackColor = backColor;
-                                button.ForeColor = textColor;
-                                button.FlatAppearance.MouseOverBackColor = lightBackCOlor;
-                                button.FlatAppearance.MouseDownBackColor = lightMainColor;
-                                break;
-
-                            case GroupBox groupBox:
-                                groupBox.BackColor = backColor;
-                                groupBox.ForeColor = textColor;
-                                break;
-
-                            case TextBox textBox:
-                                textBox.BackColor = SecondaryColor;
-                                textBox.ForeColor = textColor;
-                                break;
-
-                            case ComboBox comboBox:
-                                comboBox.BackColor = SecondaryColor;
-                                comboBox.ForeColor = textColor;
-                                break;
-
-                            default:
-                                // Action par défaut pour les autres types de contrôles
-                                // ...
-                                break;
-                        }
-
-                    }
-                    break;
-
-                case "BUILDITBLUE":
-                    backColor = Color.FromArgb(255, 30, 30, 30);
-                    lightBackCOlor = Color.FromArgb(255, 40, 40, 40);
-                    lightMainColor = Color.FromArgb(255, 12, 20, 55);
-                    SecondaryColor = Color.FromArgb(255, 50, 50, 70);
-                    textColor = Color.FromArgb(255, 50, 200, 244);
-
-                    menuStrip1.BackColor = backColor;
-                    this.BackColor = backColor;
-
-                    foreach (ToolStripMenuItem item in menuStrip1.Items.OfType<ToolStripMenuItem>())
-                    {
-                        item.BackColor = backColor;
-                        item.ForeColor = textColor;
-
-                        foreach (ToolStripItem subItem in item.DropDownItems)
-                        {
-                            subItem.BackColor = lightBackCOlor;
-                            subItem.ForeColor = textColor;
-                            if (subItem is ToolStripMenuItem)
-                            {
-                                ToolStripMenuItem menuItem = (ToolStripMenuItem)subItem;
-                                foreach (ToolStripItem againmoresubItem in menuItem.DropDownItems)
-                                {
-                                    againmoresubItem.BackColor = lightBackCOlor;
-                                    againmoresubItem.ForeColor = textColor;
-                                }
-                            }
-                        }
-                    }
-                    foreach (Control control in allControls)
-                    {
-                        switch (control)
-                        {
-                            case Label label:
-                                // Action spécifique pour les labels
-                                // ...
-                                break;
-
-                            case Button button:
-                                button.BackColor = backColor;
-                                button.ForeColor = textColor;
-                                button.FlatAppearance.MouseOverBackColor = lightBackCOlor;
-                                button.FlatAppearance.MouseDownBackColor = lightMainColor;
-                                break;
-
-                            case GroupBox groupBox:
-                                groupBox.BackColor = backColor;
-                                groupBox.ForeColor = textColor;
-                                break;
-
-                            case TextBox textBox:
-                                textBox.BackColor = SecondaryColor;
-                                textBox.ForeColor = textColor;
-                                break;
-
-                            case ComboBox comboBox:
-                                comboBox.BackColor = SecondaryColor;
-                                comboBox.ForeColor = textColor;
-                                break;
-
-                            default:
-                                // Action par défaut pour les autres types de contrôles
-                                // ...
-                                break;
-                        }
-
-                    }
-                    break;
-            }
-        }
-
-        private void MenuItem_MouseEnter(object sender, EventArgs e)
-        {
-            if (sender is ToolStripMenuItem menuItem)
-            {
-                menuItem.BackColor = Color.Gray; // Modifier la couleur de fond lors du survol
-            }
-        }
-
-        private void MenuItem_MouseLeave(object sender, EventArgs e)
-        {
-            if (sender is ToolStripMenuItem menuItem)
-            {
-                menuItem.BackColor = SystemColors.Control; // Rétablir la couleur de fond par défaut
-            }
-        }
-
-        private void MenuItem_Paint(object sender, PaintEventArgs e)
-        {
-            if (sender is ToolStripMenuItem menuItem)
-            {
-                if (menuItem.Selected)
-                {
-                    e.Graphics.FillRectangle(Brushes.LightBlue, e.ClipRectangle); // Modifier la couleur de fond lors de la sélection
-                }
-            }
-        }
-
-        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(translatedText("INFO_ABOUT"));
-        }
-
-        public void notYetImpletmentedFeature()
-        {
-            MessageBox.Show(translatedText("ERR_NOTYETIMPLEMENTED"));
-        }
-
-        private void mythMegaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(translatedText("INFO_MYTHMEGA"));
-        }
-
-        private void wikiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/MythMega/mysurvivalmods/wiki");
-        }
-
-        private void rafraichirProfilsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            reloadProfiles();
-        }
-
-        private void réinitialiserProfilsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(translatedText("LBL_CONFIRMATION"), translatedText("LBL_WARNING"), MessageBoxButtons.YesNo);
-
-            if (result == DialogResult.No)
-            {
-                return;
-            }
-
-            string[] lines = File.ReadAllLines(profileFilePath);
-
-            List<string> updatedLines = new List<string>();
-            int c = 1;
-
-            foreach (string line in lines)
-            {
-                if (line.StartsWith("p") && char.IsDigit(line[1]))
-                {
-                    // Garder les 3 premiers caractères de la ligne
-                    string updatedLine = line.Substring(0, 3) + $"Profile {c}";
-                    c++;
-                    updatedLines.Add(updatedLine);
-                }
-                else
-                {
-                    updatedLines.Add(line);
-                }
-            }
-
-            File.WriteAllLines(profileFilePath, updatedLines);
-            reloadProfiles();
-        }
+        
     }
 }
 

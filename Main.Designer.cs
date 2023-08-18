@@ -97,6 +97,9 @@
             this.btnProfile2 = new System.Windows.Forms.Button();
             this.btnProfile1 = new System.Windows.Forms.Button();
             this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
+            this.btnStartMinecraft = new System.Windows.Forms.Button();
+            this.btnLocateMinecraft = new System.Windows.Forms.Button();
+            this.contributeursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbMods.SuspendLayout();
             this.gbSystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -660,7 +663,7 @@
             this.profil7ToolStripMenuItem,
             this.profil8ToolStripMenuItem});
             this.profilsToolStripMenuItem.Name = "profilsToolStripMenuItem";
-            this.profilsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.profilsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.profilsToolStripMenuItem.Text = "Sauvegarder profils";
             // 
             // profil1ToolStripMenuItem
@@ -730,14 +733,14 @@
             // rafraichirProfilsToolStripMenuItem
             // 
             this.rafraichirProfilsToolStripMenuItem.Name = "rafraichirProfilsToolStripMenuItem";
-            this.rafraichirProfilsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rafraichirProfilsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.rafraichirProfilsToolStripMenuItem.Text = "Rafraichir profils";
             this.rafraichirProfilsToolStripMenuItem.Click += new System.EventHandler(this.rafraichirProfilsToolStripMenuItem_Click);
             // 
             // réinitialiserProfilsToolStripMenuItem
             // 
             this.réinitialiserProfilsToolStripMenuItem.Name = "réinitialiserProfilsToolStripMenuItem";
-            this.réinitialiserProfilsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.réinitialiserProfilsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.réinitialiserProfilsToolStripMenuItem.Text = "Réinitialiser profils";
             this.réinitialiserProfilsToolStripMenuItem.Click += new System.EventHandler(this.réinitialiserProfilsToolStripMenuItem_Click);
             // 
@@ -746,7 +749,8 @@
             this.infosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aProposToolStripMenuItem,
             this.mythMegaToolStripMenuItem,
-            this.wikiToolStripMenuItem});
+            this.wikiToolStripMenuItem,
+            this.contributeursToolStripMenuItem});
             this.infosToolStripMenuItem.Name = "infosToolStripMenuItem";
             this.infosToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.infosToolStripMenuItem.Text = "Infos";
@@ -832,11 +836,11 @@
             this.gbFastProfiles.Controls.Add(this.btnProfile2);
             this.gbFastProfiles.Controls.Add(this.btnProfile1);
             this.gbFastProfiles.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFastProfiles.Location = new System.Drawing.Point(6, 476);
+            this.gbFastProfiles.Location = new System.Drawing.Point(7, 504);
             this.gbFastProfiles.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbFastProfiles.Name = "gbFastProfiles";
             this.gbFastProfiles.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.gbFastProfiles.Size = new System.Drawing.Size(570, 189);
+            this.gbFastProfiles.Size = new System.Drawing.Size(570, 205);
             this.gbFastProfiles.TabIndex = 3;
             this.gbFastProfiles.TabStop = false;
             this.gbFastProfiles.Text = "Fast Profiles";
@@ -844,7 +848,7 @@
             // txbProfileName
             // 
             this.txbProfileName.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbProfileName.Location = new System.Drawing.Point(193, 20);
+            this.txbProfileName.Location = new System.Drawing.Point(193, 23);
             this.txbProfileName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txbProfileName.Name = "txbProfileName";
             this.txbProfileName.Size = new System.Drawing.Size(192, 21);
@@ -860,7 +864,7 @@
             this.btnProfile8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile8.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile8.Location = new System.Drawing.Point(293, 153);
+            this.btnProfile8.Location = new System.Drawing.Point(293, 160);
             this.btnProfile8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile8.Name = "btnProfile8";
             this.btnProfile8.Size = new System.Drawing.Size(257, 27);
@@ -880,7 +884,7 @@
             this.btnProfile6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile6.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile6.Location = new System.Drawing.Point(293, 119);
+            this.btnProfile6.Location = new System.Drawing.Point(293, 126);
             this.btnProfile6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile6.Name = "btnProfile6";
             this.btnProfile6.Size = new System.Drawing.Size(257, 27);
@@ -900,7 +904,7 @@
             this.btnProfile4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile4.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile4.Location = new System.Drawing.Point(293, 84);
+            this.btnProfile4.Location = new System.Drawing.Point(293, 91);
             this.btnProfile4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile4.Name = "btnProfile4";
             this.btnProfile4.Size = new System.Drawing.Size(257, 27);
@@ -920,7 +924,7 @@
             this.btnProfile7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile7.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile7.Location = new System.Drawing.Point(22, 153);
+            this.btnProfile7.Location = new System.Drawing.Point(22, 160);
             this.btnProfile7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile7.Name = "btnProfile7";
             this.btnProfile7.Size = new System.Drawing.Size(258, 27);
@@ -940,7 +944,7 @@
             this.btnProfile5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile5.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile5.Location = new System.Drawing.Point(22, 119);
+            this.btnProfile5.Location = new System.Drawing.Point(22, 126);
             this.btnProfile5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile5.Name = "btnProfile5";
             this.btnProfile5.Size = new System.Drawing.Size(258, 27);
@@ -960,7 +964,7 @@
             this.btnProfile3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile3.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile3.Location = new System.Drawing.Point(22, 84);
+            this.btnProfile3.Location = new System.Drawing.Point(22, 91);
             this.btnProfile3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile3.Name = "btnProfile3";
             this.btnProfile3.Size = new System.Drawing.Size(258, 27);
@@ -980,7 +984,7 @@
             this.btnProfile2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile2.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile2.Location = new System.Drawing.Point(293, 50);
+            this.btnProfile2.Location = new System.Drawing.Point(293, 57);
             this.btnProfile2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile2.Name = "btnProfile2";
             this.btnProfile2.Size = new System.Drawing.Size(257, 27);
@@ -1000,7 +1004,7 @@
             this.btnProfile1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile1.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile1.Location = new System.Drawing.Point(22, 50);
+            this.btnProfile1.Location = new System.Drawing.Point(22, 57);
             this.btnProfile1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile1.Name = "btnProfile1";
             this.btnProfile1.Size = new System.Drawing.Size(258, 27);
@@ -1032,13 +1036,45 @@
             this.comboBoxLanguage.Text = "Language";
             this.comboBoxLanguage.SelectedIndexChanged += new System.EventHandler(this.comboBoxLanguage_SelectedIndexChanged);
             // 
+            // btnStartMinecraft
+            // 
+            this.btnStartMinecraft.FlatAppearance.BorderSize = 0;
+            this.btnStartMinecraft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartMinecraft.Location = new System.Drawing.Point(17, 475);
+            this.btnStartMinecraft.Name = "btnStartMinecraft";
+            this.btnStartMinecraft.Size = new System.Drawing.Size(477, 23);
+            this.btnStartMinecraft.TabIndex = 5;
+            this.btnStartMinecraft.Text = "START";
+            this.btnStartMinecraft.UseVisualStyleBackColor = true;
+            // 
+            // btnLocateMinecraft
+            // 
+            this.btnLocateMinecraft.FlatAppearance.BorderSize = 0;
+            this.btnLocateMinecraft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLocateMinecraft.Location = new System.Drawing.Point(501, 475);
+            this.btnLocateMinecraft.Name = "btnLocateMinecraft";
+            this.btnLocateMinecraft.Size = new System.Drawing.Size(72, 23);
+            this.btnLocateMinecraft.TabIndex = 6;
+            this.btnLocateMinecraft.Text = "►";
+            this.btnLocateMinecraft.UseVisualStyleBackColor = true;
+            this.btnLocateMinecraft.MouseHover += new System.EventHandler(this.btnLocateMinecraft_MouseHover);
+            // 
+            // contributeursToolStripMenuItem
+            // 
+            this.contributeursToolStripMenuItem.Name = "contributeursToolStripMenuItem";
+            this.contributeursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contributeursToolStripMenuItem.Text = "Contributeurs";
+            this.contributeursToolStripMenuItem.Click += new System.EventHandler(this.contributeursToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(585, 672);
+            this.ClientSize = new System.Drawing.Size(585, 721);
+            this.Controls.Add(this.btnLocateMinecraft);
+            this.Controls.Add(this.btnStartMinecraft);
             this.Controls.Add(this.comboBoxLanguage);
             this.Controls.Add(this.gbFastProfiles);
             this.Controls.Add(this.gbSystem);
@@ -1135,6 +1171,9 @@
         private System.Windows.Forms.ToolStripMenuItem dARKToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bUILDITGREENToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bUILDITBLUEToolStripMenuItem;
+        private System.Windows.Forms.Button btnStartMinecraft;
+        private System.Windows.Forms.Button btnLocateMinecraft;
+        private System.Windows.Forms.ToolStripMenuItem contributeursToolStripMenuItem;
     }
 }
 
