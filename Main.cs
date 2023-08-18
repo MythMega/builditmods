@@ -1237,7 +1237,6 @@ theme=DEFAULT";
                     btnUpdateMods.Text = "Update/Download Mods";
                     btnReport.Text = "Report a Problem";
                     btnQuitter.Text = "Quit";
-                    btnStartMinecraft.Text = "Lancer Minecraft";
 
                     // section
                     gbFastProfiles.Text = "Fast Profiles";
@@ -1596,25 +1595,43 @@ theme=DEFAULT";
                 case "EN":
                     switch (textCode)
                     {
-                        case "ERR_NOMODS": resultat = "An error occurred :( Make sure this software is placed in the mods folder of your .minecraft!\nAlso, check that you have downloaded the mods!"; break;
+                        case "ERR_NOMODS": resultat = "An error occurred :( Please ensure this software is placed in the 'mods' folder of your .minecraft!\nAlso, make sure you have downloaded the mods!"; break;
                         case "ERR_TIMEOUT": resultat = "Timeout - Check your connection."; break;
-                        case "ERR_NOTYETIMPLEMENTED": resultat = "This feature is not yet implemented"; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "This feature is not yet implemented."; break;
                         case "ERR_EXEC-BATCH": resultat = "An error occurred while executing the batch file: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "It seems that launching Minecraft is not possible."; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "Wrong folder: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "The software must be executed from the 'mods' folder of your .minecraft."; break;
 
                         case "MOUSEHOVER_BTNQUITTER": resultat = "See what it does..."; break;
-                        case "MOUSEHOVER_BTNREPORT": resultat = "Open the problem report."; break;
-                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Open the changelog URL, a summary of changes by updates."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "Open problem report."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Open the changelog URL, summary of changes per updates."; break;
                         case "MOUSEHOVER_BTNSOURCECODE": resultat = "Open the GitHub repository."; break;
                         case "MOUSEHOVER_BTNFABRIC": resultat = "Open the URL to download Fabric."; break;
-                        case "MOUSEHOVER_BTNUPDATE": resultat = "Download / Update the mods"; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "Download / Update mods"; break;
 
-                        case "INFO_SUCCESS": resultat = "Everything went smoothly!"; break;
-                        case "INFO_ABOUT": resultat = $"My Survival Mods\nby MythMega\n2023\nVersion :{version}\nBuild : {app_build}"; break;
+                        case "INFO_SUCCESS": resultat = "Everything went successfully!"; break;
+                        case "INFO_ABOUT": resultat = $"My Survival Mods\nby MythMega\n2023\nVersion: {version}\nBuild: {app_build}"; break;
                         case "INFO_MYTHMEGA": resultat = "I am MythMega (I haven't created this section yet, it's less urgent)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"The contributors are as follows:\n{getContributorsNamesAndLbl()}\nThanks to them!"; break;
 
+                        case "CONTRIBUTORS": resultat = "Contributors"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Translation"; break;
+                        case "CONTRIB_DEV": resultat = "Development"; break;
+                        case "CONTRIB_ARTIST": resultat = "Artist/Design"; break;
+                        case "CONTRIB_TESTER": resultat = "Tester"; break;
+                        case "CONTRIB_OTHER": resultat = "Other"; break;
 
                         case "LBL_WARNING": resultat = "Warning!"; break;
                         case "LBL_CONFIRMATION": resultat = "Are you sure you want to perform this action?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Deselect All"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Select All"; break;
+                        case "LBL_STOP": resultat = "Stop"; break;
+                        case "LBL_OUI": resultat = "Yes"; break;
+                        case "LBL_NON": resultat = "No"; break;
+                        case "LBL_ANNULER": resultat = "Cancel"; break;
+                        case "LBL_LOCALISER": resultat = "Locate"; break;
 
                         case "": resultat = ""; break;
                     }
@@ -1624,24 +1641,43 @@ theme=DEFAULT";
                 case "ES":
                     switch (textCode)
                     {
-                        case "ERR_NOMODS": resultat = "Se produjo un error :( Asegúrate de que este software esté ubicado en la carpeta mods de tu .minecraft!\n¡También verifica que hayas descargado los mods!"; break;
-                        case "ERR_TIMEOUT": resultat = "Tiempo de espera - Verifica tu conexión."; break;
-                        case "ERR_NOTYETIMPLEMENTED": resultat = "Esta función aún no está implementada"; break;
-                        case "ERR_EXEC-BATCH": resultat = "Se produjo un error al ejecutar el archivo por lotes: "; break;
+                        case "ERR_NOMODS": resultat = "¡Se ha producido un error! :( Asegúrate de que este software esté ubicado en la carpeta 'mods' de tu .minecraft.\n¡También verifica que hayas descargado los mods!"; break;
+                        case "ERR_TIMEOUT": resultat = "Tiempo agotado - Verifica tu conexión."; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "Esta característica aún no está implementada."; break;
+                        case "ERR_EXEC-BATCH": resultat = "Se ha producido un error al ejecutar el archivo por lotes: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Parece que no es posible ejecutar Minecraft."; break;
 
-                        case "MOUSEHOVER_BTNQUITTER": resultat = "Mira lo que hace..."; break;
-                        case "MOUSEHOVER_BTNREPORT": resultat = "Abrir el informe de problemas."; break;
-                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Abrir la URL del registro de cambios, un resumen de los cambios por actualizaciones."; break;
+                        case "WARN_WRONGFOLDER": resultat = "Carpeta incorrecta: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "El software debe ejecutarse desde la carpeta 'mods' de tu .minecraft."; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "Observa qué hace..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "Abrir el informe del problema."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Abrir la URL del registro de cambios, resumen de los cambios por actualizaciones."; break;
                         case "MOUSEHOVER_BTNSOURCECODE": resultat = "Abrir el repositorio de GitHub."; break;
                         case "MOUSEHOVER_BTNFABRIC": resultat = "Abrir la URL para descargar Fabric."; break;
-                        case "MOUSEHOVER_BTNUPDATE": resultat = "Descargar / Actualizar los mods"; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "Descargar / Actualizar mods"; break;
 
-                        case "INFO_SUCCESS": resultat = "¡Todo salió bien!"; break;
-                        case "INFO_ABOUT": resultat = $"Mis Mods de Supervivencia\npor MythMega\n2023\nVersión :{version}\nBuild : {app_build}"; break;
+                        case "INFO_SUCCESS": resultat = "¡Todo se realizó con éxito!"; break;
+                        case "INFO_ABOUT": resultat = $"Mis Mods de Supervivencia\npor MythMega\n2023\nVersión: {version}\nCompilación: {app_build}"; break;
                         case "INFO_MYTHMEGA": resultat = "Soy MythMega (todavía no he creado esta sección, es menos urgente)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"Los colaboradores son los siguientes:\n{getContributorsNamesAndLbl()}\n¡Gracias a ellos!"; break;
+
+                        case "CONTRIBUTORS": resultat = "Colaboradores"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Traducción"; break;
+                        case "CONTRIB_DEV": resultat = "Desarrollo"; break;
+                        case "CONTRIB_ARTIST": resultat = "Artista/Diseño"; break;
+                        case "CONTRIB_TESTER": resultat = "Probador"; break;
+                        case "CONTRIB_OTHER": resultat = "Otro"; break;
 
                         case "LBL_WARNING": resultat = "¡Advertencia!"; break;
-                        case "LBL_CONFIRMATION": resultat = "¿Estás seguro de que deseas realizar esta acción?"; break;
+                        case "LBL_CONFIRMATION": resultat = "¿Estás seguro de que quieres realizar esta acción?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Deseleccionar Todo"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Seleccionar Todo"; break;
+                        case "LBL_STOP": resultat = "Detener"; break;
+                        case "LBL_OUI": resultat = "Sí"; break;
+                        case "LBL_NON": resultat = "No"; break;
+                        case "LBL_ANNULER": resultat = "Cancelar"; break;
+                        case "LBL_LOCALISER": resultat = "Localizar"; break;
 
                         case "": resultat = ""; break;
                     }
@@ -1651,24 +1687,43 @@ theme=DEFAULT";
                 case "DE":
                     switch (textCode)
                     {
-                        case "ERR_NOMODS": resultat = "Es ist ein Fehler aufgetreten :( Stellen Sie sicher, dass diese Software im mods-Ordner Ihrer .minecraft-Installation platziert ist!\nÜberprüfen Sie auch, ob Sie die Mods heruntergeladen haben!"; break;
-                        case "ERR_TIMEOUT": resultat = "Timeout - Überprüfen Sie Ihre Verbindung."; break;
-                        case "ERR_NOTYETIMPLEMENTED": resultat = "Diese Funktion ist noch nicht implementiert"; break;
-                        case "ERR_EXEC-BATCH": resultat = "Es ist ein Fehler beim Ausführen der Batch-Datei aufgetreten: "; break;
+                        case "ERR_NOMODS": resultat = "Ein Fehler ist aufgetreten :( Stelle sicher, dass diese Software im 'mods'-Ordner deines .minecraft-Verzeichnisses platziert ist!\nStelle außerdem sicher, dass du die Mods heruntergeladen hast!"; break;
+                        case "ERR_TIMEOUT": resultat = "Zeitüberschreitung - Überprüfe deine Verbindung."; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "Diese Funktion ist noch nicht implementiert."; break;
+                        case "ERR_EXEC-BATCH": resultat = "Ein Fehler ist während der Ausführung der Stapeldatei aufgetreten: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Es scheint, dass das Starten von Minecraft nicht möglich ist."; break;
 
-                        case "MOUSEHOVER_BTNQUITTER": resultat = "Schauen Sie, was es tut..."; break;
-                        case "MOUSEHOVER_BTNREPORT": resultat = "Öffnen Sie den Fehlerbericht."; break;
-                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Öffnen Sie die URL des Änderungsprotokolls, eine Zusammenfassung der Änderungen nach Updates."; break;
-                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "Öffnen Sie das GitHub-Repository."; break;
-                        case "MOUSEHOVER_BTNFABRIC": resultat = "Öffnen Sie die URL zum Herunterladen von Fabric."; break;
+                        case "WARN_WRONGFOLDER": resultat = "Falscher Ordner: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "Die Software muss aus dem 'mods'-Ordner deines .minecraft-Verzeichnisses ausgeführt werden."; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "Schau, was passiert..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "Problembericht öffnen."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Öffne die URL des Changelogs, Zusammenfassung der Änderungen pro Update."; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "GitHub-Repository öffnen."; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "Öffne die URL zum Herunterladen von Fabric."; break;
                         case "MOUSEHOVER_BTNUPDATE": resultat = "Mods herunterladen / aktualisieren"; break;
 
-                        case "INFO_SUCCESS": resultat = "Alles verlief reibungslos!"; break;
-                        case "INFO_ABOUT": resultat = $"Meine Survival-Mods\nvon MythMega\n2023\nVersion :{version}\nBuild : {app_build}"; break;
+                        case "INFO_SUCCESS": resultat = "Alles lief erfolgreich ab!"; break;
+                        case "INFO_ABOUT": resultat = $"Meine Survival Mods\nvon MythMega\n2023\nVersion: {version}\nBuild: {app_build}"; break;
                         case "INFO_MYTHMEGA": resultat = "Ich bin MythMega (ich habe diesen Abschnitt noch nicht erstellt, es ist weniger dringend)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"Die Beitragenden sind wie folgt:\n{getContributorsNamesAndLbl()}\nDanke an sie!"; break;
 
-                        case "LBL_WARNING": resultat = "Achtung!"; break;
-                        case "LBL_CONFIRMATION": resultat = "Sind Sie sicher, dass Sie diese Aktion ausführen möchten?"; break;
+                        case "CONTRIBUTORS": resultat = "Beitragende"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Übersetzung"; break;
+                        case "CONTRIB_DEV": resultat = "Entwicklung"; break;
+                        case "CONTRIB_ARTIST": resultat = "Künstler/Design"; break;
+                        case "CONTRIB_TESTER": resultat = "Tester"; break;
+                        case "CONTRIB_OTHER": resultat = "Andere"; break;
+
+                        case "LBL_WARNING": resultat = "Warnung!"; break;
+                        case "LBL_CONFIRMATION": resultat = "Bist du sicher, dass du diese Aktion durchführen möchtest?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Alles abwählen"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Alles auswählen"; break;
+                        case "LBL_STOP": resultat = "Stoppen"; break;
+                        case "LBL_OUI": resultat = "Ja"; break;
+                        case "LBL_NON": resultat = "Nein"; break;
+                        case "LBL_ANNULER": resultat = "Abbrechen"; break;
+                        case "LBL_LOCALISER": resultat = "Lokalisieren"; break;
 
                         case "": resultat = ""; break;
                     }
@@ -1678,24 +1733,43 @@ theme=DEFAULT";
                 case "IT":
                     switch (textCode)
                     {
-                        case "ERR_NOMODS": resultat = "Si è verificato un errore :( Assicurati che questo software sia posizionato nella cartella mods della tua .minecraft!\nVerifica anche di aver scaricato le mod!"; break;
+                        case "ERR_NOMODS": resultat = "Si è verificato un errore :( Assicurati che questo software sia posizionato nella cartella 'mods' del tuo .minecraft!\nVerifica anche di aver scaricato le mod!"; break;
                         case "ERR_TIMEOUT": resultat = "Timeout - Verifica la tua connessione."; break;
-                        case "ERR_NOTYETIMPLEMENTED": resultat = "Questa funzionalità non è ancora implementata"; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "Questa funzionalità non è ancora implementata."; break;
                         case "ERR_EXEC-BATCH": resultat = "Si è verificato un errore durante l'esecuzione del file batch: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Sembra che non sia possibile avviare Minecraft."; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "Cartella errata: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "Il software deve essere eseguito dalla cartella 'mods' del tuo .minecraft."; break;
 
                         case "MOUSEHOVER_BTNQUITTER": resultat = "Guarda cosa fa..."; break;
                         case "MOUSEHOVER_BTNREPORT": resultat = "Apri il rapporto del problema."; break;
-                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Apri l'URL del changelog, un riepilogo delle modifiche per gli aggiornamenti."; break;
-                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "Apri il repository di GitHub."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Apri l'URL del registro modifiche, riepilogo delle modifiche per aggiornamento."; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "Apri il repository GitHub."; break;
                         case "MOUSEHOVER_BTNFABRIC": resultat = "Apri l'URL per scaricare Fabric."; break;
                         case "MOUSEHOVER_BTNUPDATE": resultat = "Scarica / Aggiorna le mod"; break;
 
-                        case "INFO_SUCCESS": resultat = "Tutto è andato bene!"; break;
-                        case "INFO_ABOUT": resultat = $"Le mie mod di sopravvivenza\ndi MythMega\n2023\nVersione :{version}\nBuild : {app_build}"; break;
+                        case "INFO_SUCCESS": resultat = "Tutto è andato bene con successo!"; break;
+                        case "INFO_ABOUT": resultat = $"Le Mie Mod per la Sopravvivenza\ndi MythMega\n2023\nVersione: {version}\nBuild: {app_build}"; break;
                         case "INFO_MYTHMEGA": resultat = "Sono MythMega (non ho ancora creato questa sezione, è meno urgente)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"I collaboratori sono i seguenti:\n{getContributorsNamesAndLbl()}\nGrazie a loro!"; break;
+
+                        case "CONTRIBUTORS": resultat = "Collaboratori"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Traduzione"; break;
+                        case "CONTRIB_DEV": resultat = "Sviluppo"; break;
+                        case "CONTRIB_ARTIST": resultat = "Artista/Design"; break;
+                        case "CONTRIB_TESTER": resultat = "Tester"; break;
+                        case "CONTRIB_OTHER": resultat = "Altro"; break;
 
                         case "LBL_WARNING": resultat = "Attenzione!"; break;
                         case "LBL_CONFIRMATION": resultat = "Sei sicuro di voler eseguire questa azione?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Deseleziona tutto"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Seleziona tutto"; break;
+                        case "LBL_STOP": resultat = "Ferma"; break;
+                        case "LBL_OUI": resultat = "Sì"; break;
+                        case "LBL_NON": resultat = "No"; break;
+                        case "LBL_ANNULER": resultat = "Annulla"; break;
+                        case "LBL_LOCALISER": resultat = "Trova"; break;
 
                         case "": resultat = ""; break;
                     }
@@ -1705,24 +1779,43 @@ theme=DEFAULT";
                 case "PT":
                     switch (textCode)
                     {
-                        case "ERR_NOMODS": resultat = "Ocorreu um erro :( Certifique-se de que este software está localizado na pasta mods do seu .minecraft!\nVerifique também se você baixou os mods!"; break;
-                        case "ERR_TIMEOUT": resultat = "Tempo esgotado - Verifique sua conexão."; break;
-                        case "ERR_NOTYETIMPLEMENTED": resultat = "Esta funcionalidade ainda não está implementada"; break;
-                        case "ERR_EXEC-BATCH": resultat = "Ocorreu um erro ao executar o arquivo em lote: "; break;
+                        case "ERR_NOMODS": resultat = "Ocorreu um erro :( Certifique-se de que este software está na pasta 'mods' do seu .minecraft!\nCertifique-se também de que baixou as mods!"; break;
+                        case "ERR_TIMEOUT": resultat = "Timeout - Verifique a sua conexão."; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "Esta funcionalidade ainda não foi implementada."; break;
+                        case "ERR_EXEC-BATCH": resultat = "Ocorreu um erro durante a execução do arquivo em lote: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Parece que não é possível iniciar o Minecraft."; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "Pasta incorreta: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "O software deve ser executado a partir da pasta 'mods' do seu .minecraft."; break;
 
                         case "MOUSEHOVER_BTNQUITTER": resultat = "Veja o que faz..."; break;
-                        case "MOUSEHOVER_BTNREPORT": resultat = "Abrir o relatório de problemas."; break;
-                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Abrir a URL do changelog, um resumo das alterações por atualizações."; break;
-                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "Abrir o repositório do GitHub."; break;
-                        case "MOUSEHOVER_BTNFABRIC": resultat = "Abrir a URL para baixar o Fabric."; break;
-                        case "MOUSEHOVER_BTNUPDATE": resultat = "Baixar / Atualizar os mods"; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "Abrir relatório de problemas."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Abrir URL do changelog, resumo das mudanças por atualização."; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "Abrir repositório GitHub."; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "Abrir URL para baixar o Fabric."; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "Baixar / Atualizar mods"; break;
 
-                        case "INFO_SUCCESS": resultat = "Tudo ocorreu com sucesso!"; break;
-                        case "INFO_ABOUT": resultat = $"Minhas Mods de Sobrevivência\npor MythMega\n2023\nVersão :{version}\nBuild : {app_build}"; break;
+                        case "INFO_SUCCESS": resultat = "Tudo correu com sucesso!"; break;
+                        case "INFO_ABOUT": resultat = $"As Minhas Mods de Sobrevivência\npor MythMega\n2023\nVersão: {version}\nCompilação: {app_build}"; break;
                         case "INFO_MYTHMEGA": resultat = "Eu sou o MythMega (ainda não criei esta seção, é menos urgente)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"Os contribuidores são os seguintes:\n{getContributorsNamesAndLbl()}\nAgradecemos a eles!"; break;
 
-                        case "LBL_WARNING": resultat = "Atenção!"; break;
-                        case "LBL_CONFIRMATION": resultat = "Tem certeza de que deseja executar esta ação?"; break;
+                        case "CONTRIBUTORS": resultat = "Contribuidores"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Tradução"; break;
+                        case "CONTRIB_DEV": resultat = "Desenvolvimento"; break;
+                        case "CONTRIB_ARTIST": resultat = "Artista/Design"; break;
+                        case "CONTRIB_TESTER": resultat = "Testador"; break;
+                        case "CONTRIB_OTHER": resultat = "Outro"; break;
+
+                        case "LBL_WARNING": resultat = "Aviso!"; break;
+                        case "LBL_CONFIRMATION": resultat = "Tem certeza de que deseja realizar esta ação?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Desselecionar Tudo"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Selecionar Tudo"; break;
+                        case "LBL_STOP": resultat = "Parar"; break;
+                        case "LBL_OUI": resultat = "Sim"; break;
+                        case "LBL_NON": resultat = "Não"; break;
+                        case "LBL_ANNULER": resultat = "Cancelar"; break;
+                        case "LBL_LOCALISER": resultat = "Localizar"; break;
 
                         case "": resultat = ""; break;
                     }
@@ -1732,24 +1825,43 @@ theme=DEFAULT";
                 case "AR":
                     switch (textCode)
                     {
-                        case "ERR_NOMODS": resultat = "حدث خطأ :( تأكد من وضع هذا البرنامج في مجلد mods الخاص بـ .minecraft!\nتحقق أيضًا مما إذا قمت بتنزيل الـ mods!"; break;
-                        case "ERR_TIMEOUT": resultat = "مهلة المزامنة - تحقق من اتصالك."; break;
-                        case "ERR_NOTYETIMPLEMENTED": resultat = "هذه الميزة لم تُنفّذ بعد"; break;
-                        case "ERR_EXEC-BATCH": resultat = "حدث خطأ أثناء تنفيذ الملف الدفعي: "; break;
+                        case "ERR_NOMODS": resultat = "حدث خطأ :( يُرجى التأكد من وضع هذا البرنامج في مجلد 'mods' في ملف .minecraft الخاص بك!\nتأكد أيضًا من تنزيل المودات!"; break;
+                        case "ERR_TIMEOUT": resultat = "مهلة زمنية - تحقق من اتصالك."; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "هذه الميزة لم تُنفذ بعد."; break;
+                        case "ERR_EXEC-BATCH": resultat = "حدث خطأ أثناء تنفيذ ملف الدفع: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "يبدو أنه من غير الممكن تشغيل ماين كرافت."; break;
 
-                        case "MOUSEHOVER_BTNQUITTER": resultat = "انظر ما يحدث..."; break;
-                        case "MOUSEHOVER_BTNREPORT": resultat = "افتح تقرير المشكلة."; break;
-                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "افتح رابط تغيير السجل، وهو ملخص للتغييرات حسب التحديثات."; break;
-                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "افتح مستودع GitHub."; break;
-                        case "MOUSEHOVER_BTNFABRIC": resultat = "افتح الرابط لتحميل Fabric."; break;
-                        case "MOUSEHOVER_BTNUPDATE": resultat = "تنزيل / تحديث الـ mods"; break;
+                        case "WARN_WRONGFOLDER": resultat = "مجلد غير صحيح: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "يجب تشغيل البرنامج من مجلد 'mods' في ملف .minecraft الخاص بك."; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "انظر ماذا يحدث..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "فتح تقرير المشكلة."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "فتح عنوان URL لسجل التغييرات، ملخص للتغييرات حسب التحديثات."; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "فتح مستودع GitHub."; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "فتح العنوان URL لتنزيل Fabric."; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "تنزيل / تحديث المودات"; break;
 
                         case "INFO_SUCCESS": resultat = "كل شيء تم بنجاح!"; break;
-                        case "INFO_ABOUT": resultat = $"My Survival Mods\nby MythMega\n2023\nالإصدار :{version}\nBuild : {app_build}"; break;
-                        case "INFO_MYTHMEGA": resultat = "أنا MythMega (لم أنشئ هذا القسم بعد، غير ضروري)."; break;
+                        case "INFO_ABOUT": resultat = $"مودات البقاء الخاصة بي\nبواسطة MythMega\n2023\nالإصدار: {version}\nالبناء: {app_build}"; break;
+                        case "INFO_MYTHMEGA": resultat = "أنا MythMega (لم أقم بإنشاء هذا القسم بعد، أمر أقل ضرورة)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"المساهمون هم على النحو التالي:\n{getContributorsNamesAndLbl()}\nشكراً لهم!"; break;
+
+                        case "CONTRIBUTORS": resultat = "المساهمون"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "الترجمة"; break;
+                        case "CONTRIB_DEV": resultat = "التطوير"; break;
+                        case "CONTRIB_ARTIST": resultat = "الفنان/التصميم"; break;
+                        case "CONTRIB_TESTER": resultat = "المُختبر"; break;
+                        case "CONTRIB_OTHER": resultat = "آخر"; break;
 
                         case "LBL_WARNING": resultat = "تحذير!"; break;
-                        case "LBL_CONFIRMATION": resultat = "هل أنت متأكد من رغبتك في تنفيذ هذا الإجراء؟"; break;
+                        case "LBL_CONFIRMATION": resultat = "هل أنت متأكد من رغبتك في القيام بهذا الإجراء؟"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "إلغاء تحديد الكل"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "تحديد الكل"; break;
+                        case "LBL_STOP": resultat = "إيقاف"; break;
+                        case "LBL_OUI": resultat = "نعم"; break;
+                        case "LBL_NON": resultat = "لا"; break;
+                        case "LBL_ANNULER": resultat = "إلغاء"; break;
+                        case "LBL_LOCALISER": resultat = "تحديد الموقع"; break;
 
                         case "": resultat = ""; break;
                     }
@@ -1759,24 +1871,43 @@ theme=DEFAULT";
                 case "RU":
                     switch (textCode)
                     {
-                        case "ERR_NOMODS": resultat = "Произошла ошибка :( Убедитесь, что это программное обеспечение находится в папке mods вашей .minecraft!\nТакже проверьте, что вы загрузили моды!"; break;
+                        case "ERR_NOMODS": resultat = "Произошла ошибка :( Пожалуйста, убедитесь, что это программное обеспечение находится в папке 'mods' вашей .minecraft!\nТакже убедитесь, что вы загрузили моды!"; break;
                         case "ERR_TIMEOUT": resultat = "Тайм-аут - Проверьте ваше соединение."; break;
-                        case "ERR_NOTYETIMPLEMENTED": resultat = "Эта функция еще не реализована"; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "Эта функция еще не реализована."; break;
                         case "ERR_EXEC-BATCH": resultat = "Произошла ошибка при выполнении пакетного файла: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Похоже, что запуск Minecraft невозможен."; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "Неправильная папка: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "Программу следует запускать из папки 'mods' вашей .minecraft."; break;
 
                         case "MOUSEHOVER_BTNQUITTER": resultat = "Посмотрите, что это делает..."; break;
-                        case "MOUSEHOVER_BTNREPORT": resultat = "Открыть отчет об ошибке."; break;
-                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Открыть URL изменений, сводку изменений по обновлениям."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "Открыть отчет о проблеме."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Открыть URL-адрес изменений, сводка изменений по обновлениям."; break;
                         case "MOUSEHOVER_BTNSOURCECODE": resultat = "Открыть репозиторий GitHub."; break;
-                        case "MOUSEHOVER_BTNFABRIC": resultat = "Открыть URL для загрузки Fabric."; break;
-                        case "MOUSEHOVER_BTNUPDATE": resultat = "Загрузить / Обновить моды"; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "Открыть URL-адрес для загрузки Fabric."; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "Скачать / Обновить моды"; break;
 
                         case "INFO_SUCCESS": resultat = "Все прошло успешно!"; break;
-                        case "INFO_ABOUT": resultat = $"My Survival Mods\nот MythMega\n2023\nВерсия :{version}\nBuild : {app_build}"; break;
+                        case "INFO_ABOUT": resultat = $"Мои Моды Выживания\nот MythMega\n2023\nВерсия: {version}\nСборка: {app_build}"; break;
                         case "INFO_MYTHMEGA": resultat = "Я MythMega (я еще не создал этот раздел, это менее срочно)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"Следующие люди внесли вклад:\n{getContributorsNamesAndLbl()}\nСпасибо им!"; break;
+
+                        case "CONTRIBUTORS": resultat = "Участники"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Переводчик"; break;
+                        case "CONTRIB_DEV": resultat = "Разработка"; break;
+                        case "CONTRIB_ARTIST": resultat = "Художник/Дизайнер"; break;
+                        case "CONTRIB_TESTER": resultat = "Тестировщик"; break;
+                        case "CONTRIB_OTHER": resultat = "Другое"; break;
 
                         case "LBL_WARNING": resultat = "Внимание!"; break;
                         case "LBL_CONFIRMATION": resultat = "Вы уверены, что хотите выполнить это действие?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Снять все выделение"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Выделить все"; break;
+                        case "LBL_STOP": resultat = "Остановить"; break;
+                        case "LBL_OUI": resultat = "Да"; break;
+                        case "LBL_NON": resultat = "Нет"; break;
+                        case "LBL_ANNULER": resultat = "Отмена"; break;
+                        case "LBL_LOCALISER": resultat = "Найти"; break;
 
                         case "": resultat = ""; break;
                     }
