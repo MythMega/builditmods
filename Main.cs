@@ -2142,6 +2142,144 @@ theme=DEFAULT";
                         case "": resultat = ""; break;
                     }
                     break;
+
+                // Turkish
+                case "TR":
+                    switch (textCode)
+                    {
+                        case "ERR_NOMODS": resultat = "Bir hata oluştu :( Lütfen bu yazılımı .minecraft klasörünüzün 'mods' klasörüne yerleştirdiğinizden emin olun!\nAyrıca, modları indirdiğinizden emin olun!"; break;
+                        case "ERR_TIMEOUT": resultat = "Zaman aşımı - Bağlantınızı kontrol edin."; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "Bu özellik henüz uygulanmadı."; break;
+                        case "ERR_EXEC-BATCH": resultat = "Toplu işlem dosyası çalıştırılırken bir hata oluştu: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Minecraft'u başlatmak mümkün görünmüyor."; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "Yanlış klasör: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "Yazılım, .minecraft'ınızın 'mods' klasöründen çalıştırılmalıdır."; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "Ne yaptığını gör..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "Sorun raporunu aç."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Değişiklik günlüğü URL'sini aç, güncellemelerin özetleri."; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "GitHub deposunu aç."; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "Fabric'i indirmek için URL'yi aç."; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "Modları İndir / Güncelle"; break;
+
+                        case "INFO_SUCCESS": resultat = "Her şey başarıyla gerçekleşti!"; break;
+                        case "INFO_ABOUT": resultat = $"Benim Survival Modlarım\nMythMega tarafından\n2023\nSürüm: {version}\nDerleme: {app_build}"; break;
+                        case "INFO_MYTHMEGA": resultat = "Ben MythMega'yım (Bu bölümü henüz oluşturmadım, daha az acil)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"Katkıda bulunanlar aşağıdaki gibidir:\n{getContributorsNamesAndLbl()}\nOnlara teşekkürler!"; break;
+
+                        case "CONTRIBUTORS": resultat = "Katkıda Bulunanlar"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Çevirmen"; break;
+                        case "CONTRIB_DEV": resultat = "Geliştirme"; break;
+                        case "CONTRIB_ARTIST": resultat = "Sanatçı/Desen"; break;
+                        case "CONTRIB_TESTER": resultat = "Testçi"; break;
+                        case "CONTRIB_OTHER": resultat = "Diğer"; break;
+
+                        case "LBL_WARNING": resultat = "Uyarı!"; break;
+                        case "LBL_CONFIRMATION": resultat = "Bu eylemi gerçekleştirmek istediğinizden emin misiniz?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Tümünü Kaldır"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Tümünü Seç"; break;
+                        case "LBL_STOP": resultat = "Durdur"; break;
+                        case "LBL_OUI": resultat = "Evet"; break;
+                        case "LBL_NON": resultat = "Hayır"; break;
+                        case "LBL_ANNULER": resultat = "İptal"; break;
+                        case "LBL_LOCALISER": resultat = "Konumlandır"; break;
+
+                        case "": resultat = ""; break;
+                    }
+                    break;
+
+                // Thai
+                case "TH":
+                    switch (textCode)
+                    {
+                        case "ERR_NOMODS": resultat = "เกิดข้อผิดพลาด :( โปรดตรวจสอบว่าซอฟต์แวร์นี้อยู่ในโฟลเดอร์ 'mods' ของ .minecraft ของคุณ!\nนอกจากนี้ โปรดตรวจสอบว่าคุณได้ดาวน์โหลด mod ทั้งหมด!"; break;
+                        case "ERR_TIMEOUT": resultat = "หมดเวลา - ตรวจสอบการเชื่อมต่อของคุณ"; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "คุณลักษณะนี้ยังไม่ได้รับการนำมาใช้งาน"; break;
+                        case "ERR_EXEC-BATCH": resultat = "เกิดข้อผิดพลาดขณะดำเนินการแบทช์ไฟล์: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "ดูเหมือนว่าการเริ่ม Minecraft ไม่เป็นไปได้"; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "โฟลเดอร์ผิด: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "โปรแกรมต้องถูกเรียกใช้จากโฟลเดอร์ 'mods' ของ .minecraft ของคุณ"; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "ดูว่ามันทำอะไร..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "เปิดรายงานปัญหา"; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "เปิด URL ประวัติการเปลี่ยนแปลง, สรุปการเปลี่ยนแปลงต่อการอัปเดต"; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "เปิด GitHub ที่เก็บข้อมูล"; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "เปิด URL เพื่อดาวน์โหลด Fabric"; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "ดาวน์โหลด / อัปเดต mod"; break;
+
+                        case "INFO_SUCCESS": resultat = "ทุกอย่างเสร็จสมบูรณ์แล้ว!"; break;
+                        case "INFO_ABOUT": resultat = $"My Survival Mods\nโดย MythMega\n2023\nเวอร์ชัน: {version}\nสร้าง: {app_build}"; break;
+                        case "INFO_MYTHMEGA": resultat = "ฉันคือ MythMega (ฉันยังไม่ได้สร้างส่วนนี้, ไม่เร่งด่วน)"; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"ผู้มีส่วนร่วมคือดังต่อไปนี้:\n{getContributorsNamesAndLbl()}\nขอบคุณพวกเขา!"; break;
+
+                        case "CONTRIBUTORS": resultat = "ผู้มีส่วนร่วม"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "ผู้แปล"; break;
+                        case "CONTRIB_DEV": resultat = "การพัฒนา"; break;
+                        case "CONTRIB_ARTIST": resultat = "ศิลปิน/การออกแบบ"; break;
+                        case "CONTRIB_TESTER": resultat = "ผู้ทดสอบ"; break;
+                        case "CONTRIB_OTHER": resultat = "อื่น ๆ"; break;
+
+                        case "LBL_WARNING": resultat = "คำเตือน!"; break;
+                        case "LBL_CONFIRMATION": resultat = "คุณแน่ใจหรือไม่ว่าต้องการดำเนินการนี้?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "ไม่เลือกทั้งหมด"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "เลือกทั้งหมด"; break;
+                        case "LBL_STOP": resultat = "หยุด"; break;
+                        case "LBL_OUI": resultat = "ใช่"; break;
+                        case "LBL_NON": resultat = "ไม่ใช่"; break;
+                        case "LBL_ANNULER": resultat = "ยกเลิก"; break;
+                        case "LBL_LOCALISER": resultat = "ค้นหาตำแหน่ง"; break;
+
+                        case "": resultat = ""; break;
+                    }
+                    break;
+
+                // Indonesian
+                case "ID":
+                    switch (textCode)
+                    {
+                        case "ERR_NOMODS": resultat = "Terjadi kesalahan :( Pastikan perangkat lunak ini ditempatkan di folder 'mods' dari .minecraft Anda!\nJuga, pastikan Anda telah mengunduh mod-modnya!"; break;
+                        case "ERR_TIMEOUT": resultat = "Waktu habis - Periksa koneksi Anda."; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "Fitur ini belum diimplementasikan."; break;
+                        case "ERR_EXEC-BATCH": resultat = "Terjadi kesalahan saat menjalankan berkas batch: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Sepertinya meluncurkan Minecraft tidak mungkin."; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "Folder yang Salah: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "Perangkat lunak ini harus dijalankan dari folder 'mods' dari .minecraft Anda."; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "Lihat apa yang dilakukannya..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "Buka laporan masalah."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Buka URL catatan perubahan, ringkasan perubahan per pembaruan."; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "Buka repositori GitHub."; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "Buka URL untuk mengunduh Fabric."; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "Unduh / Perbarui mod"; break;
+
+                        case "INFO_SUCCESS": resultat = "Semuanya berjalan dengan sukses!"; break;
+                        case "INFO_ABOUT": resultat = $"My Survival Mods\noleh MythMega\n2023\nVersi: {version}\nBuild: {app_build}"; break;
+                        case "INFO_MYTHMEGA": resultat = "Saya adalah MythMega (Saya belum membuat bagian ini, kurang mendesak)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"Para kontributor adalah sebagai berikut:\n{getContributorsNamesAndLbl()}\nTerima kasih kepada mereka!"; break;
+
+                        case "CONTRIBUTORS": resultat = "Kontributor"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Penerjemah"; break;
+                        case "CONTRIB_DEV": resultat = "Pengembang"; break;
+                        case "CONTRIB_ARTIST": resultat = "Seniman/Desain"; break;
+                        case "CONTRIB_TESTER": resultat = "Penguji"; break;
+                        case "CONTRIB_OTHER": resultat = "Lainnya"; break;
+
+                        case "LBL_WARNING": resultat = "Peringatan!"; break;
+                        case "LBL_CONFIRMATION": resultat = "Apakah Anda yakin ingin melakukan tindakan ini?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Tidak Pilih Semua"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Pilih Semua"; break;
+                        case "LBL_STOP": resultat = "Berhenti"; break;
+                        case "LBL_OUI": resultat = "Ya"; break;
+                        case "LBL_NON": resultat = "Tidak"; break;
+                        case "LBL_ANNULER": resultat = "Batal"; break;
+                        case "LBL_LOCALISER": resultat = "Temukan"; break;
+
+                        case "": resultat = ""; break;
+                    }
+                    break;
             }
             return resultat;
         }

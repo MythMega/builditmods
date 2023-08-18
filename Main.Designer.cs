@@ -1039,7 +1039,10 @@
             "JA (日本語)",
             "BN (বাঙালি)",
             "HI (हिन्दी)",
-            "KO (한국어)"});
+            "KO (한국어)",
+            "TR (Türkçe)",
+            "TH (ไทย)",
+            "ID (Indonesia)"});
             this.comboBoxLanguage.Location = new System.Drawing.Point(319, 40);
             this.comboBoxLanguage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
