@@ -1912,6 +1912,236 @@ theme=DEFAULT";
                         case "": resultat = ""; break;
                     }
                     break;
+
+                // Tagalog
+                case "TL":
+                    switch (textCode)
+                    {
+                        case "ERR_NOMODS": resultat = "May naganap na error :( Tiyaking nasa 'mods' na folder ng iyong .minecraft ang software na ito!\nSiguruhin din na na-download mo ang mga mods!"; break;
+                        case "ERR_TIMEOUT": resultat = "Timeout - Suriin ang iyong koneksyon."; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "Ang feature na ito ay hindi pa naipapatupad."; break;
+                        case "ERR_EXEC-BATCH": resultat = "May naganap na error habang inii-execute ang batch file: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Mukhang hindi maaring buksan ang Minecraft."; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "Maling folder: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "Ang software ay dapat na ma-eexecute mula sa 'mods' na folder ng iyong .minecraft."; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "Tingnan kung ano ang nagaganap..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "Buksan ang ulat ng problema."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "Buksan ang changelog URL, buod ng mga pagbabago sa bawat update."; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "Buksan ang GitHub repository."; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "Buksan ang URL para sa pag-download ng Fabric."; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "I-download / I-update ang mga mods"; break;
+
+                        case "INFO_SUCCESS": resultat = "Lahat ay naging matagumpay!"; break;
+                        case "INFO_ABOUT": resultat = $"Aking Mga Mods sa Survival\nni MythMega\n2023\nBersyon: {version}\nBuild: {app_build}"; break;
+                        case "INFO_MYTHMEGA": resultat = "Ako si MythMega (Hindi ko pa nabuo ang seksyon na ito, hindi pa ito urgent)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"Ang mga kontribyutor ay sumusunod:\n{getContributorsNamesAndLbl()}\nSalamat sa kanila!"; break;
+
+                        case "CONTRIBUTORS": resultat = "Mga Kontribyutor"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Pagsasalin"; break;
+                        case "CONTRIB_DEV": resultat = "Pag-develop"; break;
+                        case "CONTRIB_ARTIST": resultat = "Artist/Disenyo"; break;
+                        case "CONTRIB_TESTER": resultat = "Tagatasa"; break;
+                        case "CONTRIB_OTHER": resultat = "Iba pa"; break;
+
+                        case "LBL_WARNING": resultat = "Babala!"; break;
+                        case "LBL_CONFIRMATION": resultat = "Sigurado ka bang nais mong gawin ang aksyong ito?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Huwag Piliin Lahat"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Piliin Lahat"; break;
+                        case "LBL_STOP": resultat = "Itigil"; break;
+                        case "LBL_OUI": resultat = "Oo"; break;
+                        case "LBL_NON": resultat = "Hindi"; break;
+                        case "LBL_ANNULER": resultat = "Kanselahin"; break;
+                        case "LBL_LOCALISER": resultat = "Hanapin"; break;
+
+                        case "": resultat = ""; break;
+                    }
+                    break;
+
+                // Hindi
+                case "HI":
+                    switch (textCode)
+                    {
+                        case "ERR_NOMODS": resultat = "कुछ त्रुटि हुई है :( कृपया सुनिश्चित करें कि यह सॉफ़्टवेयर आपके .minecraft के 'mods' फ़ोल्डर में है!\nयह भी सुनिश्चित करें कि आपने मॉड डाउनलोड किए हैं!"; break;
+                        case "ERR_TIMEOUT": resultat = "टाइमआउट - अपना कनेक्शन जांचें।"; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "यह सुविधा अभी तक लागू नहीं की गई है।"; break;
+                        case "ERR_EXEC-BATCH": resultat = "बैच फ़ाइल को निष्पादित करते समय कुछ त्रुटि हुई: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "लगता है कि Minecraft चलाना संभावित नहीं है।"; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "गलत फ़ोल्डर: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "सॉफ़्टवेयर को आपके .minecraft के 'mods' फ़ोल्डर से चलाया जाना चाहिए।"; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "देखें कि यह क्या करता है..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "समस्या रिपोर्ट खोलें।"; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "बदलाव URL खोलें, अपडेट्स के लिए परिवर्तनों का संक्षेप।"; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "GitHub रिपॉजिटरी खोलें।"; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "Fabric डाउनलोड करने के लिए URL खोलें।"; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "मॉड डाउनलोड / अपडेट करें"; break;
+
+                        case "INFO_SUCCESS": resultat = "सब कुछ सफलतापूर्वक हुआ!"; break;
+                        case "INFO_ABOUT": resultat = $"मेरे Survival Mods\nनिर्माता: MythMega\n2023\nसंस्करण: {version}\nबिल्ड: {app_build}"; break;
+                        case "INFO_MYTHMEGA": resultat = "मैं MythMega हूँ (मैंने इस खंड को अभी तक नहीं बनाया है, यह जरूरी नहीं है)।"; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"कोन्ट्रिब्यूटर्स निम्नलिखित हैं:\n{getContributorsNamesAndLbl()}\nउन्हें धन्यवाद!"; break;
+
+                        case "CONTRIBUTORS": resultat = "कोन्ट्रिब्यूटर्स"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "अनुवादक"; break;
+                        case "CONTRIB_DEV": resultat = "डेवलपमेंट"; break;
+                        case "CONTRIB_ARTIST": resultat = "कलाकार/डिज़ाइन"; break;
+                        case "CONTRIB_TESTER": resultat = "टेस्टर"; break;
+                        case "CONTRIB_OTHER": resultat = "अन्य"; break;
+
+                        case "LBL_WARNING": resultat = "चेतावनी!"; break;
+                        case "LBL_CONFIRMATION": resultat = "क्या आप वाकई इस क्रिया को करना चाहते हैं?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "सभी को अचयन करें"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "सभी को चयनित करें"; break;
+                        case "LBL_STOP": resultat = "रोकें"; break;
+                        case "LBL_OUI": resultat = "हाँ"; break;
+                        case "LBL_NON": resultat = "नहीं"; break;
+                        case "LBL_ANNULER": resultat = "रद्द करें"; break;
+                        case "LBL_LOCALISER": resultat = "स्थानित करें"; break;
+
+                        case "": resultat = ""; break;
+                    }
+                    break;
+
+                // Bengali
+                case "BN":
+                    switch (textCode)
+                    {
+                        case "ERR_NOMODS": resultat = "একটি ত্রুটি ঘটেছে :( দয়া করে নিশ্চিত করুন যে এই সফটওয়্যারটি আপনার .minecraft ফোল্ডারের 'mods' ফোল্ডারে রয়েছে!\nএছাড়া, আপনি মডগুলি ডাউনলোড করেছেন তা নিশ্চিত করুন!"; break;
+                        case "ERR_TIMEOUT": resultat = "টাইমআউট - আপনার সংযোগ পরীক্ষা করুন।"; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "এই বৈশিষ্ট্যটি এখনও সম্পন্ন হয়নি।"; break;
+                        case "ERR_EXEC-BATCH": resultat = "ব্যাচ ফাইল নিষ্পাদন করার সময় একটি ত্রুটি ঘটেছে: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "মাইনক্রাফট চালাতে সম্ভব হচ্ছে না।"; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "ভুল ফোল্ডার: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "সফটওয়্যারটি আপনার .minecraft এর 'mods' ফোল্ডার থেকে চালানো আবশ্যক।"; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "এটি কী করে দেখুন..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "সমস্যা রিপোর্ট খুলুন।"; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "চেঞ্জলগ URL খুলুন, আপডেটগুলির সারাংশ দেখানো হয়।"; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "GitHub রিপোজিটরি খুলুন।"; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "ফ্যাব্রিক ডাউনলোড করার জন্য URL খুলুন।"; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "মডগুলি ডাউনলোড / আপডেট করুন"; break;
+
+                        case "INFO_SUCCESS": resultat = "সব সফলভাবে গতিবদ্ধ হয়েছে!"; break;
+                        case "INFO_ABOUT": resultat = $"আমার সার্ভাইভাল মডস\nলেখক: MythMega\n২০২৩\nসংস্করণ: {version}\nবিল্ড: {app_build}"; break;
+                        case "INFO_MYTHMEGA": resultat = "আমি মিথমেগা (আমি এই বিভাগটি এখনও তৈরি করনি, এটি তাড়াতাড়ি প্রয়োজন নেই)।"; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"যারা অবদান দিয়েছেন তাদের তালিকা নিম্নলিখিত:\n{getContributorsNamesAndLbl()}\nতাদের জন্য ধন্যবাদ!"; break;
+
+                        case "CONTRIBUTORS": resultat = "অবদানকারীগণ"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "অনুবাদক"; break;
+                        case "CONTRIB_DEV": resultat = "ডেভলপমেন্ট"; break;
+                        case "CONTRIB_ARTIST": resultat = "শিল্পী/ডিজাইন"; break;
+                        case "CONTRIB_TESTER": resultat = "টেস্টার"; break;
+                        case "CONTRIB_OTHER": resultat = "অন্যান্য"; break;
+
+                        case "LBL_WARNING": resultat = "সতর্কবার্তা!"; break;
+                        case "LBL_CONFIRMATION": resultat = "আপনি কি নিশ্চিত যে আপনি এই ক্রিয়া পুনরায় চালাতে চান?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "সব অপশন বাদ দিন"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "সব চিহ্নিত করুন"; break;
+                        case "LBL_STOP": resultat = "বন্ধ করুন"; break;
+                        case "LBL_OUI": resultat = "হাঁ"; break;
+                        case "LBL_NON": resultat = "না"; break;
+                        case "LBL_ANNULER": resultat = "বাতিল করুন"; break;
+                        case "LBL_LOCALISER": resultat = "স্থান নির্ধারণ করুন"; break;
+
+                        case "": resultat = ""; break;
+                    }
+                    break;
+
+                // Japanese
+                case "JA":
+                    switch (textCode)
+                    {
+                        case "ERR_NOMODS": resultat = "エラーが発生しました :( このソフトウェアが .minecraft の 'mods' フォルダに配置されていることを確認してください！\nまた、モッズをダウンロードしていることを確認してください！"; break;
+                        case "ERR_TIMEOUT": resultat = "タイムアウト - 接続を確認してください。"; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "この機能はまだ実装されていません。"; break;
+                        case "ERR_EXEC-BATCH": resultat = "バッチファイルを実行する際にエラーが発生しました: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Minecraft を起動することはできないようです。"; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "間違ったフォルダ："; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "このソフトウェアは .minecraft の 'mods' フォルダから実行する必要があります。"; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "何をするかを見てみてください..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "問題報告を開く。"; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "変更ログの URL を開く、アップデートごとの変更の概要。"; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "GitHub リポジトリを開く。"; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "Fabric をダウンロードするための URL を開く。"; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "モッズをダウンロード / 更新"; break;
+
+                        case "INFO_SUCCESS": resultat = "すべて正常に完了しました！"; break;
+                        case "INFO_ABOUT": resultat = $"My Survival Mods\n作成者：MythMega\n2023\nバージョン：{version}\nビルド：{app_build}"; break;
+                        case "INFO_MYTHMEGA": resultat = "私は MythMega です（このセクションはまだ作成していません、緊急性は低いです）。"; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"コントリビューターは次のとおりです：\n{getContributorsNamesAndLbl()}\n彼らに感謝！"; break;
+
+                        case "CONTRIBUTORS": resultat = "コントリビューター"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "翻訳者"; break;
+                        case "CONTRIB_DEV": resultat = "開発者"; break;
+                        case "CONTRIB_ARTIST": resultat = "アーティスト/デザイン"; break;
+                        case "CONTRIB_TESTER": resultat = "テスター"; break;
+                        case "CONTRIB_OTHER": resultat = "その他"; break;
+
+                        case "LBL_WARNING": resultat = "警告！"; break;
+                        case "LBL_CONFIRMATION": resultat = "このアクションを実行してもよろしいですか？"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "すべて選択解除"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "すべて選択"; break;
+                        case "LBL_STOP": resultat = "停止"; break;
+                        case "LBL_OUI": resultat = "はい"; break;
+                        case "LBL_NON": resultat = "いいえ"; break;
+                        case "LBL_ANNULER": resultat = "キャンセル"; break;
+                        case "LBL_LOCALISER": resultat = "位置を特定"; break;
+
+                        case "": resultat = ""; break;
+                    }
+                    break;
+
+                // Korean
+                case "KO":
+                    switch (textCode)
+                    {
+                        case "ERR_NOMODS": resultat = "오류가 발생했습니다 :( 이 소프트웨어를 .minecraft의 'mods' 폴더에 배치하십시오!\n또한 모드를 다운로드했는지 확인하십시오!"; break;
+                        case "ERR_TIMEOUT": resultat = "타임아웃 - 연결을 확인하십시오."; break;
+                        case "ERR_NOTYETIMPLEMENTED": resultat = "이 기능은 아직 구현되지 않았습니다."; break;
+                        case "ERR_EXEC-BATCH": resultat = "일괄 파일을 실행하는 동안 오류가 발생했습니다: "; break;
+                        case "ERR_NOMINECRAFEXE": resultat = "Minecraft을(를) 시작할 수 없는 것 같습니다."; break;
+
+                        case "WARN_WRONGFOLDER": resultat = "잘못된 폴더: "; break;
+                        case "WARN_MUSTSTARTINMODSFOLDER": resultat = "이 소프트웨어는 .minecraft의 'mods' 폴더에서 실행되어야 합니다."; break;
+
+                        case "MOUSEHOVER_BTNQUITTER": resultat = "이게 무슨 일인지 확인해보세요..."; break;
+                        case "MOUSEHOVER_BTNREPORT": resultat = "문제 보고서 열기."; break;
+                        case "MOUSEHOVER_BTNCHANGELOG": resultat = "변경 내역 URL 열기, 업데이트별 변경 사항 요약."; break;
+                        case "MOUSEHOVER_BTNSOURCECODE": resultat = "GitHub 저장소 열기."; break;
+                        case "MOUSEHOVER_BTNFABRIC": resultat = "Fabric 다운로드용 URL 열기."; break;
+                        case "MOUSEHOVER_BTNUPDATE": resultat = "모드 다운로드 / 업데이트"; break;
+
+                        case "INFO_SUCCESS": resultat = "모든 작업이 성공적으로 완료되었습니다!"; break;
+                        case "INFO_ABOUT": resultat = $"내 서바이벌 모드\n작성자: MythMega\n2023\n버전: {version}\n빌드: {app_build}"; break;
+                        case "INFO_MYTHMEGA": resultat = "나는 MythMega입니다 (이 섹션을 아직 만들지 않았습니다, 긴급하지 않습니다)."; break;
+                        case "INFO_CONTRIBUTORS": resultat = $"기여자 목록은 다음과 같습니다:\n{getContributorsNamesAndLbl()}\n그들에게 감사드립니다!"; break;
+
+                        case "CONTRIBUTORS": resultat = "기여자"; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "번역자"; break;
+                        case "CONTRIB_DEV": resultat = "개발자"; break;
+                        case "CONTRIB_ARTIST": resultat = "아티스트/디자이너"; break;
+                        case "CONTRIB_TESTER": resultat = "테스터"; break;
+                        case "CONTRIB_OTHER": resultat = "기타"; break;
+
+                        case "LBL_WARNING": resultat = "경고!"; break;
+                        case "LBL_CONFIRMATION": resultat = "이 작업을 수행하시겠습니까?"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "모두 선택 해제"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "모두 선택"; break;
+                        case "LBL_STOP": resultat = "중지"; break;
+                        case "LBL_OUI": resultat = "예"; break;
+                        case "LBL_NON": resultat = "아니오"; break;
+                        case "LBL_ANNULER": resultat = "취소"; break;
+                        case "LBL_LOCALISER": resultat = "찾기"; break;
+
+                        case "": resultat = ""; break;
+                    }
+                    break;
             }
             return resultat;
         }
