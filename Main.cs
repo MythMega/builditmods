@@ -1569,11 +1569,11 @@ theme=DEFAULT";
                         case "INFO_CONTRIBUTORS": resultat = $"Les contributeurs sont les suivants :\n{getContributorsNamesAndLbl()}\nMerci à eux !"; break;
 
                         case "CONTRIBUTORS": resultat = "Contributeurs"; break;
-                        case "CONTRIB_TRANSLATOR": resultat = ""; break;
-                        case "CONTRIB_DEV": resultat = ""; break;
-                        case "CONTRIB_ARTIST": resultat = ""; break;
-                        case "CONTRIB_TESTER": resultat = ""; break;
-                        case "CONTRIB_OTHER": resultat = ""; break;
+                        case "CONTRIB_TRANSLATOR": resultat = "Traduction"; break;
+                        case "CONTRIB_DEV": resultat = "Developpement"; break;
+                        case "CONTRIB_ARTIST": resultat = "Artiste/Design"; break;
+                        case "CONTRIB_TESTER": resultat = "Testeur"; break;
+                        case "CONTRIB_OTHER": resultat = "Autre"; break;
 
                         case "LBL_WARNING": resultat = "Attention !"; break;
                         case "LBL_CONFIRMATION": resultat = "ëtes vous sur de vouloir faire cette action ?"; break;
