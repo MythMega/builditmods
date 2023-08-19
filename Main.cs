@@ -1532,6 +1532,320 @@ theme=DEFAULT";
                     aProposToolStripMenuItem.Text = "حول";
                     themeToolStripMenuItem.Text = "السمة";
                     break;
+
+                // Tagalog
+                case "TL":
+                    // mga label na mod
+                    lblCosmetiqueGUI.Text = "GUI ng Kosmetiko";
+                    lblCosmetiquesJeu.Text = "Kosmetiko ng Laro";
+                    lblCosmetiqueSkins.Text = "Kosmetiko ng Skins";
+                    lblCommandsAdmins.Text = "Mga Utos/Admin";
+
+                    // mga checkboxes
+                    isEnabled = "Pinagana?";
+
+                    // mga buttons
+                    btnActiverTout.Text = "Paganahin lahat";
+                    btnDesactiverTout.Text = "Huwag paganahin ang lahat";
+                    btnExec.Text = "Isagawa";
+                    btnFabric.Text = "Mag-install ng Fabric";
+                    btnModsChangelog.Text = "Mga Pabago sa Update";
+                    btnOpenRepos.Text = "Pinagmulan sa GitHub";
+                    btnOuvrirMods.Text = "Buksan ang Mga Mod Folder";
+                    btnUpdateMods.Text = "I-update/I-download ang mga Mod";
+                    btnReport.Text = "I-ulat ang Isang Problema";
+                    btnQuitter.Text = "Lumabas";
+
+                    // seksyon
+                    gbFastProfiles.Text = "Mabilis na Mga Profile";
+                    gbSystem.Text = "Systema";
+
+                    // menuItems
+                    quitterToolStripMenuItem.Text = "Lumabas";
+                    profilsToolStripMenuItem.Text = "I-save ang Profil";
+                    fichierToolStripMenuItem.Text = "File";
+                    profilToolStripMenuItem.Text = "Profile";
+                    rafraichirProfilsToolStripMenuItem.Text = "I-refresh ang Mga Profile";
+                    réinitialiserProfilsToolStripMenuItem.Text = "I-reset ang Mga Profile";
+                    configToolStripMenuItem.Text = "Mga Setting";
+                    aProposToolStripMenuItem.Text = "Tungkol Dito";
+                    themeToolStripMenuItem.Text = "Tema";
+                    break;
+
+                // Japanese
+                case "JA":
+                    // ラベルモッズ
+                    lblCosmetiqueGUI.Text = "GUI コスメティック";
+                    lblCosmetiquesJeu.Text = "ゲーム コスメティック";
+                    lblCosmetiqueSkins.Text = "スキン コスメティック";
+                    lblCommandsAdmins.Text = "コマンド/管理者";
+
+                    // チェックボックス
+                    isEnabled = "有効ですか？";
+
+                    // ボタン
+                    btnActiverTout.Text = "すべてを有効にする";
+                    btnDesactiverTout.Text = "すべてを無効にする";
+                    btnExec.Text = "実行";
+                    btnFabric.Text = "Fabric をインストール";
+                    btnModsChangelog.Text = "アップデートノート";
+                    btnOpenRepos.Text = "GitHub ソース";
+                    btnOuvrirMods.Text = "モッズフォルダを開く";
+                    btnUpdateMods.Text = "モッズをアップデート/ダウンロード";
+                    btnReport.Text = "問題を報告する";
+                    btnQuitter.Text = "終了";
+
+                    // セクション
+                    gbFastProfiles.Text = "高速プロファイル";
+                    gbSystem.Text = "システム";
+
+                    // メニューアイテム
+                    quitterToolStripMenuItem.Text = "終了";
+                    profilsToolStripMenuItem.Text = "プロフィールを保存";
+                    fichierToolStripMenuItem.Text = "ファイル";
+                    profilToolStripMenuItem.Text = "プロフィール";
+                    rafraichirProfilsToolStripMenuItem.Text = "プロフィールを更新";
+                    réinitialiserProfilsToolStripMenuItem.Text = "プロフィールをリセット";
+                    configToolStripMenuItem.Text = "設定";
+                    aProposToolStripMenuItem.Text = "情報";
+                    themeToolStripMenuItem.Text = "テーマ";
+                    break;
+
+                // Bengali
+                case "BN":
+                    // লেবেল মডস
+                    lblCosmetiqueGUI.Text = "জিউআই কসমেটিক্স";
+                    lblCosmetiquesJeu.Text = "গেম কসমেটিক্স";
+                    lblCosmetiqueSkins.Text = "স্কিন কসমেটিক্স";
+                    lblCommandsAdmins.Text = "কমান্ডগুলি / অ্যাডমিন";
+
+                    // চেকবক্সগুলি
+                    isEnabled = "সক্ষম?";
+
+                    // বোতামগুলি
+                    btnActiverTout.Text = "সব সক্ষম করুন";
+                    btnDesactiverTout.Text = "সব অক্ষম করুন";
+                    btnExec.Text = "সাক্ষাত্কার";
+                    btnFabric.Text = "ফ্যাব্রিক ইনস্টল করুন";
+                    btnModsChangelog.Text = "আপডেট নোটস";
+                    btnOpenRepos.Text = "GitHub উত্স";
+                    btnOuvrirMods.Text = "মডস ফোল্ডার খুলুন";
+                    btnUpdateMods.Text = "মডস আপডেট / ডাউনলোড করুন";
+                    btnReport.Text = "একটি সমস্যা রিপোর্ট করুন";
+                    btnQuitter.Text = "বাহির";
+
+                    // সেকশন
+                    gbFastProfiles.Text = "দ্রুত প্রোফাইল";
+                    gbSystem.Text = "সিস্টেম";
+
+                    // মেনুআইটেমস
+                    quitterToolStripMenuItem.Text = "বাহির হোন";
+                    profilsToolStripMenuItem.Text = "প্রোফাইল সংরক্ষণ করুন";
+                    fichierToolStripMenuItem.Text = "ফাইল";
+                    profilToolStripMenuItem.Text = "প্রোফাইল";
+                    rafraichirProfilsToolStripMenuItem.Text = "প্রোফাইল রিফ্রেশ করুন";
+                    réinitialiserProfilsToolStripMenuItem.Text = "প্রোফাইল রিসেট করুন";
+                    configToolStripMenuItem.Text = "সেটিংস";
+                    aProposToolStripMenuItem.Text = "সম্পর্কিত";
+                    themeToolStripMenuItem.Text = "থিম";
+                    break;
+
+                // Hindi
+                case "HI":
+                    // मोड लेबल
+                    lblCosmetiqueGUI.Text = "GUI सौंदर्यिक उपयोग";
+                    lblCosmetiquesJeu.Text = "गेम सौंदर्यिक उपयोग";
+                    lblCosmetiqueSkins.Text = "स्किन सौंदर्यिक उपयोग";
+                    lblCommandsAdmins.Text = "कमांड / प्रशासन";
+
+                    // चेकबॉक्स
+                    isEnabled = "सक्षम?";
+
+                    // बटन
+                    btnActiverTout.Text = "सभी को सक्षम करें";
+                    btnDesactiverTout.Text = "सभी को अक्षम करें";
+                    btnExec.Text = "क्रियान्वित करें";
+                    btnFabric.Text = "फैब्रिक इंस्टॉल करें";
+                    btnModsChangelog.Text = "अपडेट नोट्स";
+                    btnOpenRepos.Text = "GitHub स्रोत";
+                    btnOuvrirMods.Text = "मोड फ़ोल्डर खोलें";
+                    btnUpdateMods.Text = "मोड अपडेट / डाउनलोड करें";
+                    btnReport.Text = "समस्या की सूचना दें";
+                    btnQuitter.Text = "बाहर जाएं";
+
+                    // सेक्शन
+                    gbFastProfiles.Text = "फ़ास्ट प्रोफ़ाइल";
+                    gbSystem.Text = "सिस्टम";
+
+                    // मेनूआइटम्स
+                    quitterToolStripMenuItem.Text = "बाहर निकलें";
+                    profilsToolStripMenuItem.Text = "प्रोफ़ाइल सहेजें";
+                    fichierToolStripMenuItem.Text = "फ़ाइल";
+                    profilToolStripMenuItem.Text = "प्रोफ़ाइल";
+                    rafraichirProfilsToolStripMenuItem.Text = "प्रोफ़ाइल ताज़ा करें";
+                    réinitialiserProfilsToolStripMenuItem.Text = "प्रोफ़ाइल रीसेट करें";
+                    configToolStripMenuItem.Text = "सेटिंग्स";
+                    aProposToolStripMenuItem.Text = "बारे में";
+                    themeToolStripMenuItem.Text = "थीम";
+                    break;
+
+                // Korean
+                case "KO":
+                    // 레이블 모드
+                    lblCosmetiqueGUI.Text = "GUI 화장품";
+                    lblCosmetiquesJeu.Text = "게임 화장품";
+                    lblCosmetiqueSkins.Text = "스킨 화장품";
+                    lblCommandsAdmins.Text = "명령어/관리자";
+
+                    // 체크박스
+                    isEnabled = "활성화됨?";
+
+                    // 버튼
+                    btnActiverTout.Text = "모두 활성화";
+                    btnDesactiverTout.Text = "모두 비활성화";
+                    btnExec.Text = "실행";
+                    btnFabric.Text = "패브릭 설치";
+                    btnModsChangelog.Text = "업데이트 노트";
+                    btnOpenRepos.Text = "GitHub 소스";
+                    btnOuvrirMods.Text = "모드 폴더 열기";
+                    btnUpdateMods.Text = "모드 업데이트/다운로드";
+                    btnReport.Text = "문제 신고";
+                    btnQuitter.Text = "종료";
+
+                    // 섹션
+                    gbFastProfiles.Text = "빠른 프로필";
+                    gbSystem.Text = "시스템";
+
+                    // 메뉴 아이템
+                    quitterToolStripMenuItem.Text = "종료";
+                    profilsToolStripMenuItem.Text = "프로필 저장";
+                    fichierToolStripMenuItem.Text = "파일";
+                    profilToolStripMenuItem.Text = "프로필";
+                    rafraichirProfilsToolStripMenuItem.Text = "프로필 새로고침";
+                    réinitialiserProfilsToolStripMenuItem.Text = "프로필 재설정";
+                    configToolStripMenuItem.Text = "설정";
+                    aProposToolStripMenuItem.Text = "소개";
+                    themeToolStripMenuItem.Text = "테마";
+                    break;
+
+                // Turkish
+                case "TR":
+                    // etiket değişiklikleri
+                    lblCosmetiqueGUI.Text = "GUI Kozmetik";
+                    lblCosmetiquesJeu.Text = "Oyun Kozmetikleri";
+                    lblCosmetiqueSkins.Text = "Kil Kozmetikleri";
+                    lblCommandsAdmins.Text = "Komutlar/Yönetici";
+
+                    // onay kutuları
+                    isEnabled = "Etkin mi?";
+
+                    // düğmeler
+                    btnActiverTout.Text = "Tümünü Etkinleştir";
+                    btnDesactiverTout.Text = "Tümünü Devre Dışı Bırak";
+                    btnExec.Text = "Çalıştır";
+                    btnFabric.Text = "Fabric Yükle";
+                    btnModsChangelog.Text = "Güncelleme Notları";
+                    btnOpenRepos.Text = "GitHub Kaynağı";
+                    btnOuvrirMods.Text = "Mod Klasörünü Aç";
+                    btnUpdateMods.Text = "Modları Güncelle/İndir";
+                    btnReport.Text = "Sorun Bildir";
+                    btnQuitter.Text = "Çıkış";
+
+                    // bölümler
+                    gbFastProfiles.Text = "Hızlı Profiller";
+                    gbSystem.Text = "Sistem";
+
+                    // menü öğeleri
+                    quitterToolStripMenuItem.Text = "Çıkış";
+                    profilsToolStripMenuItem.Text = "Profil Kaydet";
+                    fichierToolStripMenuItem.Text = "Dosya";
+                    profilToolStripMenuItem.Text = "Profil";
+                    rafraichirProfilsToolStripMenuItem.Text = "Profilleri Yenile";
+                    réinitialiserProfilsToolStripMenuItem.Text = "Profilleri Sıfırla";
+                    configToolStripMenuItem.Text = "Ayarlar";
+                    aProposToolStripMenuItem.Text = "Hakkında";
+                    themeToolStripMenuItem.Text = "Tema";
+                    break;
+
+                // Thai
+                case "TH":
+                    // แก้ไขตัวแปร
+                    lblCosmetiqueGUI.Text = "GUI เครื่องสำอาง";
+                    lblCosmetiquesJeu.Text = "เครื่องสำอางในเกม";
+                    lblCosmetiqueSkins.Text = "เครื่องสำอางสกิน";
+                    lblCommandsAdmins.Text = "คำสั่ง/ผู้ดูแล";
+
+                    // เช็คบ็อกซ์
+                    isEnabled = "เปิดใช้งาน?";
+
+                    // ปุ่ม
+                    btnActiverTout.Text = "เปิดใช้งานทั้งหมด";
+                    btnDesactiverTout.Text = "ปิดใช้งานทั้งหมด";
+                    btnExec.Text = "ดำเนินการ";
+                    btnFabric.Text = "ติดตั้ง Fabric";
+                    btnModsChangelog.Text = "บันทึกการอัพเดต";
+                    btnOpenRepos.Text = "ที่มา GitHub";
+                    btnOuvrirMods.Text = "เปิดโฟลเดอร์ Mods";
+                    btnUpdateMods.Text = "อัพเดต/ดาวน์โหลด Mods";
+                    btnReport.Text = "รายงานปัญหา";
+                    btnQuitter.Text = "ออก";
+
+                    // ส่วน
+                    gbFastProfiles.Text = "โปรไฟล์ด่วน";
+                    gbSystem.Text = "ระบบ";
+
+                    // เมนูไอเท็ม
+                    quitterToolStripMenuItem.Text = "ออก";
+                    profilsToolStripMenuItem.Text = "บันทึกโปรไฟล์";
+                    fichierToolStripMenuItem.Text = "ไฟล์";
+                    profilToolStripMenuItem.Text = "โปรไฟล์";
+                    rafraichirProfilsToolStripMenuItem.Text = "รีเฟรชโปรไฟล์";
+                    réinitialiserProfilsToolStripMenuItem.Text = "รีเซ็ตโปรไฟล์";
+                    configToolStripMenuItem.Text = "การตั้งค่า";
+                    aProposToolStripMenuItem.Text = "เกี่ยวกับ";
+                    themeToolStripMenuItem.Text = "ธีม";
+                    break;
+
+                // Indonesian
+                case "ID":
+                    // modifikasi label
+                    lblCosmetiqueGUI.Text = "GUI Kosmetik";
+                    lblCosmetiquesJeu.Text = "Kosmetik Game";
+                    lblCosmetiqueSkins.Text = "Kosmetik Skins";
+                    lblCommandsAdmins.Text = "Perintah/Admin";
+
+                    // kotak centang
+                    isEnabled = "Diaktifkan?";
+
+                    // tombol
+                    btnActiverTout.Text = "Aktifkan Semua";
+                    btnDesactiverTout.Text = "Nonaktifkan Semua";
+                    btnExec.Text = "Eksekusi";
+                    btnFabric.Text = "Pasang Fabric";
+                    btnModsChangelog.Text = "Catatan Pembaruan";
+                    btnOpenRepos.Text = "Sumber GitHub";
+                    btnOuvrirMods.Text = "Buka Folder Mods";
+                    btnUpdateMods.Text = "Perbarui/Unduh Mods";
+                    btnReport.Text = " Laporkan Masalah";
+                    btnQuitter.Text = "Keluar";
+
+                    // bagian
+                    gbFastProfiles.Text = "Profil Cepat";
+                    gbSystem.Text = "Sistem";
+
+                    // item menu
+                    quitterToolStripMenuItem.Text = "Keluar";
+                    profilsToolStripMenuItem.Text = "Simpan Profil";
+                    fichierToolStripMenuItem.Text = "Berkas";
+                    profilToolStripMenuItem.Text = "Profil";
+                    rafraichirProfilsToolStripMenuItem.Text = "Segarkan Profil";
+                    réinitialiserProfilsToolStripMenuItem.Text = "Atur Ulang Profil";
+                    configToolStripMenuItem.Text = "Pengaturan";
+                    aProposToolStripMenuItem.Text = "Tentang";
+                    themeToolStripMenuItem.Text = "Tema";
+                    break;
+
+
             }
 
             foreach (CheckBox cb in GetCheckboxsDictionary().Values)
