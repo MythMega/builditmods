@@ -24,8 +24,8 @@ namespace BuildItModsSelector
         private string profileFilePath = Path.Combine("sys", "profile.txt");
         private WebClient webClient;
         private Dictionary<string, string> filesToDownload = new Dictionary<string, string>();
-        private string version = "1.0pre-release-1";
-        private int app_build = 6; 
+        private string version = "1.1pre-release-1";
+        private int app_build = 9; 
 
         public Main()
         {
