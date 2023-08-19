@@ -131,7 +131,7 @@
             this.gbMods.Controls.Add(this.lblJourneyMap);
             this.gbMods.Controls.Add(this.lblCosmetiqueSkins);
             this.gbMods.Controls.Add(this.lblCosmetiquesJeu);
-            this.gbMods.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbMods.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbMods.Location = new System.Drawing.Point(7, 33);
             this.gbMods.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbMods.Name = "gbMods";
@@ -145,11 +145,11 @@
             // 
             this.cbCommandsAdmins.AutoSize = true;
             this.cbCommandsAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCommandsAdmins.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCommandsAdmins.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCommandsAdmins.Location = new System.Drawing.Point(198, 314);
             this.cbCommandsAdmins.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbCommandsAdmins.Name = "cbCommandsAdmins";
-            this.cbCommandsAdmins.Size = new System.Drawing.Size(74, 21);
+            this.cbCommandsAdmins.Size = new System.Drawing.Size(75, 22);
             this.cbCommandsAdmins.TabIndex = 20;
             this.cbCommandsAdmins.Tag = "admin";
             this.cbCommandsAdmins.Text = "Activé ?";
@@ -158,11 +158,11 @@
             // lblCommandsAdmins
             // 
             this.lblCommandsAdmins.AutoSize = true;
-            this.lblCommandsAdmins.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCommandsAdmins.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCommandsAdmins.Location = new System.Drawing.Point(22, 317);
             this.lblCommandsAdmins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCommandsAdmins.Name = "lblCommandsAdmins";
-            this.lblCommandsAdmins.Size = new System.Drawing.Size(104, 13);
+            this.lblCommandsAdmins.Size = new System.Drawing.Size(128, 15);
             this.lblCommandsAdmins.TabIndex = 19;
             this.lblCommandsAdmins.Text = "Commands / Admins";
             this.lblCommandsAdmins.Click += new System.EventHandler(this.lblCommandsAdmins_Click);
@@ -171,11 +171,11 @@
             // 
             this.cbCosmetiquesGUI.AutoSize = true;
             this.cbCosmetiquesGUI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCosmetiquesGUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCosmetiquesGUI.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCosmetiquesGUI.Location = new System.Drawing.Point(198, 64);
             this.cbCosmetiquesGUI.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbCosmetiquesGUI.Name = "cbCosmetiquesGUI";
-            this.cbCosmetiquesGUI.Size = new System.Drawing.Size(74, 21);
+            this.cbCosmetiquesGUI.Size = new System.Drawing.Size(75, 22);
             this.cbCosmetiquesGUI.TabIndex = 18;
             this.cbCosmetiquesGUI.Tag = "cosmgui";
             this.cbCosmetiquesGUI.Text = "Activé ?";
@@ -184,11 +184,11 @@
             // lblCosmetiqueGUI
             // 
             this.lblCosmetiqueGUI.AutoSize = true;
-            this.lblCosmetiqueGUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCosmetiqueGUI.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCosmetiqueGUI.Location = new System.Drawing.Point(22, 66);
             this.lblCosmetiqueGUI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCosmetiqueGUI.Name = "lblCosmetiqueGUI";
-            this.lblCosmetiqueGUI.Size = new System.Drawing.Size(89, 13);
+            this.lblCosmetiqueGUI.Size = new System.Drawing.Size(106, 15);
             this.lblCosmetiqueGUI.TabIndex = 17;
             this.lblCosmetiqueGUI.Text = "Cosmetiques GUI";
             this.lblCosmetiqueGUI.Click += new System.EventHandler(this.lblCosmetiqueGUI_Click);
@@ -196,11 +196,11 @@
             // lblIsometry
             // 
             this.lblIsometry.AutoSize = true;
-            this.lblIsometry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsometry.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIsometry.Location = new System.Drawing.Point(22, 283);
             this.lblIsometry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIsometry.Name = "lblIsometry";
-            this.lblIsometry.Size = new System.Drawing.Size(96, 13);
+            this.lblIsometry.Size = new System.Drawing.Size(118, 15);
             this.lblIsometry.TabIndex = 16;
             this.lblIsometry.Text = "Isometric Renderer";
             this.lblIsometry.Click += new System.EventHandler(this.lblIsometry_Click);
@@ -209,11 +209,11 @@
             // 
             this.cbIsometricRenderer.AutoSize = true;
             this.cbIsometricRenderer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbIsometricRenderer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIsometricRenderer.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIsometricRenderer.Location = new System.Drawing.Point(198, 280);
             this.cbIsometricRenderer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbIsometricRenderer.Name = "cbIsometricRenderer";
-            this.cbIsometricRenderer.Size = new System.Drawing.Size(74, 21);
+            this.cbIsometricRenderer.Size = new System.Drawing.Size(75, 22);
             this.cbIsometricRenderer.TabIndex = 15;
             this.cbIsometricRenderer.Tag = "isometric";
             this.cbIsometricRenderer.Text = "Activé ?";
@@ -227,7 +227,7 @@
             this.btnActiverTout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActiverTout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActiverTout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActiverTout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActiverTout.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActiverTout.Location = new System.Drawing.Point(10, 392);
             this.btnActiverTout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnActiverTout.Name = "btnActiverTout";
@@ -245,7 +245,7 @@
             this.btnDesactiverTout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDesactiverTout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDesactiverTout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesactiverTout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesactiverTout.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesactiverTout.Location = new System.Drawing.Point(10, 359);
             this.btnDesactiverTout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDesactiverTout.Name = "btnDesactiverTout";
@@ -263,7 +263,7 @@
             this.btnExec.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnExec.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnExec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExec.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExec.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExec.Location = new System.Drawing.Point(146, 359);
             this.btnExec.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnExec.Name = "btnExec";
@@ -277,11 +277,11 @@
             // 
             this.cbWorldEdit.AutoSize = true;
             this.cbWorldEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbWorldEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbWorldEdit.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbWorldEdit.Location = new System.Drawing.Point(198, 245);
             this.cbWorldEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbWorldEdit.Name = "cbWorldEdit";
-            this.cbWorldEdit.Size = new System.Drawing.Size(74, 21);
+            this.cbWorldEdit.Size = new System.Drawing.Size(75, 22);
             this.cbWorldEdit.TabIndex = 11;
             this.cbWorldEdit.Tag = "worldedit";
             this.cbWorldEdit.Text = "Activé ?";
@@ -291,11 +291,11 @@
             // 
             this.cbReplaymod.AutoSize = true;
             this.cbReplaymod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbReplaymod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbReplaymod.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbReplaymod.Location = new System.Drawing.Point(198, 209);
             this.cbReplaymod.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbReplaymod.Name = "cbReplaymod";
-            this.cbReplaymod.Size = new System.Drawing.Size(74, 21);
+            this.cbReplaymod.Size = new System.Drawing.Size(75, 22);
             this.cbReplaymod.TabIndex = 10;
             this.cbReplaymod.Tag = "replaymod";
             this.cbReplaymod.Text = "Activé ?";
@@ -305,11 +305,11 @@
             // 
             this.cbLitematica.AutoSize = true;
             this.cbLitematica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLitematica.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLitematica.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLitematica.Location = new System.Drawing.Point(198, 170);
             this.cbLitematica.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbLitematica.Name = "cbLitematica";
-            this.cbLitematica.Size = new System.Drawing.Size(74, 21);
+            this.cbLitematica.Size = new System.Drawing.Size(75, 22);
             this.cbLitematica.TabIndex = 9;
             this.cbLitematica.Tag = "litematica";
             this.cbLitematica.Text = "Activé ?";
@@ -319,11 +319,11 @@
             // 
             this.cbJourneymap.AutoSize = true;
             this.cbJourneymap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbJourneymap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbJourneymap.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbJourneymap.Location = new System.Drawing.Point(198, 135);
             this.cbJourneymap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbJourneymap.Name = "cbJourneymap";
-            this.cbJourneymap.Size = new System.Drawing.Size(74, 21);
+            this.cbJourneymap.Size = new System.Drawing.Size(75, 22);
             this.cbJourneymap.TabIndex = 8;
             this.cbJourneymap.Tag = "map";
             this.cbJourneymap.Text = "Activé ?";
@@ -333,11 +333,11 @@
             // 
             this.cbCosmetiquesSkins.AutoSize = true;
             this.cbCosmetiquesSkins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCosmetiquesSkins.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCosmetiquesSkins.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCosmetiquesSkins.Location = new System.Drawing.Point(198, 101);
             this.cbCosmetiquesSkins.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbCosmetiquesSkins.Name = "cbCosmetiquesSkins";
-            this.cbCosmetiquesSkins.Size = new System.Drawing.Size(74, 21);
+            this.cbCosmetiquesSkins.Size = new System.Drawing.Size(75, 22);
             this.cbCosmetiquesSkins.TabIndex = 7;
             this.cbCosmetiquesSkins.Tag = "cosmskin";
             this.cbCosmetiquesSkins.Text = "Activé ?";
@@ -347,11 +347,11 @@
             // 
             this.cbCosmetiquesJeu.AutoSize = true;
             this.cbCosmetiquesJeu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCosmetiquesJeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCosmetiquesJeu.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCosmetiquesJeu.Location = new System.Drawing.Point(198, 30);
             this.cbCosmetiquesJeu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbCosmetiquesJeu.Name = "cbCosmetiquesJeu";
-            this.cbCosmetiquesJeu.Size = new System.Drawing.Size(74, 21);
+            this.cbCosmetiquesJeu.Size = new System.Drawing.Size(75, 22);
             this.cbCosmetiquesJeu.TabIndex = 6;
             this.cbCosmetiquesJeu.Tag = "cosmjeu";
             this.cbCosmetiquesJeu.Text = "Activé ?";
@@ -360,11 +360,11 @@
             // lblReplaymod
             // 
             this.lblReplaymod.AutoSize = true;
-            this.lblReplaymod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReplaymod.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReplaymod.Location = new System.Drawing.Point(22, 211);
             this.lblReplaymod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReplaymod.Name = "lblReplaymod";
-            this.lblReplaymod.Size = new System.Drawing.Size(61, 13);
+            this.lblReplaymod.Size = new System.Drawing.Size(72, 15);
             this.lblReplaymod.TabIndex = 5;
             this.lblReplaymod.Text = "ReplayMod";
             this.lblReplaymod.Click += new System.EventHandler(this.lblReplaymod_Click);
@@ -372,11 +372,11 @@
             // lblWorldEdit
             // 
             this.lblWorldEdit.AutoSize = true;
-            this.lblWorldEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWorldEdit.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWorldEdit.Location = new System.Drawing.Point(22, 247);
             this.lblWorldEdit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWorldEdit.Name = "lblWorldEdit";
-            this.lblWorldEdit.Size = new System.Drawing.Size(53, 13);
+            this.lblWorldEdit.Size = new System.Drawing.Size(64, 15);
             this.lblWorldEdit.TabIndex = 4;
             this.lblWorldEdit.Text = "WorldEdit";
             this.lblWorldEdit.Click += new System.EventHandler(this.lblWorldEdit_Click);
@@ -384,11 +384,11 @@
             // lblLitematica
             // 
             this.lblLitematica.AutoSize = true;
-            this.lblLitematica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLitematica.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLitematica.Location = new System.Drawing.Point(22, 172);
             this.lblLitematica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLitematica.Name = "lblLitematica";
-            this.lblLitematica.Size = new System.Drawing.Size(55, 13);
+            this.lblLitematica.Size = new System.Drawing.Size(69, 15);
             this.lblLitematica.TabIndex = 3;
             this.lblLitematica.Text = "Litematica";
             this.lblLitematica.Click += new System.EventHandler(this.lblLitematica_Click);
@@ -396,11 +396,11 @@
             // lblJourneyMap
             // 
             this.lblJourneyMap.AutoSize = true;
-            this.lblJourneyMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJourneyMap.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJourneyMap.Location = new System.Drawing.Point(22, 137);
             this.lblJourneyMap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblJourneyMap.Name = "lblJourneyMap";
-            this.lblJourneyMap.Size = new System.Drawing.Size(65, 13);
+            this.lblJourneyMap.Size = new System.Drawing.Size(78, 15);
             this.lblJourneyMap.TabIndex = 2;
             this.lblJourneyMap.Text = "JourneyMap";
             this.lblJourneyMap.Click += new System.EventHandler(this.lblJourneyMap_Click);
@@ -408,11 +408,11 @@
             // lblCosmetiqueSkins
             // 
             this.lblCosmetiqueSkins.AutoSize = true;
-            this.lblCosmetiqueSkins.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCosmetiqueSkins.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCosmetiqueSkins.Location = new System.Drawing.Point(22, 103);
             this.lblCosmetiqueSkins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCosmetiqueSkins.Name = "lblCosmetiqueSkins";
-            this.lblCosmetiqueSkins.Size = new System.Drawing.Size(91, 13);
+            this.lblCosmetiqueSkins.Size = new System.Drawing.Size(110, 15);
             this.lblCosmetiqueSkins.TabIndex = 1;
             this.lblCosmetiqueSkins.Text = "Cométiques Skins";
             this.lblCosmetiqueSkins.Click += new System.EventHandler(this.lblCosmetiqueSkins_Click);
@@ -420,11 +420,11 @@
             // lblCosmetiquesJeu
             // 
             this.lblCosmetiquesJeu.AutoSize = true;
-            this.lblCosmetiquesJeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCosmetiquesJeu.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCosmetiquesJeu.Location = new System.Drawing.Point(22, 32);
             this.lblCosmetiquesJeu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCosmetiquesJeu.Name = "lblCosmetiquesJeu";
-            this.lblCosmetiquesJeu.Size = new System.Drawing.Size(87, 13);
+            this.lblCosmetiquesJeu.Size = new System.Drawing.Size(106, 15);
             this.lblCosmetiquesJeu.TabIndex = 0;
             this.lblCosmetiquesJeu.Text = "Cosmetiques Jeu";
             this.lblCosmetiquesJeu.Click += new System.EventHandler(this.lblCosmetiquesJeu_Click);
@@ -441,7 +441,7 @@
             this.gbSystem.Controls.Add(this.btnOpenRepos);
             this.gbSystem.Controls.Add(this.btnReport);
             this.gbSystem.Controls.Add(this.btnFabric);
-            this.gbSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbSystem.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSystem.Location = new System.Drawing.Point(318, 69);
             this.gbSystem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbSystem.Name = "gbSystem";
@@ -477,7 +477,7 @@
             this.btnOuvrirMods.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOuvrirMods.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOuvrirMods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOuvrirMods.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOuvrirMods.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOuvrirMods.Location = new System.Drawing.Point(22, 203);
             this.btnOuvrirMods.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOuvrirMods.Name = "btnOuvrirMods";
@@ -495,7 +495,7 @@
             this.btnModsChangelog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnModsChangelog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnModsChangelog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModsChangelog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModsChangelog.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModsChangelog.Location = new System.Drawing.Point(22, 97);
             this.btnModsChangelog.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnModsChangelog.Name = "btnModsChangelog";
@@ -525,7 +525,7 @@
             this.btnQuitter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnQuitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitter.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitter.Location = new System.Drawing.Point(22, 302);
             this.btnQuitter.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnQuitter.Name = "btnQuitter";
@@ -544,7 +544,7 @@
             this.btnUpdateMods.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnUpdateMods.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUpdateMods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateMods.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateMods.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateMods.Location = new System.Drawing.Point(22, 168);
             this.btnUpdateMods.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnUpdateMods.Name = "btnUpdateMods";
@@ -563,7 +563,7 @@
             this.btnOpenRepos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOpenRepos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOpenRepos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenRepos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenRepos.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenRepos.Location = new System.Drawing.Point(21, 62);
             this.btnOpenRepos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOpenRepos.Name = "btnOpenRepos";
@@ -582,7 +582,7 @@
             this.btnReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.Location = new System.Drawing.Point(21, 271);
             this.btnReport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReport.Name = "btnReport";
@@ -601,7 +601,7 @@
             this.btnFabric.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnFabric.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnFabric.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFabric.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFabric.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFabric.Location = new System.Drawing.Point(20, 31);
             this.btnFabric.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnFabric.Name = "btnFabric";
@@ -630,14 +630,15 @@
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitterToolStripMenuItem});
+            this.fichierToolStripMenuItem.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -647,8 +648,9 @@
             this.profilsToolStripMenuItem,
             this.rafraichirProfilsToolStripMenuItem,
             this.réinitialiserProfilsToolStripMenuItem});
+            this.profilToolStripMenuItem.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.profilToolStripMenuItem.Text = "Profils";
             // 
             // profilsToolStripMenuItem
@@ -663,13 +665,13 @@
             this.profil7ToolStripMenuItem,
             this.profil8ToolStripMenuItem});
             this.profilsToolStripMenuItem.Name = "profilsToolStripMenuItem";
-            this.profilsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.profilsToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.profilsToolStripMenuItem.Text = "Sauvegarder profils";
             // 
             // profil1ToolStripMenuItem
             // 
             this.profil1ToolStripMenuItem.Name = "profil1ToolStripMenuItem";
-            this.profil1ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.profil1ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.profil1ToolStripMenuItem.Tag = "p1";
             this.profil1ToolStripMenuItem.Text = "Profil 1";
             this.profil1ToolStripMenuItem.Click += new System.EventHandler(this.profilSaveBtn);
@@ -677,7 +679,7 @@
             // profil2ToolStripMenuItem
             // 
             this.profil2ToolStripMenuItem.Name = "profil2ToolStripMenuItem";
-            this.profil2ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.profil2ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.profil2ToolStripMenuItem.Tag = "p2";
             this.profil2ToolStripMenuItem.Text = "Profil 2";
             this.profil2ToolStripMenuItem.Click += new System.EventHandler(this.profilSaveBtn);
@@ -685,7 +687,7 @@
             // profil3ToolStripMenuItem
             // 
             this.profil3ToolStripMenuItem.Name = "profil3ToolStripMenuItem";
-            this.profil3ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.profil3ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.profil3ToolStripMenuItem.Tag = "p3";
             this.profil3ToolStripMenuItem.Text = "Profil 3";
             this.profil3ToolStripMenuItem.Click += new System.EventHandler(this.profilSaveBtn);
@@ -693,7 +695,7 @@
             // profil4ToolStripMenuItem
             // 
             this.profil4ToolStripMenuItem.Name = "profil4ToolStripMenuItem";
-            this.profil4ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.profil4ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.profil4ToolStripMenuItem.Tag = "p4";
             this.profil4ToolStripMenuItem.Text = "Profil 4";
             this.profil4ToolStripMenuItem.Click += new System.EventHandler(this.profilSaveBtn);
@@ -701,7 +703,7 @@
             // profil5ToolStripMenuItem
             // 
             this.profil5ToolStripMenuItem.Name = "profil5ToolStripMenuItem";
-            this.profil5ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.profil5ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.profil5ToolStripMenuItem.Tag = "p5";
             this.profil5ToolStripMenuItem.Text = "Profil 5";
             this.profil5ToolStripMenuItem.Click += new System.EventHandler(this.profilSaveBtn);
@@ -709,7 +711,7 @@
             // profil6ToolStripMenuItem
             // 
             this.profil6ToolStripMenuItem.Name = "profil6ToolStripMenuItem";
-            this.profil6ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.profil6ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.profil6ToolStripMenuItem.Tag = "p6";
             this.profil6ToolStripMenuItem.Text = "Profil 6";
             this.profil6ToolStripMenuItem.Click += new System.EventHandler(this.profilSaveBtn);
@@ -717,7 +719,7 @@
             // profil7ToolStripMenuItem
             // 
             this.profil7ToolStripMenuItem.Name = "profil7ToolStripMenuItem";
-            this.profil7ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.profil7ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.profil7ToolStripMenuItem.Tag = "p7";
             this.profil7ToolStripMenuItem.Text = "Profil 7";
             this.profil7ToolStripMenuItem.Click += new System.EventHandler(this.profilSaveBtn);
@@ -725,7 +727,7 @@
             // profil8ToolStripMenuItem
             // 
             this.profil8ToolStripMenuItem.Name = "profil8ToolStripMenuItem";
-            this.profil8ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.profil8ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.profil8ToolStripMenuItem.Tag = "p8";
             this.profil8ToolStripMenuItem.Text = "Profil 8";
             this.profil8ToolStripMenuItem.Click += new System.EventHandler(this.profilSaveBtn);
@@ -733,14 +735,14 @@
             // rafraichirProfilsToolStripMenuItem
             // 
             this.rafraichirProfilsToolStripMenuItem.Name = "rafraichirProfilsToolStripMenuItem";
-            this.rafraichirProfilsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.rafraichirProfilsToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.rafraichirProfilsToolStripMenuItem.Text = "Rafraichir profils";
             this.rafraichirProfilsToolStripMenuItem.Click += new System.EventHandler(this.rafraichirProfilsToolStripMenuItem_Click);
             // 
             // réinitialiserProfilsToolStripMenuItem
             // 
             this.réinitialiserProfilsToolStripMenuItem.Name = "réinitialiserProfilsToolStripMenuItem";
-            this.réinitialiserProfilsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.réinitialiserProfilsToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.réinitialiserProfilsToolStripMenuItem.Text = "Réinitialiser profils";
             this.réinitialiserProfilsToolStripMenuItem.Click += new System.EventHandler(this.réinitialiserProfilsToolStripMenuItem_Click);
             // 
@@ -751,35 +753,36 @@
             this.mythMegaToolStripMenuItem,
             this.wikiToolStripMenuItem,
             this.contributeursToolStripMenuItem});
+            this.infosToolStripMenuItem.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infosToolStripMenuItem.Name = "infosToolStripMenuItem";
-            this.infosToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.infosToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.infosToolStripMenuItem.Text = "Infos";
             // 
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.aProposToolStripMenuItem.Text = "A propos";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 
             // mythMegaToolStripMenuItem
             // 
             this.mythMegaToolStripMenuItem.Name = "mythMegaToolStripMenuItem";
-            this.mythMegaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.mythMegaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.mythMegaToolStripMenuItem.Text = "MythMega";
             this.mythMegaToolStripMenuItem.Click += new System.EventHandler(this.mythMegaToolStripMenuItem_Click);
             // 
             // wikiToolStripMenuItem
             // 
             this.wikiToolStripMenuItem.Name = "wikiToolStripMenuItem";
-            this.wikiToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.wikiToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.wikiToolStripMenuItem.Text = "Wiki";
             this.wikiToolStripMenuItem.Click += new System.EventHandler(this.wikiToolStripMenuItem_Click);
             // 
             // contributeursToolStripMenuItem
             // 
             this.contributeursToolStripMenuItem.Name = "contributeursToolStripMenuItem";
-            this.contributeursToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.contributeursToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.contributeursToolStripMenuItem.Text = "Contributeurs";
             this.contributeursToolStripMenuItem.Click += new System.EventHandler(this.contributeursToolStripMenuItem_Click);
             // 
@@ -787,8 +790,9 @@
             // 
             this.configToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.themeToolStripMenuItem});
+            this.configToolStripMenuItem.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.configToolStripMenuItem.Name = "configToolStripMenuItem";
-            this.configToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.configToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.configToolStripMenuItem.Text = "Config";
             // 
             // themeToolStripMenuItem
@@ -799,34 +803,34 @@
             this.bUILDITGREENToolStripMenuItem,
             this.bUILDITBLUEToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            this.themeToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.themeToolStripMenuItem.Text = "theme";
             // 
             // dEFAULTToolStripMenuItem
             // 
             this.dEFAULTToolStripMenuItem.Name = "dEFAULTToolStripMenuItem";
-            this.dEFAULTToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.dEFAULTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dEFAULTToolStripMenuItem.Text = "DEFAULT";
             this.dEFAULTToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // dARKToolStripMenuItem
             // 
             this.dARKToolStripMenuItem.Name = "dARKToolStripMenuItem";
-            this.dARKToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.dARKToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dARKToolStripMenuItem.Text = "DARK";
             this.dARKToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // bUILDITGREENToolStripMenuItem
             // 
             this.bUILDITGREENToolStripMenuItem.Name = "bUILDITGREENToolStripMenuItem";
-            this.bUILDITGREENToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.bUILDITGREENToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bUILDITGREENToolStripMenuItem.Text = "BUILDITGREEN";
             this.bUILDITGREENToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // bUILDITBLUEToolStripMenuItem
             // 
             this.bUILDITBLUEToolStripMenuItem.Name = "bUILDITBLUEToolStripMenuItem";
-            this.bUILDITBLUEToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.bUILDITBLUEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bUILDITBLUEToolStripMenuItem.Text = "BUILDITBLUE";
             this.bUILDITBLUEToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
@@ -842,7 +846,7 @@
             this.gbFastProfiles.Controls.Add(this.btnProfile3);
             this.gbFastProfiles.Controls.Add(this.btnProfile2);
             this.gbFastProfiles.Controls.Add(this.btnProfile1);
-            this.gbFastProfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbFastProfiles.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbFastProfiles.Location = new System.Drawing.Point(7, 504);
             this.gbFastProfiles.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbFastProfiles.Name = "gbFastProfiles";
@@ -854,11 +858,11 @@
             // 
             // txbProfileName
             // 
-            this.txbProfileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbProfileName.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbProfileName.Location = new System.Drawing.Point(193, 23);
             this.txbProfileName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txbProfileName.Name = "txbProfileName";
-            this.txbProfileName.Size = new System.Drawing.Size(192, 20);
+            this.txbProfileName.Size = new System.Drawing.Size(192, 21);
             this.txbProfileName.TabIndex = 8;
             // 
             // btnProfile8
@@ -870,7 +874,7 @@
             this.btnProfile8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProfile8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile8.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile8.Location = new System.Drawing.Point(293, 160);
             this.btnProfile8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile8.Name = "btnProfile8";
@@ -890,7 +894,7 @@
             this.btnProfile6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProfile6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile6.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile6.Location = new System.Drawing.Point(293, 126);
             this.btnProfile6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile6.Name = "btnProfile6";
@@ -910,7 +914,7 @@
             this.btnProfile4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProfile4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile4.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile4.Location = new System.Drawing.Point(293, 91);
             this.btnProfile4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile4.Name = "btnProfile4";
@@ -930,7 +934,7 @@
             this.btnProfile7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProfile7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile7.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile7.Location = new System.Drawing.Point(22, 160);
             this.btnProfile7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile7.Name = "btnProfile7";
@@ -950,7 +954,7 @@
             this.btnProfile5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProfile5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile5.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile5.Location = new System.Drawing.Point(22, 126);
             this.btnProfile5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile5.Name = "btnProfile5";
@@ -970,7 +974,7 @@
             this.btnProfile3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProfile3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile3.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile3.Location = new System.Drawing.Point(22, 91);
             this.btnProfile3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile3.Name = "btnProfile3";
@@ -990,7 +994,7 @@
             this.btnProfile2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProfile2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile2.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile2.Location = new System.Drawing.Point(293, 57);
             this.btnProfile2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile2.Name = "btnProfile2";
@@ -1010,7 +1014,7 @@
             this.btnProfile1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProfile1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProfile1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile1.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile1.Location = new System.Drawing.Point(22, 57);
             this.btnProfile1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnProfile1.Name = "btnProfile1";
@@ -1055,6 +1059,7 @@
             // 
             this.btnStartMinecraft.FlatAppearance.BorderSize = 0;
             this.btnStartMinecraft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartMinecraft.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStartMinecraft.Location = new System.Drawing.Point(17, 475);
             this.btnStartMinecraft.Name = "btnStartMinecraft";
             this.btnStartMinecraft.Size = new System.Drawing.Size(477, 23);
