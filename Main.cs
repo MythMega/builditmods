@@ -2686,9 +2686,14 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             return resultat;
         }
 
+
         #endregion
 
-        
+        private void btnShaderManager_Click(object sender, EventArgs e)
+        {
+            ShaderUpdater su = new ShaderUpdater();
+            su.ShowDialog();
+        }
     }
 }
 
