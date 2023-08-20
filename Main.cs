@@ -50,7 +50,8 @@ p6=profile 6=
 p7=profile 7=
 p8=profile 8=
 language=??
-theme=DEFAULT";
+theme=DEFAULT
+mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
                 // Créer le fichier avec le contenu spécifié
                 File.WriteAllText(filePath, fileContent);
@@ -64,6 +65,10 @@ theme=DEFAULT";
                 {
                     SetProfileValue("language", "EN");
                 }
+            }
+            if(GetProfileValue("mc")==string.Empty)
+            {
+                SetProfileValue("mc", @"C:\XboxGames\Minecraft Launcher\Content\Minecraft.exe");
             }
             reloadProfiles();
             makeTranslation();
@@ -1016,6 +1021,48 @@ theme=DEFAULT";
         private void contributeursToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //TODO
+        }
+
+        private void btnStartMinecraft_Click(object sender, EventArgs e)
+        {
+            string launcher_MS = @"C:\XboxGames\Minecraft Launcher\Content\Minecraft.exe";
+            string launcher_W10 = @"C:\Program Files (x86)\Minecraft Launcher\MinecraftLauncher.exe";
+
+            try
+            {
+                Process.Start(GetProfileValue("mc"));
+                
+            }
+            catch
+            {
+                try
+                {
+                    Process.Start(launcher_MS);
+                    
+                }
+                catch
+                {
+
+                    try
+                    {
+                        Process.Start(launcher_W10);
+                    }
+                    catch 
+                    {
+                        MessageBox.Show(translatedText("ERR_NOMINECRAFEXE"));
+                    }
+                }
+            }
+
+        }
+        private void btnLocateMinecraft_Click(object sender, EventArgs e)
+        {
+            MinecraftPathSetterForm frm = new MinecraftPathSetterForm();
+            frm.Text = translatedText("LBL_LOCALISER");
+            frm.btnCancel.Text = translatedText("LBL_ANNULER");
+            frm.btnCHangeMinecraftLocation.Text = translatedText("LBL_LOCALISER");
+            frm.txbLocation.Text = GetProfileValue("mc");
+            frm.ShowDialog();
         }
 
 
