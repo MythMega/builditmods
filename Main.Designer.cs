@@ -107,6 +107,8 @@
             this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
             this.btnStartMinecraft = new System.Windows.Forms.Button();
             this.btnLocateMinecraft = new System.Windows.Forms.Button();
+            this.btnShaderManager = new System.Windows.Forms.Button();
+            this.btnRessourceManager = new System.Windows.Forms.Button();
             this.gbMods.SuspendLayout();
             this.gbSystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -645,7 +647,7 @@
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -768,28 +770,28 @@
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.aProposToolStripMenuItem.Text = "A propos";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 
             // mythMegaToolStripMenuItem
             // 
             this.mythMegaToolStripMenuItem.Name = "mythMegaToolStripMenuItem";
-            this.mythMegaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mythMegaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.mythMegaToolStripMenuItem.Text = "MythMega";
             this.mythMegaToolStripMenuItem.Click += new System.EventHandler(this.mythMegaToolStripMenuItem_Click);
             // 
             // wikiToolStripMenuItem
             // 
             this.wikiToolStripMenuItem.Name = "wikiToolStripMenuItem";
-            this.wikiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.wikiToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.wikiToolStripMenuItem.Text = "Wiki";
             this.wikiToolStripMenuItem.Click += new System.EventHandler(this.wikiToolStripMenuItem_Click);
             // 
             // contributeursToolStripMenuItem
             // 
             this.contributeursToolStripMenuItem.Name = "contributeursToolStripMenuItem";
-            this.contributeursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contributeursToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.contributeursToolStripMenuItem.Text = "Contributeurs";
             this.contributeursToolStripMenuItem.Click += new System.EventHandler(this.contributeursToolStripMenuItem_Click);
             // 
@@ -817,83 +819,83 @@
             this.pASTELToolStripMenuItem,
             this.aQUAToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            this.themeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.themeToolStripMenuItem.Text = "theme";
             // 
             // dEFAULTToolStripMenuItem
             // 
             this.dEFAULTToolStripMenuItem.Name = "dEFAULTToolStripMenuItem";
-            this.dEFAULTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dEFAULTToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.dEFAULTToolStripMenuItem.Text = "DEFAULT";
             this.dEFAULTToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // dARKToolStripMenuItem
             // 
             this.dARKToolStripMenuItem.Name = "dARKToolStripMenuItem";
-            this.dARKToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dARKToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.dARKToolStripMenuItem.Text = "DARK";
             this.dARKToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // bUILDITGREENToolStripMenuItem
             // 
             this.bUILDITGREENToolStripMenuItem.Name = "bUILDITGREENToolStripMenuItem";
-            this.bUILDITGREENToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bUILDITGREENToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.bUILDITGREENToolStripMenuItem.Text = "BUILDITGREEN";
             this.bUILDITGREENToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // bUILDITBLUEToolStripMenuItem
             // 
             this.bUILDITBLUEToolStripMenuItem.Name = "bUILDITBLUEToolStripMenuItem";
-            this.bUILDITBLUEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bUILDITBLUEToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.bUILDITBLUEToolStripMenuItem.Text = "BUILDITBLUE";
             this.bUILDITBLUEToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // bUILDITYELLOWToolStripMenuItem
             // 
             this.bUILDITYELLOWToolStripMenuItem.Name = "bUILDITYELLOWToolStripMenuItem";
-            this.bUILDITYELLOWToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bUILDITYELLOWToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.bUILDITYELLOWToolStripMenuItem.Text = "BUILDITYELLOW";
             this.bUILDITYELLOWToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // bUILDITPINKToolStripMenuItem
             // 
             this.bUILDITPINKToolStripMenuItem.Name = "bUILDITPINKToolStripMenuItem";
-            this.bUILDITPINKToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bUILDITPINKToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.bUILDITPINKToolStripMenuItem.Text = "BUILDITPINK";
             this.bUILDITPINKToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // bUILDITORANGEToolStripMenuItem
             // 
             this.bUILDITORANGEToolStripMenuItem.Name = "bUILDITORANGEToolStripMenuItem";
-            this.bUILDITORANGEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bUILDITORANGEToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.bUILDITORANGEToolStripMenuItem.Text = "BUILDITORANGE";
             this.bUILDITORANGEToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // cANDYToolStripMenuItem
             // 
             this.cANDYToolStripMenuItem.Name = "cANDYToolStripMenuItem";
-            this.cANDYToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cANDYToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.cANDYToolStripMenuItem.Text = "CANDY";
             this.cANDYToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // mINTToolStripMenuItem
             // 
             this.mINTToolStripMenuItem.Name = "mINTToolStripMenuItem";
-            this.mINTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mINTToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.mINTToolStripMenuItem.Text = "MINT";
             this.mINTToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // pASTELToolStripMenuItem
             // 
             this.pASTELToolStripMenuItem.Name = "pASTELToolStripMenuItem";
-            this.pASTELToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pASTELToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.pASTELToolStripMenuItem.Text = "PASTEL";
             this.pASTELToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
             // aQUAToolStripMenuItem
             // 
             this.aQUAToolStripMenuItem.Name = "aQUAToolStripMenuItem";
-            this.aQUAToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aQUAToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.aQUAToolStripMenuItem.Text = "AQUA";
             this.aQUAToolStripMenuItem.Click += new System.EventHandler(this.changeThemeClick);
             // 
@@ -1144,13 +1146,41 @@
             this.btnLocateMinecraft.Click += new System.EventHandler(this.btnLocateMinecraft_Click);
             this.btnLocateMinecraft.MouseHover += new System.EventHandler(this.btnLocateMinecraft_MouseHover);
             // 
+            // btnShaderManager
+            // 
+            this.btnShaderManager.FlatAppearance.BorderSize = 0;
+            this.btnShaderManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShaderManager.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShaderManager.Location = new System.Drawing.Point(7, 716);
+            this.btnShaderManager.Name = "btnShaderManager";
+            this.btnShaderManager.Size = new System.Drawing.Size(273, 23);
+            this.btnShaderManager.TabIndex = 7;
+            this.btnShaderManager.Text = "ShaderPack Manager";
+            this.btnShaderManager.UseVisualStyleBackColor = true;
+            this.btnShaderManager.Click += new System.EventHandler(this.btnShaderManager_Click);
+            // 
+            // btnRessourceManager
+            // 
+            this.btnRessourceManager.FlatAppearance.BorderSize = 0;
+            this.btnRessourceManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRessourceManager.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRessourceManager.Location = new System.Drawing.Point(303, 716);
+            this.btnRessourceManager.Name = "btnRessourceManager";
+            this.btnRessourceManager.Size = new System.Drawing.Size(273, 23);
+            this.btnRessourceManager.TabIndex = 8;
+            this.btnRessourceManager.Text = "RessourcePack Manager";
+            this.btnRessourceManager.UseVisualStyleBackColor = true;
+            this.btnRessourceManager.Click += new System.EventHandler(this.btnRessourceManager_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(585, 721);
+            this.ClientSize = new System.Drawing.Size(585, 753);
+            this.Controls.Add(this.btnRessourceManager);
+            this.Controls.Add(this.btnShaderManager);
             this.Controls.Add(this.btnLocateMinecraft);
             this.Controls.Add(this.btnStartMinecraft);
             this.Controls.Add(this.comboBoxLanguage);
@@ -1259,6 +1289,8 @@
         private System.Windows.Forms.ToolStripMenuItem pASTELToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aQUAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mINTToolStripMenuItem;
+        private System.Windows.Forms.Button btnShaderManager;
+        private System.Windows.Forms.Button btnRessourceManager;
     }
 }
 
