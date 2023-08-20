@@ -1984,8 +1984,8 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
                         case "LBL_WARNING": resultat = "Attention !"; break;
                         case "LBL_CONFIRMATION": resultat = "ëtes vous sur de vouloir faire cette action ?"; break;
-                        case "LBL_TOUT_SELECTIONNER": resultat = "Tout déselctionner"; break;
-                        case "LBL_TOUT_DESELECTIONNER": resultat = "Tout selctionner"; break;
+                        case "LBL_TOUT_SELECTIONNER": resultat = "Tout sélectionner"; break;
+                        case "LBL_TOUT_DESELECTIONNER": resultat = "Tout déselctionner"; break;
                         case "LBL_STOP": resultat = "Arrêter"; break;
                         case "LBL_OUI": resultat = "Oui"; break;
                         case "LBL_NON": resultat = "Non"; break;
