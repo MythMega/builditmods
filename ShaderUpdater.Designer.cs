@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnUpdateShader = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnUpdateShader
+            // 
+            this.btnUpdateShader.Location = new System.Drawing.Point(371, 391);
+            this.btnUpdateShader.Name = "btnUpdateShader";
+            this.btnUpdateShader.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateShader.TabIndex = 1;
+            this.btnUpdateShader.Text = "UPDATE";
+            this.btnUpdateShader.UseVisualStyleBackColor = true;
+            this.btnUpdateShader.Click += new System.EventHandler(this.btnUpdateShader_Click);
             // 
             // ShaderUpdater
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdateShader);
             this.Name = "ShaderUpdater";
             this.Text = "ShaderSelectors";
             this.Load += new System.EventHandler(this.ShaderUpdater_Load);
@@ -43,5 +55,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnUpdateShader;
     }
 }

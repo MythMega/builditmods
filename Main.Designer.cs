@@ -1170,6 +1170,7 @@
             this.btnRessourceManager.TabIndex = 8;
             this.btnRessourceManager.Text = "RessourcePack Manager";
             this.btnRessourceManager.UseVisualStyleBackColor = true;
+            this.btnRessourceManager.Click += new System.EventHandler(this.btnRessourceManager_Click);
             // 
             // Main
             // 

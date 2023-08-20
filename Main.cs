@@ -1956,6 +1956,9 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                         case "ERR_NOTYETIMPLEMENTED": resultat = "Cette feature n'est pas encore implémentée"; break;
                         case "ERR_EXEC-BATCH": resultat = "Une erreur s'est produite lors de l'exécution du fichier batch : "; break;
                         case "ERR_NOMINECRAFEXE": resultat = "Il semblerait qu'il soit pas possible de lancer minecraft"; break;
+                        case "ERR_NOITEMS_SELECTED": resultat = "Vous n'avez selectionné aucun item, l'action a été ignoré"; break;
+                        case "ERR_NOTIMPLEMENTED_FEATURE": resultat = "Cette fonctionalité n'a pas encore été implementée."; break;
+                        case "ERR_NOTIMPLEMENTED_FEATURE_VERSION": resultat = "Cette fonctionalité n'a pas encore été implementée. Cette feature sera disponible en version "; break;
 
                         case "WARN_WRONGFOLDER": resultat = "Mauvais dossier : "; break;
                         case "WARN_MUSTSTARTINMODSFOLDER": resultat = "Le logiciel doit être exécuté depuis le dossier 'mods' de votre .minecraft."; break;
@@ -2693,6 +2696,11 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
         {
             ShaderUpdater su = new ShaderUpdater();
             su.ShowDialog();
+        }
+
+        private void btnRessourceManager_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(translatedText("ERR_NOTIMPLEMENTED_FEATURE_VERSION") + "1.2.");
         }
     }
 }
