@@ -28,7 +28,7 @@ namespace BuildItModsSelector
 
         private void ShaderUpdater_Load(object sender, EventArgs e)
         {
-            DownloadFileSyncInSys("shaderclist.config", "https://jmdbymyth.000webhostapp.com/prj/mysurvivaltool/shaderlist.config");
+            DownloadFileSyncInSys("shaderlist.config", "https://jmdbymyth.000webhostapp.com/prj/mysurvivaltool/shaderlist.config");
             Thread.Sleep(1000);
             loadLayout();
         }
