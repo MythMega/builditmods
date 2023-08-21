@@ -34,6 +34,7 @@ namespace BuildItModsSelector
             DownloadFileSyncInSys("shaderlist.config", "https://jmdbymyth.000webhostapp.com/prj/mysurvivaltool/shaderlist.config");
             Thread.Sleep(1000);
             loadLayout();
+            temoinMain.updateTheme(this);
         }
 
         private void DownloadFileSyncInSys(string file, string url)
@@ -183,6 +184,8 @@ namespace BuildItModsSelector
                 selectAllButton.Text = temoinMain.translatedText("LBL_TOUT_SELECTIONNER");
                 selectAllButton.Location = new Point(10, buttonsY+15);
                 selectAllButton.Width = 130;
+                selectAllButton.FlatAppearance.BorderSize = 0;
+                selectAllButton.FlatStyle = FlatStyle.Flat;
                 selectAllButton.Click += (s, eventArgs) =>
                 {
                     foreach (CheckBox checkBox in groupe.Value)
@@ -197,6 +200,8 @@ namespace BuildItModsSelector
                 deselectAllButton.Text = temoinMain.translatedText("LBL_TOUT_DESELECTIONNER");
                 deselectAllButton.Location = new Point(155, buttonsY+15);
                 deselectAllButton.Width = 130;
+                deselectAllButton.FlatAppearance.BorderSize = 0;
+                deselectAllButton.FlatStyle = FlatStyle.Flat;
                 deselectAllButton.Click += (s, eventArgs) =>
                 {
                     foreach (CheckBox checkBox in groupe.Value)
