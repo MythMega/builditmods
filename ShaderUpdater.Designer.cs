@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShaderUpdater));
             this.btnUpdateShader = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUpdateShader
             // 
+            this.btnUpdateShader.FlatAppearance.BorderSize = 0;
+            this.btnUpdateShader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateShader.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateShader.Location = new System.Drawing.Point(371, 391);
             this.btnUpdateShader.Name = "btnUpdateShader";
             this.btnUpdateShader.Size = new System.Drawing.Size(75, 23);
@@ -47,7 +51,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnUpdateShader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShaderUpdater";
+            this.ShowInTaskbar = false;
             this.Text = "ShaderSelectors";
             this.Load += new System.EventHandler(this.ShaderUpdater_Load);
             this.ResumeLayout(false);

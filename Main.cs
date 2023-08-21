@@ -72,7 +72,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             }
             reloadProfiles();
             makeTranslation();
-            updateTheme();
+            updateTheme(this);
         }
 
         private void checkStartingFolder()
@@ -911,7 +911,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
         {
             string theme = ((ToolStripMenuItem)sender).Text;
             SetProfileValue("theme", theme);
-            updateTheme();
+            updateTheme(this);
         }
 
         
@@ -1066,12 +1066,12 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
         }
 
 
-        private void updateTheme()
+        public void updateTheme(Form form)
         {
             string theme = GetProfileValue("theme");
             List<Control> allControls = new List<Control>();
 
-            foreach (Control control in Controls)
+            foreach (Control control in form.Controls)
             {
                 allControls.Add(control);
                 if (control is GroupBox)
@@ -1181,7 +1181,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
             }
             menuStrip1.BackColor = backColor;
-            this.BackColor = backColor;
+            form.BackColor = backColor;
 
             foreach (ToolStripMenuItem item in menuStrip1.Items.OfType<ToolStripMenuItem>())
             {
