@@ -33,7 +33,7 @@ namespace BuildItModsSelector
         private void ShaderUpdater_Load(object sender, EventArgs e)
         {
             DownloadFileSyncInSys("shaderlist.config", "https://jmdbymyth.000webhostapp.com/prj/mysurvivaltool/shaderlist.config");
-            Thread.Sleep(1000);
+            Thread.Sleep(1);
             loadLayout();
             Theme.updateTheme(this);
         }

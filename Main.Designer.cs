@@ -109,11 +109,14 @@
             this.btnLocateMinecraft = new System.Windows.Forms.Button();
             this.btnShaderManager = new System.Windows.Forms.Button();
             this.btnRessourceManager = new System.Windows.Forms.Button();
+            this.gbAddonManagin = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbMods.SuspendLayout();
             this.gbSystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.gbFastProfiles.SuspendLayout();
+            this.gbAddonManagin.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbMods
@@ -1111,7 +1114,9 @@
             "KO (한국어)",
             "TR (Türkçe)",
             "TH (ไทย)",
-            "ID (Indonesia)"});
+            "ID (Indonesia)",
+            "PL (Polski)",
+            "SV (Svenska)"});
             this.comboBoxLanguage.Location = new System.Drawing.Point(319, 40);
             this.comboBoxLanguage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
@@ -1151,7 +1156,7 @@
             this.btnShaderManager.FlatAppearance.BorderSize = 0;
             this.btnShaderManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShaderManager.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShaderManager.Location = new System.Drawing.Point(7, 716);
+            this.btnShaderManager.Location = new System.Drawing.Point(6, 20);
             this.btnShaderManager.Name = "btnShaderManager";
             this.btnShaderManager.Size = new System.Drawing.Size(273, 23);
             this.btnShaderManager.TabIndex = 7;
@@ -1164,7 +1169,7 @@
             this.btnRessourceManager.FlatAppearance.BorderSize = 0;
             this.btnRessourceManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRessourceManager.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRessourceManager.Location = new System.Drawing.Point(303, 716);
+            this.btnRessourceManager.Location = new System.Drawing.Point(290, 20);
             this.btnRessourceManager.Name = "btnRessourceManager";
             this.btnRessourceManager.Size = new System.Drawing.Size(273, 23);
             this.btnRessourceManager.TabIndex = 8;
@@ -1172,15 +1177,25 @@
             this.btnRessourceManager.UseVisualStyleBackColor = true;
             this.btnRessourceManager.Click += new System.EventHandler(this.btnRessourceManager_Click);
             // 
+            // gbAddonManagin
+            // 
+            this.gbAddonManagin.Controls.Add(this.btnShaderManager);
+            this.gbAddonManagin.Controls.Add(this.btnRessourceManager);
+            this.gbAddonManagin.Location = new System.Drawing.Point(8, 715);
+            this.gbAddonManagin.Name = "gbAddonManagin";
+            this.gbAddonManagin.Size = new System.Drawing.Size(569, 58);
+            this.gbAddonManagin.TabIndex = 9;
+            this.gbAddonManagin.TabStop = false;
+            this.gbAddonManagin.Text = "Add-On";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(585, 753);
-            this.Controls.Add(this.btnRessourceManager);
-            this.Controls.Add(this.btnShaderManager);
+            this.ClientSize = new System.Drawing.Size(585, 779);
+            this.Controls.Add(this.gbAddonManagin);
             this.Controls.Add(this.btnLocateMinecraft);
             this.Controls.Add(this.btnStartMinecraft);
             this.Controls.Add(this.comboBoxLanguage);
@@ -1204,6 +1219,7 @@
             this.menuStrip1.PerformLayout();
             this.gbFastProfiles.ResumeLayout(false);
             this.gbFastProfiles.PerformLayout();
+            this.gbAddonManagin.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1291,6 +1307,8 @@
         private System.Windows.Forms.ToolStripMenuItem mINTToolStripMenuItem;
         private System.Windows.Forms.Button btnShaderManager;
         private System.Windows.Forms.Button btnRessourceManager;
+        private System.Windows.Forms.GroupBox gbAddonManagin;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

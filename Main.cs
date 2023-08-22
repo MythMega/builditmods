@@ -1573,6 +1573,47 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
             }
 
+            // label mods
+            lblCosmetiqueGUI.Text = Translator.translatedText("LAYOUT_Cosmetic_GUI");
+            lblCosmetiquesJeu.Text = Translator.translatedText("LAYOUT_Cosmetic_Game");
+            lblCosmetiqueSkins.Text = Translator.translatedText("LAYOUT_Cosmetic_Skin");
+            lblCommandsAdmins.Text = Translator.translatedText("LAYOUT_Commande_Admin");
+
+            // checkboxes
+            isEnabled = Translator.translatedText("LAYOUT_IsEnabled");
+
+            // buttons
+            btnActiverTout.Text = Translator.translatedText("LAYOUT_EnableAll");
+            btnDesactiverTout.Text = Translator.translatedText("LAYOUT_DisableAll");
+            btnExec.Text = Translator.translatedText("LAYOUT_Execute");
+            btnFabric.Text = Translator.translatedText("LAYOUT_InstallFabric");
+            btnModsChangelog.Text = Translator.translatedText("LAYOUT_UpdateNotes"); ;
+            btnOpenRepos.Text = Translator.translatedText("LAYOUT_GithubSource");
+            btnOuvrirMods.Text = Translator.translatedText("LAYOUT_OpenModFolder");
+            btnUpdateMods.Text = Translator.translatedText("LAYOUT_UpdateDownloadMod");
+            btnReport.Text = Translator.translatedText("LAYOUT_Report");
+            btnQuitter.Text = Translator.translatedText("LAYOUT_Quit");
+            btnStartMinecraft.Text = Translator.translatedText("LAYOUT_StartMinecraft");
+            btnShaderManager.Text = Translator.translatedText("LAYOUT_ShaderManager");
+            btnRessourceManager.Text = Translator.translatedText("LAYOUT_RessourceManager");
+
+            // section
+            gbFastProfiles.Text = Translator.translatedText("LAYOUT_GBFastProfiles");
+            gbSystem.Text = Translator.translatedText("LAYOUT_GBSystem");
+            gbAddonManagin.Text = Translator.translatedText("LAYOUT_GBAddOn");
+
+            // menuItems
+            quitterToolStripMenuItem.Text = Translator.translatedText("LAYOUT_Quit");
+            profilsToolStripMenuItem.Text = Translator.translatedText("LAYOUT_ProfilSave");
+            fichierToolStripMenuItem.Text = Translator.translatedText("LAYOUT_File");
+            profilToolStripMenuItem.Text = Translator.translatedText("LAYOUT_Profil");
+            rafraichirProfilsToolStripMenuItem.Text = Translator.translatedText("LAYOUT_ProfilRefresh");
+            réinitialiserProfilsToolStripMenuItem.Text = Translator.translatedText("LAYOUT_ProfilReset");
+            configToolStripMenuItem.Text = Translator.translatedText("LAYOUT_Setting");
+            aProposToolStripMenuItem.Text = Translator.translatedText("LAYOUT_About");
+            themeToolStripMenuItem.Text = Translator.translatedText("LAYOUT_Theme");
+            contributeursToolStripMenuItem.Text = Translator.translatedText("LAYOUT_Contributors");
+
             foreach (CheckBox cb in GetCheckboxsDictionary().Values)
             {
                 cb.Text = isEnabled;
