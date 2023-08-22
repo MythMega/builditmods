@@ -21,6 +21,7 @@ namespace BuildItModsSelector
         private WebClient webClient;
         private string shaderFilePath = Path.Combine("sys", "shaderlist.config");
         private Main mainStuff = new Main();
+        private Themes Theme = new Themes();
         private Translation translator = new Translation();
         private List<CheckBox> checkBoxes = new List<CheckBox>();
 
@@ -34,7 +35,7 @@ namespace BuildItModsSelector
             DownloadFileSyncInSys("shaderlist.config", "https://jmdbymyth.000webhostapp.com/prj/mysurvivaltool/shaderlist.config");
             Thread.Sleep(1000);
             loadLayout();
-            mainStuff.updateTheme(this);
+            Theme.updateTheme(this);
         }
 
         private void DownloadFileSyncInSys(string file, string url)

@@ -24,7 +24,8 @@ namespace BuildItModsSelector
         private string profileFilePath = Path.Combine("sys", "profile.txt");
         private WebClient webClient;
         private Dictionary<string, string> filesToDownload = new Dictionary<string, string>();
-        private Translation translator = new Translation();
+        private Translation Translator = new Translation();
+        private Themes Theme = new Themes();
         
 
         public Main()
@@ -72,7 +73,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             }
             reloadProfiles();
             makeTranslation();
-            updateTheme(this);
+            Theme.updateTheme(this);
         }
 
         private void checkStartingFolder()
@@ -82,8 +83,8 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             if (Path.GetFileName(appFolderPath) != "mods")
             {
                 DialogResult result = MessageBox.Show(
-                    translator.translatedText("WARN_MUSTSTARTINMODSFOLDER"),
-                    translator.translatedText("WARN_WRONGFOLDER"),
+                    Translator.translatedText("WARN_MUSTSTARTINMODSFOLDER"),
+                    Translator.translatedText("WARN_WRONGFOLDER"),
                     MessageBoxButtons.OKCancel,
                     MessageBoxIcon.Warning
                 );
@@ -261,11 +262,11 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 else { filePath = Path.Combine(Application.StartupPath, "sys/bats/cosmetique_jeu_disable.bat"); }
                 process.StartInfo.FileName = filePath; process.Start();
 
-                MessageBox.Show(translator.translatedText("INFO_SUCCESS"));
+                MessageBox.Show(Translator.translatedText("INFO_SUCCESS"));
             }
             catch
             {
-                MessageBox.Show(translator.translatedText("ERR_NOMODS"));
+                MessageBox.Show(Translator.translatedText("ERR_NOMODS"));
             }
 
         }
@@ -380,7 +381,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                     debug_timetodownloadFile += 50;
                     if (debug_timetodownloadFile == 5000)
                     {
-                        MessageBox.Show(translator.translatedText("ERR_TIMEOUT"));
+                        MessageBox.Show(Translator.translatedText("ERR_TIMEOUT"));
                         return;
                     }
                 }
@@ -403,7 +404,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { "Falling Leaves", 3 },
             };
 
-            showModstats(modlist, translator.getLanguageCode());
+            showModstats(modlist, Translator.getLanguageCode());
         }
 
         private void lblCommandsAdmins_Click(object sender, EventArgs e)
@@ -412,7 +413,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { "CommandMacros", 1 },
             };
 
-            showModstats(modlist, translator.getLanguageCode());
+            showModstats(modlist, Translator.getLanguageCode());
         }
         private void lblCosmetiqueSkins_Click(object sender, EventArgs e)
         {
@@ -421,7 +422,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { "Capes", 2 },
             };
 
-            showModstats(modlist, translator.getLanguageCode());
+            showModstats(modlist, Translator.getLanguageCode());
         }
 
         private void lblCosmetiqueGUI_Click(object sender, EventArgs e)
@@ -431,7 +432,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { "Chat Head", 0 },
             };
 
-            showModstats(modlist, translator.getLanguageCode());
+            showModstats(modlist, Translator.getLanguageCode());
         }
 
         private void lblJourneyMap_Click(object sender, EventArgs e)
@@ -440,7 +441,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { "JourneyMap", 10 },
             };
 
-            showModstats(modlist, translator.getLanguageCode());
+            showModstats(modlist, Translator.getLanguageCode());
         }
 
         private void lblLitematica_Click(object sender, EventArgs e)
@@ -451,7 +452,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { "Litematica Enderchest", 1 },
             };
 
-            showModstats(modlist, translator.getLanguageCode());
+            showModstats(modlist, Translator.getLanguageCode());
         }
 
         private void lblReplaymod_Click(object sender, EventArgs e)
@@ -461,7 +462,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { "Bobby", 6 },
             };
 
-            showModstats(modlist, translator.getLanguageCode());
+            showModstats(modlist, Translator.getLanguageCode());
         }
 
         private void lblWorldEdit_Click(object sender, EventArgs e)
@@ -470,7 +471,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { "World Edit", 15 },
             };
 
-            showModstats(modlist, translator.getLanguageCode());
+            showModstats(modlist, Translator.getLanguageCode());
         }
         private void lblIsometry_Click(object sender, EventArgs e)
         {
@@ -479,7 +480,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { "owo-lib", 0 },
             };
 
-            showModstats(modlist, translator.getLanguageCode());
+            showModstats(modlist, Translator.getLanguageCode());
         }
 
         private void showModstats(Dictionary<string, int> modlist, string languageCode)
@@ -495,37 +496,37 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
         private void btnUpdateMods_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(btnUpdateMods, translator.translatedText("MOUSEHOVER_BTNUPDATE"));
+            toolTip.SetToolTip(btnUpdateMods, Translator.translatedText("MOUSEHOVER_BTNUPDATE"));
         }
 
         private void btnFabric_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(btnFabric, translator.translatedText("MOUSEHOVER_BTNFABRIC"));
+            toolTip.SetToolTip(btnFabric, Translator.translatedText("MOUSEHOVER_BTNFABRIC"));
         }
 
         private void btnOpenRepos_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(btnOpenRepos, translator.translatedText("MOUSEHOVER_BTNSOURCECODE"));
+            toolTip.SetToolTip(btnOpenRepos, Translator.translatedText("MOUSEHOVER_BTNSOURCECODE"));
         }
 
         private void btnModsChangelog_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(btnModsChangelog, translator.translatedText("MOUSEHOVER_BTNCHANGELOG"));
+            toolTip.SetToolTip(btnModsChangelog, Translator.translatedText("MOUSEHOVER_BTNCHANGELOG"));
         }
 
         private void btnReport_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(btnReport, translator.translatedText("MOUSEHOVER_BTNREPORT"));
+            toolTip.SetToolTip(btnReport, Translator.translatedText("MOUSEHOVER_BTNREPORT"));
         }
 
         private void btnQuitter_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(btnQuitter, translator.translatedText("MOUSEHOVER_BTNQUITTER"));
+            toolTip.SetToolTip(btnQuitter, Translator.translatedText("MOUSEHOVER_BTNQUITTER"));
         }
 
         public static void enableAllMod()
@@ -893,7 +894,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
         {
             string theme = ((ToolStripMenuItem)sender).Text;
             SetProfileValue("theme", theme);
-            updateTheme(this);
+            Theme.updateTheme(this);
         }
 
         
@@ -927,17 +928,17 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
         private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(translator.translatedText("INFO_ABOUT"));
+            MessageBox.Show(Translator.translatedText("INFO_ABOUT"));
         }
 
         public void notYetImpletmentedFeature()
         {
-            MessageBox.Show(translator.translatedText("ERR_NOTYETIMPLEMENTED"));
+            MessageBox.Show(Translator.translatedText("ERR_NOTYETIMPLEMENTED"));
         }
 
         private void mythMegaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(translator.translatedText("INFO_MYTHMEGA"));
+            MessageBox.Show(Translator.translatedText("INFO_MYTHMEGA"));
         }
 
         private void wikiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -952,7 +953,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
         private void réinitialiserProfilsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(translator.translatedText("LBL_CONFIRMATION"), translator.translatedText("LBL_WARNING"), MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show(Translator.translatedText("LBL_CONFIRMATION"), Translator.translatedText("LBL_WARNING"), MessageBoxButtons.YesNo);
 
             if (result == DialogResult.No)
             {
@@ -986,7 +987,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
         private void btnLocateMinecraft_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(btnUpdateMods, translator.translatedText("MOUSEHOVER_BTNUPDATE"));
+            toolTip.SetToolTip(btnUpdateMods, Translator.translatedText("MOUSEHOVER_BTNUPDATE"));
         }
 
         
@@ -1022,7 +1023,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                     }
                     catch 
                     {
-                        MessageBox.Show(translator.translatedText("ERR_NOMINECRAFEXE"));
+                        MessageBox.Show(Translator.translatedText("ERR_NOMINECRAFEXE"));
                     }
                 }
             }
@@ -1031,198 +1032,22 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
         private void btnLocateMinecraft_Click(object sender, EventArgs e)
         {
             MinecraftPathSetterForm frm = new MinecraftPathSetterForm();
-            frm.Text = translator.translatedText("LBL_LOCALISER");
-            frm.btnCancel.Text = translator.translatedText("LBL_ANNULER");
-            frm.btnCHangeMinecraftLocation.Text = translator.translatedText("LBL_LOCALISER");
+            frm.Text = Translator.translatedText("LBL_LOCALISER");
+            frm.btnCancel.Text = Translator.translatedText("LBL_ANNULER");
+            frm.btnCHangeMinecraftLocation.Text = Translator.translatedText("LBL_LOCALISER");
             frm.txbLocation.Text = GetProfileValue("mc");
             frm.ShowDialog();
         }
 
 
-        public void updateTheme(Form form)
-        {
-            string theme = GetProfileValue("theme");
-            List<Control> allControls = new List<Control>();
-
-            foreach (Control control in form.Controls)
-            {
-                allControls.Add(control);
-                if (control is GroupBox)
-                {
-                    foreach (Control element in control.Controls)
-                    {
-                        allControls.Add(element);
-                    }
-                }
-            }
-
-            Color backColor = Color.FromArgb(255, 225, 225, 225);
-            Color lightBackColor = Color.FromArgb(255, 225, 225, 245);
-            Color lightMainColor = Color.FromArgb(255, 12, 20, 55);
-            Color secondaryColor = Color.LightGray;
-            Color textColor = Color.Black;
-
-            switch (theme)
-            {
-                case "DEFAULT":
-                    backColor = Color.FromArgb(255, 225, 225, 225);
-                    lightBackColor = Color.FromArgb(255, 225, 225, 245);
-                    lightMainColor = Color.FromArgb(255, 12, 20, 55);
-                    secondaryColor = Color.LightGray;
-                    textColor = Color.Black;
-                    break;
-
-                case "DARK":
-                    backColor = Color.FromArgb(255, 10, 10, 14);
-                    lightBackColor = Color.FromArgb(255, 15, 15, 20);
-                    lightMainColor = Color.FromArgb(255, 17, 17, 23);
-                    secondaryColor = Color.FromArgb(255, 50, 50, 70);
-                    textColor = Color.White;
-                    break;
-
-                case "BUILDITGREEN":
-                    backColor = Color.FromArgb(255, 30, 30, 30);
-                    lightBackColor = Color.FromArgb(255, 40, 40, 40);
-                    lightMainColor = Color.FromArgb(255, 12, 55, 20);
-                    secondaryColor = Color.FromArgb(255, 50, 70, 50);
-                    textColor = Color.FromArgb(255, 28, 239, 91);
-                    break;
-
-                case "BUILDITBLUE":
-                    backColor = Color.FromArgb(255, 30, 30, 30);
-                    lightBackColor = Color.FromArgb(255, 40, 40, 40);
-                    lightMainColor = Color.FromArgb(255, 12, 20, 55);
-                    secondaryColor = Color.FromArgb(255, 50, 50, 70);
-                    textColor = Color.FromArgb(255, 50, 200, 244);
-                    break;
-
-                case "BUILDITYELLOW":
-                    backColor = Color.FromArgb(30, 30, 30);
-                    lightBackColor = Color.FromArgb(40, 40, 40);
-                    lightMainColor = Color.FromArgb(12, 55, 20);
-                    secondaryColor = Color.FromArgb(50, 70, 50);
-                    textColor = Color.Yellow;
-                    break;
-
-                case "BUILDITPINK":
-                    backColor = Color.FromArgb(30, 30, 30);
-                    lightBackColor = Color.FromArgb(40, 40, 40);
-                    lightMainColor = Color.FromArgb(12, 55, 20);
-                    secondaryColor = Color.FromArgb(50, 70, 50);
-                    textColor = Color.Pink;
-                    break;
-
-                case "BUILDITORANGE":
-                    backColor = Color.FromArgb(30, 30, 30);
-                    lightBackColor = Color.FromArgb(40, 40, 40);
-                    lightMainColor = Color.FromArgb(12, 55, 20);
-                    secondaryColor = Color.FromArgb(50, 70, 50);
-                    textColor = Color.Orange;
-                    break;
-
-                case "CANDY":
-                    backColor = Color.Pink;
-                    lightBackColor = Color.Purple;
-                    lightMainColor = Color.Blue;
-                    secondaryColor = Color.Green;
-                    textColor = Color.White;
-                    break;
-
-                case "MINT":
-                    backColor = Color.LightGreen;
-                    lightBackColor = Color.Green;
-                    lightMainColor = Color.DarkGreen;
-                    secondaryColor = Color.PaleGreen;
-                    textColor = Color.Black;
-                    break;
-
-                case "PASTEL":
-                    backColor = Color.FromArgb(240, 240, 240);
-                    lightBackColor = Color.FromArgb(230, 230, 230);
-                    lightMainColor = Color.FromArgb(200, 200, 200);
-                    secondaryColor = Color.LightGray;
-                    textColor = Color.White;
-                    break;
-
-                case "AQUA":
-                    backColor = Color.FromArgb(100, 149, 237);
-                    lightBackColor = Color.FromArgb(135, 206, 250);
-                    lightMainColor = Color.FromArgb(0, 0, 128);
-                    secondaryColor = Color.Cyan;
-                    textColor = Color.White;
-                    break;
-
-            }
-            menuStrip1.BackColor = backColor;
-            form.BackColor = backColor;
-
-            foreach (ToolStripMenuItem item in menuStrip1.Items.OfType<ToolStripMenuItem>())
-            {
-                item.BackColor = backColor;
-                item.ForeColor = textColor;
-
-                foreach (ToolStripItem subItem in item.DropDownItems)
-                {
-                    subItem.BackColor = lightBackColor;
-                    subItem.ForeColor = textColor;
-                    if (subItem is ToolStripMenuItem)
-                    {
-                        ToolStripMenuItem menuItem = (ToolStripMenuItem)subItem;
-                        foreach (ToolStripItem againmoresubItem in menuItem.DropDownItems)
-                        {
-                            againmoresubItem.BackColor = lightBackColor;
-                            againmoresubItem.ForeColor = textColor;
-                        }
-                    }
-                }
-            }
-            foreach (Control control in allControls)
-            {
-                switch (control)
-                {
-                    case Label label:
-                        // Action spécifique pour les labels
-                        // ...
-                        break;
-
-                    case Button button:
-                        button.BackColor = backColor;
-                        button.ForeColor = textColor;
-                        button.FlatAppearance.MouseOverBackColor = lightBackColor;
-                        button.FlatAppearance.MouseDownBackColor = lightMainColor;
-                        break;
-
-                    case GroupBox groupBox:
-                        groupBox.BackColor = backColor;
-                        groupBox.ForeColor = textColor;
-                        break;
-
-                    case TextBox textBox:
-                        textBox.BackColor = secondaryColor;
-                        textBox.ForeColor = textColor;
-                        break;
-
-                    case ComboBox comboBox:
-                        comboBox.BackColor = secondaryColor;
-                        comboBox.ForeColor = textColor;
-                        break;
-
-                    default:
-                        // Action par défaut pour les autres types de contrôles
-                        // ...
-                        break;
-                }
-
-            }
-
-        }
+        
 
 
         #region TRADUCTIONS
 
         public void makeTranslation()
         {
-            string LanguageCode = translator.getLanguageCode();
+            string LanguageCode = Translator.getLanguageCode();
             string isEnabled = "!! Missing Translation !!";
 
 
@@ -1928,7 +1753,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
         private void btnRessourceManager_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(translator.translatedText("ERR_NOTIMPLEMENTED_FEATURE_VERSION") + "1.2.");
+            MessageBox.Show(Translator.translatedText("ERR_NOTIMPLEMENTED_FEATURE_VERSION") + "1.2.");
         }
     }
 }
