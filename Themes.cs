@@ -13,7 +13,8 @@ namespace BuildItModsSelector
 {
     public partial class Themes : Form
     {
-        private string profileFilePath = Path.Combine("sys", "profile.txt");
+        private Commons Commons = new Commons();
+        
         public Themes()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace BuildItModsSelector
 
         public void updateTheme(Form form)
         {
-            string theme = GetProfileValue("theme");
+            string theme = Commons.GetProfileValue("theme");
             List<Control> allControls = new List<Control>();
 
             foreach (Control control in form.Controls)
@@ -196,27 +197,7 @@ namespace BuildItModsSelector
                         // ...
                         break;
                 }
-
             }
-
-        }
-
-        public string GetProfileValue(string criterion)
-        {
-            string[] lines = File.ReadAllLines(profileFilePath);
-
-            foreach (string line in lines)
-            {
-                string[] parts = line.Split('=');
-
-                if (parts.Length == 2 && parts[0] == criterion)
-                {
-                    return parts[1];
-                }
-            }
-
-            // Critère non trouvé, retourner une valeur par défaut ou une chaîne vide
-            return string.Empty;
         }
     }
 }
