@@ -21,10 +21,9 @@ namespace BuildItModsSelector
     public partial class Main : Form
     {
         // Déclarez une instance de MaterialSkinManager
-        private string profileFilePath = Path.Combine("sys", "profile.txt");
-        private WebClient webClient;
-        private Dictionary<string, string> filesToDownload = new Dictionary<string, string>();
+        
         private Translation Translator = new Translation();
+        private Commons Commons = new Commons();
         private Themes Theme = new Themes();
         
 
@@ -35,7 +34,7 @@ namespace BuildItModsSelector
             //crée un dossier sys si il n'existe pas
             if (!Directory.Exists(Path.Combine(Application.StartupPath, "sys"))) { Directory.CreateDirectory(Path.Combine(Application.StartupPath, "sys")); }
             // Chemin du fichier profile.txt
-            string filePath = profileFilePath;
+            string filePath = Commons.profileFilePath;
             comboBoxLanguage.DropDownStyle = ComboBoxStyle.DropDownList;
 
             // Vérifier si le fichier existe
@@ -60,16 +59,16 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 // Récupérer la langue du système
                 if(new List<string>(){"FR", "EN", "PT", "ES", "IT", "AR", "RU", "IT" }.Contains((CultureInfo.InstalledUICulture).Name.Substring(0, 2).ToUpper()))
                 {
-                    SetProfileValue("language", (CultureInfo.InstalledUICulture).Name.Substring(0, 2).ToUpper());
+                    Commons.SetProfileValue("language", (CultureInfo.InstalledUICulture).Name.Substring(0, 2).ToUpper());
                 }
                 else
                 {
-                    SetProfileValue("language", "EN");
+                    Commons.SetProfileValue("language", "EN");
                 }
             }
-            if(GetProfileValue("mc")==string.Empty)
+            if(Commons.GetProfileValue("mc")==string.Empty)
             {
-                SetProfileValue("mc", @"C:\XboxGames\Minecraft Launcher\Content\Minecraft.exe");
+                Commons.SetProfileValue("mc", @"C:\XboxGames\Minecraft Launcher\Content\Minecraft.exe");
             }
             reloadProfiles();
             makeTranslation();
@@ -114,7 +113,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             UpdateProfileFile();
             foreach (var item in comboBoxLanguage.Items)
             {
-                if (item.ToString().StartsWith(GetProfileValue("language")))
+                if (item.ToString().StartsWith(Commons.GetProfileValue("language")))
                 {
                     comboBoxLanguage.SelectedItem = item;
                     break;
@@ -122,51 +121,10 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             }
         }
 
-        public string GetProfileValue(string criterion)
-        {
-            string[] lines = File.ReadAllLines(profileFilePath);
-
-            foreach (string line in lines)
-            {
-                string[] parts = line.Split('=');
-
-                if (parts.Length == 2 && parts[0] == criterion)
-                {
-                    return parts[1];
-                }
-            }
-
-            // Critère non trouvé, retourner une valeur par défaut ou une chaîne vide
-            return string.Empty;
-        }
-
-        public void SetProfileValue(string criterion, string value)
-        {
-            string[] lines = File.ReadAllLines(profileFilePath);
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                string line = lines[i];
-                string[] parts = line.Split('=');
-
-                if (parts.Length == 2 && parts[0] == criterion)
-                {
-                    lines[i] = $"{criterion}={value}";
-                    File.WriteAllLines(profileFilePath, lines);
-                    return;
-                }
-            }
-
-            // Critère non trouvé, ajouter une nouvelle ligne avec le critère et la valeur
-            string newLine = $"{criterion}={value}";
-            File.AppendAllText(profileFilePath, Environment.NewLine + newLine);
-        }
-
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
 
         private List<CheckBox> settings()
         {
@@ -179,7 +137,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 cbCosmetiquesJeu,
                 cbIsometricRenderer,
             };
-
             return list;
         }
 
@@ -207,7 +164,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
         private void btnReport_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/MythMega/builditmods/issues/new");
-        
         }
 
         private void btnOpenRepos_Click(object sender, EventArgs e)
@@ -268,15 +224,14 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             {
                 MessageBox.Show(Translator.translatedText("ERR_NOMODS"));
             }
-
         }
 
         private void btnUpdateMods_Click(object sender, EventArgs e)
         {
-            DownloadFileSyncInSys("modlist.config", "https://jmdbymyth.000webhostapp.com/modlist.config");
+            Commons.DownloadFileSyncInSys("modlist.config", "https://jmdbymyth.000webhostapp.com/modlist.config");
             Thread.Sleep(3000);
             string modlistFilePath = Path.Combine("sys", "modlist.config");
-            enableAllMod();
+            Commons.enableAllMod();
             if (File.Exists(modlistFilePath))
             {
                 string[] lines = File.ReadAllLines(modlistFilePath);
@@ -291,7 +246,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                         string lienDuFichier = parts[1].Trim();
 
                         // Appeler la fonction Download avec les paramètres appropriés
-                        DownloadFiles(nomDeFichier, lienDuFichier);
+                        Commons.DownloadFiles(nomDeFichier, lienDuFichier);
                     }
                     else
                     {
@@ -304,11 +259,8 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 Console.WriteLine($"Le fichier {modlistFilePath} n'existe pas.");
             }
 
-            Console.WriteLine("Téléchargements terminés.");
-
-
             //batFile
-            DownloadFileSyncInSys("batlist.config", "https://jmdbymyth.000webhostapp.com/batlist.config");
+            Commons.DownloadFileSyncInSys("batlist.config", "https://jmdbymyth.000webhostapp.com/batlist.config");
             string batlistFilePath = Path.Combine("sys", "batlist.config");
             if (File.Exists(batlistFilePath))
             {
@@ -324,7 +276,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                         string lienDuFichier = parts[1].Trim();
 
                         // Appeler la fonction Download avec les paramètres appropriés
-                        DownloadFiles(nomDeFichier, lienDuFichier);
+                        Commons.DownloadFiles(nomDeFichier, lienDuFichier);
                     }
                     else
                     {
@@ -351,39 +303,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 catch
                 {
                     Thread.Sleep(50);
-                }
-            }
-
-
-        }
-
-        private void DownloadFileSyncInSys(string file, string url)
-        {
-            DownloadFiles("sys/" + file, url);
-            bool fileIsDownloaded = false;
-            int debug_timetodownloadFile = 0;
-
-
-
-
-            string sysFilePath = Path.Combine("sys", file);
-
-            while (!fileIsDownloaded)
-            {
-                try
-                {
-                    string[] lines = File.ReadAllLines(sysFilePath);
-                    fileIsDownloaded = true;
-                }
-                catch
-                {
-                    Thread.Sleep(50);
-                    debug_timetodownloadFile += 50;
-                    if (debug_timetodownloadFile == 5000)
-                    {
-                        MessageBox.Show(Translator.translatedText("ERR_TIMEOUT"));
-                        return;
-                    }
                 }
             }
         }
@@ -529,77 +448,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             toolTip.SetToolTip(btnQuitter, Translator.translatedText("MOUSEHOVER_BTNQUITTER"));
         }
 
-        public static void enableAllMod()
-        {
-            string fileExtension = "dis";
-            try
-            {
-                string applicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                string[] files = Directory.GetFiles(applicationDirectory, "*." + fileExtension);
-
-                foreach (string filePath in files)
-                {
-                    string newFilePath = Path.ChangeExtension(filePath, "jar");
-                    File.Move(filePath, newFilePath);
-                }
-
-                Console.WriteLine("Files renamed successfully.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error renaming files: " + ex.Message);
-            }
-        }
-
-
-        public void DownloadFiles(string filename, string link)
-        {
-            // Ajouter les fichiers à télécharger dans le dictionnaire
-            filesToDownload.Add(filename, link);
-            // Ajouter d'autres fichiers ici avec leurs noms et URLs correspondants
-
-            // Télécharger les fichiers du dictionnaire
-            foreach (var fileEntry in filesToDownload)
-            {
-                string fileName = fileEntry.Key;
-                string url = fileEntry.Value;
-
-                // Créer une instance de WebClient
-                webClient = new WebClient();
-
-                // S'abonner à l'événement DownloadFileCompleted
-                webClient.DownloadFileCompleted += WebClient_DownloadFileCompleted;
-
-                // Télécharger le fichier depuis l'URL spécifiée vers le chemin de destination
-                webClient.DownloadFileAsync(new Uri(url), fileName);
-            }
-            filesToDownload.Clear();
-        }
-
-        private void WebClient_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
-        {
-            // Vérifier si le téléchargement a réussi
-            if (!e.Cancelled && e.Error == null)
-            {
-                // Obtenir le nom de fichier à partir de UserState
-                string fileName = (string)e.UserState;
-
-                //MessageBox.Show($"Téléchargement terminé : {fileName}");
-            }
-            else if (e.Cancelled)
-            {
-                //MessageBox.Show("Le téléchargement a été annulé.");
-            }
-            else
-            {
-                //MessageBox.Show($"Une erreur s'est produite lors du téléchargement : {e.Error.Message}");
-            }
-
-            // Libérer les ressources du WebClient
-            webClient.Dispose();
-            filesToDownload.Clear();
-        }
-
         public static void ExecuteBatchFile(string filePath)
         {
             try
@@ -649,7 +497,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
         private void btnDebug_Click(object sender, EventArgs e)
         {
-            enableAllMod();
+            Commons.enableAllMod();
         }
 
         private List<Button> GetProfilesButtons()
@@ -681,7 +529,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { btnProfile7.Tag.ToString(), btnProfile7 },
                 { btnProfile8.Tag.ToString(), btnProfile8 }
             };
-
             return buttonDictionary;
         }
 
@@ -699,7 +546,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { cbCommandsAdmins.Tag.ToString(), cbCommandsAdmins },
                 { cbIsometricRenderer.Tag.ToString(), cbIsometricRenderer }
             };
-
             return checkboxDictionary;
         }
 
@@ -716,7 +562,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 { profil7ToolStripMenuItem.Tag.ToString(), profil7ToolStripMenuItem },
                 { profil8ToolStripMenuItem.Tag.ToString(), profil8ToolStripMenuItem }
             };
-
             return toolStripMenuItems;
         }
 
@@ -739,7 +584,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 }
             }
             WriteProfile(clickedButton.Tag.ToString(), lineSave.Substring(0, lineSave.Length - 1));
-
         }
 
         private void profilLoadBtn(object sender, EventArgs e)
@@ -754,7 +598,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             string keyPrefix = profileNumber; // Clé souhaitée
 
             // Lire le contenu du fichier dans une liste de chaînes de caractères
-            List<string> lines = File.ReadAllLines(profileFilePath).ToList();
+            List<string> lines = File.ReadAllLines(Commons.profileFilePath).ToList();
 
             // Rechercher la ligne qui commence par la clé souhaitée
             int lineIndex = lines.FindIndex(line => line.StartsWith(keyPrefix));
@@ -767,8 +611,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             }
 
             // Écrire le contenu mis à jour dans le fichier
-            File.WriteAllLines(profileFilePath, lines);
-
+            File.WriteAllLines(Commons.profileFilePath, lines);
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -781,13 +624,12 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             foreach(CheckBox checkBox in GetModsCheckboxs()) {
                 checkBox.Checked = false;
             }
-           
 
             // Vérifier si le fichier existe
-            if (File.Exists(profileFilePath))
+            if (File.Exists(Commons.profileFilePath))
             {
                 // Lire toutes les lignes du fichier
-                string[] lines = File.ReadAllLines(profileFilePath);
+                string[] lines = File.ReadAllLines(Commons.profileFilePath);
 
                 // Chercher la ligne correspondant au profil
                 string profileLine = lines.FirstOrDefault(line => line.StartsWith(profileCode + "="));
@@ -813,7 +655,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                     catch {
                         elements = new string[0];
                     }
-                    
 
                     // Afficher chaque élément
                     foreach (string element in elements)
@@ -824,7 +665,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                             CheckBox myCb = myCbs[element];
                             myCb.Checked = true;
                         }
-                        
                     }
                 }
                 else
@@ -840,7 +680,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
         public void changeLanguage(string languageCode)
         {
-            string[] lines = File.ReadAllLines(profileFilePath);
+            string[] lines = File.ReadAllLines(Commons.profileFilePath);
             List<string> modifiedLines = new List<string>();
 
             foreach (string line in lines)
@@ -854,13 +694,12 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                     modifiedLines.Add(line);
                 }
             }
-
-            File.WriteAllLines(profileFilePath, modifiedLines);
+            File.WriteAllLines(Commons.profileFilePath, modifiedLines);
         }
 
         public void UpdateProfileFile()
         {
-            string[] lines = File.ReadAllLines(profileFilePath);
+            string[] lines = File.ReadAllLines(Commons.profileFilePath);
 
             // Vérifier si la ligne "language=" existe
             bool languageExists = false;
@@ -877,11 +716,11 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
             // Si la ligne "language=" n'existe pas, l'ajouter à la fin du fichier
             if (!languageExists)
-                File.AppendAllText(profileFilePath, "language=EN" + Environment.NewLine);
+                File.AppendAllText(Commons.profileFilePath, "language=EN" + Environment.NewLine);
 
             // Si la ligne "theme=" n'existe pas, l'ajouter à la fin du fichier
             if (!themeExists)
-                File.AppendAllText(profileFilePath, "theme=DEFAULT" + Environment.NewLine);
+                File.AppendAllText(Commons.profileFilePath, "theme=DEFAULT" + Environment.NewLine);
         }
 
         private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
@@ -893,11 +732,9 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
         private void changeThemeClick(object sender, EventArgs e)
         {
             string theme = ((ToolStripMenuItem)sender).Text;
-            SetProfileValue("theme", theme);
+            Commons.SetProfileValue("theme", theme);
             Theme.updateTheme(this);
         }
-
-        
 
         private void MenuItem_MouseEnter(object sender, EventArgs e)
         {
@@ -960,7 +797,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 return;
             }
 
-            string[] lines = File.ReadAllLines(profileFilePath);
+            string[] lines = File.ReadAllLines(Commons.profileFilePath);
 
             List<string> updatedLines = new List<string>();
             int c = 1;
@@ -980,7 +817,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                 }
             }
 
-            File.WriteAllLines(profileFilePath, updatedLines);
+            File.WriteAllLines(Commons.profileFilePath, updatedLines);
             reloadProfiles();
         }
 
@@ -989,8 +826,6 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(btnUpdateMods, Translator.translatedText("MOUSEHOVER_BTNUPDATE"));
         }
-
-        
 
         private void contributeursToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1004,19 +839,16 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
 
             try
             {
-                Process.Start(GetProfileValue("mc"));
-                
+                Process.Start(Commons.GetProfileValue("mc"));
             }
             catch
             {
                 try
                 {
                     Process.Start(launcher_MS);
-                    
                 }
                 catch
                 {
-
                     try
                     {
                         Process.Start(launcher_W10);
@@ -1027,21 +859,28 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
                     }
                 }
             }
-
         }
+
         private void btnLocateMinecraft_Click(object sender, EventArgs e)
         {
             MinecraftPathSetterForm frm = new MinecraftPathSetterForm();
             frm.Text = Translator.translatedText("LBL_LOCALISER");
             frm.btnCancel.Text = Translator.translatedText("LBL_ANNULER");
             frm.btnCHangeMinecraftLocation.Text = Translator.translatedText("LBL_LOCALISER");
-            frm.txbLocation.Text = GetProfileValue("mc");
+            frm.txbLocation.Text = Commons.GetProfileValue("mc");
             frm.ShowDialog();
         }
 
+        private void btnShaderManager_Click(object sender, EventArgs e)
+        {
+            ShaderUpdater su = new ShaderUpdater();
+            su.ShowDialog();
+        }
 
-        
-
+        private void btnRessourceManager_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Translator.translatedText("ERR_NOTIMPLEMENTED_FEATURE_VERSION") + "1.2.");
+        }
 
         #region TRADUCTIONS
 
@@ -1740,21 +1579,7 @@ mc=C:\Program Files (x86)\Minecraft Launcher\Minecraft.exe";
             }
         }
 
-        
-
-
         #endregion
-
-        private void btnShaderManager_Click(object sender, EventArgs e)
-        {
-            ShaderUpdater su = new ShaderUpdater();
-            su.ShowDialog();
-        }
-
-        private void btnRessourceManager_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(Translator.translatedText("ERR_NOTIMPLEMENTED_FEATURE_VERSION") + "1.2.");
-        }
     }
 }
 
