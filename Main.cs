@@ -25,7 +25,7 @@ namespace BuildItModsSelector
         private WebClient webClient;
         private Dictionary<string, string> filesToDownload = new Dictionary<string, string>();
         private string version = "1.1pre-release-1";
-        private int app_build = 9; 
+        private int app_build = 10; 
 
         public Main()
         {

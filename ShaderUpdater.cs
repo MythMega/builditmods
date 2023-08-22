@@ -22,7 +22,6 @@ namespace BuildItModsSelector
         private string shaderFilePath = Path.Combine("sys", "shaderlist.config");
         private Main temoinMain = new Main();
         private List<CheckBox> checkBoxes = new List<CheckBox>();
-        private string shaderPackFolderPath = @"..\shaderpacks\";
 
         public ShaderUpdater()
         {
