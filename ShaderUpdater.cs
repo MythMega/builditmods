@@ -20,7 +20,8 @@ namespace BuildItModsSelector
         private Dictionary<string, string> filesToDownload = new Dictionary<string, string>();
         private WebClient webClient;
         private string shaderFilePath = Path.Combine("sys", "shaderlist.config");
-        private Main temoinMain = new Main();
+        private Main mainStuff = new Main();
+        private Translation translator = new Translation();
         private List<CheckBox> checkBoxes = new List<CheckBox>();
 
         public ShaderUpdater()
@@ -33,7 +34,7 @@ namespace BuildItModsSelector
             DownloadFileSyncInSys("shaderlist.config", "https://jmdbymyth.000webhostapp.com/prj/mysurvivaltool/shaderlist.config");
             Thread.Sleep(1000);
             loadLayout();
-            temoinMain.updateTheme(this);
+            mainStuff.updateTheme(this);
         }
 
         private void DownloadFileSyncInSys(string file, string url)
@@ -60,7 +61,7 @@ namespace BuildItModsSelector
                     debug_timetodownloadFile += 50;
                     if (debug_timetodownloadFile == 5000)
                     {
-                        MessageBox.Show(temoinMain.translatedText("ERR_TIMEOUT"));
+                        MessageBox.Show(translator.translatedText("ERR_TIMEOUT"));
                         return;
                     }
                 }
@@ -180,7 +181,7 @@ namespace BuildItModsSelector
 
                 // Bouton tout selectionner
                 Button selectAllButton = new Button();
-                selectAllButton.Text = temoinMain.translatedText("LBL_TOUT_SELECTIONNER");
+                selectAllButton.Text = translator.translatedText("LBL_TOUT_SELECTIONNER");
                 selectAllButton.Location = new Point(10, buttonsY+15);
                 selectAllButton.Width = 130;
                 selectAllButton.FlatAppearance.BorderSize = 0;
@@ -196,7 +197,7 @@ namespace BuildItModsSelector
 
                 // Bouton tout deselectionner
                 Button deselectAllButton = new Button();
-                deselectAllButton.Text = temoinMain.translatedText("LBL_TOUT_DESELECTIONNER");
+                deselectAllButton.Text = translator.translatedText("LBL_TOUT_DESELECTIONNER");
                 deselectAllButton.Location = new Point(155, buttonsY+15);
                 deselectAllButton.Width = 130;
                 deselectAllButton.FlatAppearance.BorderSize = 0;
